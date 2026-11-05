@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing — Knowva School ERP, from ₹99 per student a year</title>
+<meta name="description" content="Transparent per-student pricing for Knowva School ERP. Three cumulative plans, volume slabs, no setup fee, hosting and apps included, one-month free trial.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23bd5117'/%3E%3Cpath d='M9 22V10m0 6l8-6m-8 6l8 6' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header"><div class="container"><nav class="nav" aria-label="Primary">
+  <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#bd5117"/><path d="M9 22V10m0 6l8-6m-8 6l8 6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Knowva Systems</a>
+  <div class="nav-links"><a href="product.html">Product</a><a href="capabilities.html">Capabilities</a><a href="solutions.html">Solutions</a><a href="security.html">Security</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a></div>
+  <div class="nav-cta"><a class="btn btn-primary" href="demo.html">Book a demo</a></div>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg></button>
+</nav></div></header>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">Pricing</p>
+      <h1>What Knowva costs. Every rupee, on this page.</h1>
+      <p class="lead">No sit-through-a-sales-call to hear a price. Pick a plan, enter your number of students, and see the figure your quote will show. Plans start at ₹99 per student a year.</p>
+    </div>
+    <div class="center" style="display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin-bottom:.5rem">
+      <span class="pill-tag">No setup fee</span><span class="pill-tag">Hosting &amp; apps included</span><span class="pill-tag">1-month free trial</span><span class="pill-tag">No lock-in</span>
+    </div>
+
+    <div class="plans" style="margin-top:2rem">
+      <div class="plan">
+        <h3>Essentials</h3>
+        <div class="price">₹99 <small>/student / year + GST</small></div>
+        <p class="desc">Records, attendance and communication.</p>
+        <ul>
+          <li>Student, guardian &amp; staff records; role portals</li>
+          <li>Roles &amp; access (RBAC)</li>
+          <li>Student &amp; staff attendance</li>
+          <li>Communications: circulars, alerts, gate passes</li>
+          <li>Conduct notes &amp; ID cards</li>
+        </ul>
+        <a class="btn btn-outline btn-block" href="demo.html">Get an Essentials quote</a>
+      </div>
+      <div class="plan featured">
+        <span class="tag">Recommended</span>
+        <h3>Standard</h3>
+        <div class="price">₹199 <small>/student / year + GST</small></div>
+        <p class="desc">Adds fees, exams, teaching and report cards.</p>
+        <ul>
+          <li>Everything in Essentials</li>
+          <li>Fees &amp; payments (online gateway: roadmap)</li>
+          <li>Academics &amp; exams, progress cards</li>
+          <li>Teaching: timetable, cover, homework, labs</li>
+          <li>Calendar, Documents, certificates &amp; TC</li>
+        </ul>
+        <a class="btn btn-primary btn-block" href="demo.html">Get a Standard quote</a>
+      </div>
+      <div class="plan">
+        <h3>Complete</h3>
+        <div class="price">₹299 <small>/student / year + GST</small></div>
+        <p class="desc">Adds admissions, payroll, reports and governance.</p>
+        <ul>
+          <li>Everything in Standard</li>
+          <li>Admissions pipeline &amp; Outlook</li>
+          <li>Staff HR &amp; payroll with statutory returns</li>
+          <li>Reports, trustee KPIs, board compliance</li>
+          <li>Delegation, API tokens, data import</li>
+        </ul>
+        <a class="btn btn-outline btn-block" href="demo.html">Get a Complete quote</a>
+      </div>
+    </div>
+    <p class="center" style="font-size:.85rem;color:var(--muted);margin-top:1.2rem">Prices per student per year, + 18% GST. Each plan includes the one before. Minimum ₹15,000 a year before GST.</p>
+  </div>
+</section>
+
+<!-- ESTIMATOR -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-head center"><p class="eyebrow">Estimate</p><h2>What will Knowva cost your school?</h2><p class="lead">Type in your number of students. The estimate is worked out exactly the way your quote will be.</p></div>
+    <div class="estimator" id="estimator">
+      <div class="row">
+        <div class="field"><label for="est-students">How many students?</label><input id="est-students" type="number" min="0" value="800" inputmode="numeric"></div>
+        <div class="field"><label for="est-plan">Plan</label><select id="est-plan"><option value="essentials">Essentials — ₹99</option><option value="standard" selected>Standard — ₹199</option><option value="complete">Complete — ₹299</option></select></div>
+        <div class="field"><label for="est-billing">Billing</label><select id="est-billing"><option value="yearly" selected>Yearly in advance</option><option value="quarterly">Quarterly (+10%)</option></select></div>
+      </div>
+      <div class="est-out"></div>
+      <div style="margin-top:1.2rem;display:flex;gap:.8rem;flex-wrap:wrap"><a class="btn btn-primary" href="demo.html">Get this as a quote</a><a class="btn btn-outline" href="demo.html">Book a free demo</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- SLABS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head"><h2>How your price is worked out</h2><p>Count your students in slabs — like income-tax slabs, only the students inside each slab get that slab's rate. Your first 500 are always at full price. Add 18% GST; quarterly billing adds 10%.</p></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Students</th><th class="center">Essentials</th><th class="center">Standard</th><th class="center">Complete</th></tr></thead>
+        <tbody>
+          <tr><td>1–500 (full price)</td><td class="center">₹99</td><td class="center">₹199</td><td class="center">₹299</td></tr>
+          <tr><td>501–1,500 (85%)</td><td class="center">₹84.15</td><td class="center">₹169.15</td><td class="center">₹254.15</td></tr>
+          <tr><td>1,501–5,000 (70%)</td><td class="center">₹69.30</td><td class="center">₹139.30</td><td class="center">₹209.30</td></tr>
+          <tr><td>Above 5,000</td><td class="center" colspan="3">We quote</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note" style="margin-top:1.4rem"><strong>Worked example — 800 students on Standard:</strong> 500 × ₹199 (₹99,500) + 300 × ₹169.15 (₹50,745) = ₹1,50,245 before GST. With 18% GST, ₹1,77,289 a year — that's ₹187.81 per student before GST, against ₹199 list.</div>
+  </div>
+</section>
+
+<!-- TERMS + FAQ -->
+<section class="section section-tint">
+  <div class="container">
+    <div class="split">
+      <div>
+        <h2>The terms, in plain words</h2>
+        <ul class="split" style="display:block;margin-top:1rem">
+          <li style="padding-left:1.8rem;position:relative;margin-bottom:.7rem"><strong>Billed yearly, in advance</strong> — one invoice for the year ahead.</li>
+          <li style="padding-left:1.8rem;position:relative;margin-bottom:.7rem"><strong>Quarterly if you prefer</strong> — four payments, 10% more over the year.</li>
+          <li style="padding-left:1.8rem;position:relative;margin-bottom:.7rem"><strong>18% GST on top</strong> — every price here is before GST.</li>
+          <li style="padding-left:1.8rem;position:relative;margin-bottom:.7rem"><strong>No setup fee</strong>, hosting on AWS (Mumbai) and apps included.</li>
+          <li style="padding-left:1.8rem;position:relative;margin-bottom:.7rem"><strong>Minimum ₹15,000 a year</strong> before GST — small schools only.</li>
+          <li style="padding-left:1.8rem;position:relative;margin-bottom:.7rem"><strong>One-month free trial</strong>, no lock-in; SMS &amp; gateway fees at cost.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Pricing FAQ</h2>
+        <div class="card" style="margin-bottom:.8rem"><h3 style="font-size:1rem">How does volume pricing work?</h3><p style="margin:0;font-size:.9rem">Income-tax-style slabs per school: first 500 at full price, 501–1,500 at 85%, 1,501–5,000 at 70%, above 5,000 we quote.</p></div>
+        <div class="card" style="margin-bottom:.8rem"><h3 style="font-size:1rem">Which plan should we choose?</h3><p style="margin:0;font-size:.9rem">Standard suits most schools — it adds fees, exams and teaching to Essentials. Complete adds admissions, payroll and reporting.</p></div>
+        <div class="card" style="margin-bottom:.8rem"><h3 style="font-size:1rem">We run more than one school.</h3><p style="margin:0;font-size:.9rem">Each campus is priced on its own students (its own tenant), with slabs applied within each campus.</p></div>
+        <div class="card"><h3 style="font-size:1rem">Can we move up later?</h3><p style="margin:0;font-size:.9rem">Yes — plans are cumulative and modules are switched on per school, so moving up is a change in your settings.</p></div>
+      </div>
+    </div>
+    <div class="center" style="margin-top:2.4rem"><a class="btn btn-primary btn-lg" href="demo.html">Book a free demo</a></div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-brand"><a class="brand" href="index.html" style="margin-bottom:.8rem"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#bd5117"/><path d="M9 22V10m0 6l8-6m-8 6l8 6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Knowva Systems</a><p>School ERP for multi-campus schools and the people who run them every day.</p></div>
+    <div><h4>Product</h4><a href="product.html">All modules</a><a href="capabilities.html">Capabilities</a><a href="pricing.html">Pricing</a><a href="security.html">Security</a></div>
+    <div><h4>Solutions</h4><a href="solutions.html">Leadership</a><a href="solutions.html">Admissions</a><a href="solutions.html">Teaching</a><a href="solutions.html">Finance &amp; HR</a></div>
+    <div><h4>Company</h4><a href="about.html">About</a><a href="resources.html">Resources</a><a href="demo.html">Contact</a><a href="demo.html">Book a demo</a></div>
+    <div><h4>Get started</h4><a href="demo.html">Book a demo</a><a href="demo.html">Free trial</a><a href="pricing.html">See pricing</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Knowva Systems. All rights reserved.</span><span>Made for schools in India.</span></div>
+</div></footer>
+<script src="assets/app.js?v=4"></script>
+</body>
+</html>
