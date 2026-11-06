@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=29">
+<link rel="stylesheet" href="assets/styles.css?v=57">
 <link rel="icon" type="image/png" href="assets/logo-light.png">
 </head>
 <body>
@@ -20,13 +20,18 @@
 </nav></div></header>
 
 <section class="section">
-  <div class="container">
+  <div class="container sol-hero-grid">
     <div class="section-head">
       <p class="eyebrow">The product</p>
-      <h1>One platform, thirteen connected modules</h1>
-      <p class="lead">Built on a shared, role-aware core — so a student enrolled in Admissions appears in Students, bills through Fees, and shows up in Attendance and Academics without re-keying anything.</p>
+      <h1>One platform, <span class="sec-accent">thirteen connected modules</span></h1>
+      <p class="lead">Built on a shared, role-aware core — so a student enrolled in <strong>Admissions</strong> appears in Students, bills through <strong>Fees</strong>, and shows up in <strong>Attendance</strong> and <strong>Academics</strong> without re-keying anything.</p>
     </div>
+    <figure class="sol-hero-art">
+      <img src="assets/product-hero.webp" width="960" height="717" alt="Illustration: admissions, students, attendance, fees, communication, payroll and academics connected around a shared, role-aware core">
+    </figure>
+  </div>
 
+  <div class="container">
     <h2 style="font-size:1.1rem;color:var(--muted);font-weight:600;margin-bottom:1rem">Workspace</h2>
     <div class="grid grid-3">
       <article class="card"><span class="cardnum">01</span><div class="icon-circle ic-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 13h6V4H4v9zm10 7h6V11h-6v9zM4 20h6v-4H4v4zM14 4v4h6V4h-6z" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Overview &amp; dashboards</h3><p>A role-shaped command centre — every login lands on the data and tasks that are theirs.</p><ul class="cap-list"><li>Role dashboards: School, HR, Academics, Teaching</li><li>A worklist that deep-links straight to the action</li></ul></article>
@@ -48,7 +53,18 @@
       <article class="card"><span class="cardnum">13</span><div class="icon-circle ic-amber"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 4h8l2 2h6v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Documents &amp; admin</h3><p>The document vault and the control room.</p><ul class="cap-list"><li>Permissioned document library with access history</li><li>Roles &amp; access, integrations, bulk data import</li></ul></article>
     </div>
 
-    <div class="note" style="margin-top:2rem"><strong>How the modules fit together:</strong> Admissions creates a <strong>Student</strong> → billed in <strong>Fees</strong>, tracked in <strong>Attendance</strong> and <strong>Academics</strong>, reached through <strong>Communications</strong> and <strong>Calendar</strong>, reported in <strong>Reports</strong> — all under one roles &amp; access model set in <strong>Settings</strong>.</div>
+    <div class="flow-card">
+      <p class="flow-title">How the modules fit together</p>
+      <div class="flow-steps">
+        <span class="flow-step">Admissions</span><span class="flow-arrow" aria-hidden="true">→</span>
+        <span class="flow-step is-core">Student</span><span class="flow-arrow" aria-hidden="true">→</span>
+        <span class="flow-step">Fees</span><span class="flow-arrow" aria-hidden="true">→</span>
+        <span class="flow-step">Attendance &amp; Academics</span><span class="flow-arrow" aria-hidden="true">→</span>
+        <span class="flow-step">Communications &amp; Calendar</span><span class="flow-arrow" aria-hidden="true">→</span>
+        <span class="flow-step">Reports</span>
+      </div>
+      <p class="flow-note">Admissions creates a student, who is billed in Fees, tracked in Attendance and Academics, reached through Communications and Calendar, and reported in Reports. All of it sits under one roles &amp; access model, set in Settings.</p>
+    </div>
 
     <div class="center" style="margin-top:2.4rem"><a class="btn btn-primary" href="capabilities.html">Compare it line by line</a> &nbsp; <a class="btn btn-outline" href="demo.html">Book a demo</a></div>
   </div>
@@ -64,6 +80,6 @@
   </div>
   <div class="footer-bottom"><span>© 2026 Knowva Systems. All rights reserved.</span><span>Made for schools in India.</span></div>
 </div></footer>
-<script src="assets/app.js?v=29"></script>
+<script src="assets/app.js?v=57"></script>
 </body>
 </html>

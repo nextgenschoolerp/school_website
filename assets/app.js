@@ -168,6 +168,31 @@
     });
   }
 
+  // ---- role tiles flip in place ----
+  var flipCards = Array.prototype.slice.call(document.querySelectorAll('.flip-card'));
+  var setFlip = function (card) {
+    var open = !card.classList.contains('is-flipped');
+    flipCards.forEach(function (c) { c.classList.remove('is-flipped'); });
+    if (open) card.classList.add('is-flipped');
+  };
+  var equalizeFlipCards = function () {
+    flipCards.forEach(function (c) { c.querySelector('.flip-inner').style.minHeight = ''; });
+    var h = Math.max.apply(null, flipCards.map(function (c) { return c.querySelector('.flip-inner').scrollHeight; }));
+    flipCards.forEach(function (c) { c.querySelector('.flip-inner').style.minHeight = h + 'px'; });
+  };
+  flipCards.forEach(function (card) {
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('click', function () { setFlip(card); });
+    card.addEventListener('keydown', function (e) {
+      if (e.target === card && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); setFlip(card); }
+    });
+  });
+  if (flipCards.length) {
+    equalizeFlipCards();
+    window.addEventListener('load', equalizeFlipCards);
+    window.addEventListener('resize', equalizeFlipCards);
+  }
+
   // ---- capability filter ----
   var cap = document.getElementById('cap-table');
   if (cap) {

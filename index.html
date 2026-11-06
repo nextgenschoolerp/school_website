@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=29">
+<link rel="stylesheet" href="assets/styles.css?v=57">
 <link rel="icon" type="image/png" href="assets/logo-light.png">
 </head>
 <body>
@@ -85,8 +85,8 @@
 </section>
 
 <!-- FEATURES (hero-matched split layout) -->
-<section class="section" style="overflow:hidden">
-  <div class="container hero-grid">
+<section class="section feat-section" style="overflow:hidden">
+  <div class="container hero-grid feat-grid">
     <div>
       <p class="eyebrow">One platform, connected</p>
       <h2>Everything a school runs, in one place</h2>
@@ -119,7 +119,11 @@
         <div class="mock-float fa-badge fa-2"><span class="ring" style="background:var(--purple)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M3 17l5-5 4 4 8-8M21 8v4m0-4h-4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 13 connected modules</div>
         <div class="mock-float fa-badge fa-3"><span class="ring" style="background:var(--sky)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.3"/></svg></span> Multi-campus ready</div>
       </div>
-      <img class="hero-illus" src="assets/features-illustration.webp" width="1024" height="768" alt="Illustration: an admission flows into a student record that connects fees, payroll, attendance, communication and the school calendar">
+      <video class="hero-illus" poster="assets/features-illustration.png" autoplay loop muted playsinline aria-label="Animated illustration: an admission flows into a student record that connects fees, payroll, attendance, communication and the school calendar">
+        <source src="assets/features-video.webm" type="video/webm">
+        <source src="assets/features-video.mp4" type="video/mp4">
+        <img src="assets/features-illustration.png" alt="Illustration: an admission flows into a student record that connects fees, payroll, attendance, communication and the school calendar" width="1024" height="768">
+      </video>
       <div class="mock-float feat-float"><span class="ring" style="background:var(--green)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12l5 5L20 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Entered once, trusted everywhere</div>
     </div>
   </div>
@@ -140,7 +144,7 @@
         <button class="wf-tab" data-wf="2" role="tab" aria-selected="false"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="4"/><path d="M3 20a7 7 0 0114 0M19 8v6M16 11h6"/></svg></span><span class="tx"><span class="t">Admission officer</span><span class="s">Enquiry to enrolment</span></span></button>
         <button class="wf-tab" data-wf="3" role="tab" aria-selected="false"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></span><span class="tx"><span class="t">Teacher</span><span class="s">Classroom &amp; marks</span></span></button>
         <button class="wf-tab" data-wf="4" role="tab" aria-selected="false"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12h2M3 9h15"/></svg></span><span class="tx"><span class="t">Finance &amp; HR</span><span class="s">Fees &amp; payroll</span></span></button>
-        <button class="wf-tab" data-wf="5" role="tab" aria-selected="false"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></span><span class="tx"><span class="t">Super administrator</span><span class="s">Users &amp; governance</span></span></button>
+        <button class="wf-tab" data-wf="5" role="tab" aria-selected="false"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></span><span class="tx"><span class="t">IT administrator</span><span class="s">Integrations &amp; sign-in</span></span></button>
       </div>
       <div class="wf-panels">
         <div class="wf-panel active" role="tabpanel"><p class="wf-eyebrow">Leadership</p><h3>Principal &amp; director</h3><div class="role-sub">Oversight across every campus</div><ul class="wf-checks"><li>A School Overview with enrolment, fees and attendance KPIs</li><li>Approve leave, publish progress cards, close applications</li><li>Collect seat deposits and send emergency alerts</li><li>Trustee KPI snapshots for the board</li></ul><div class="wf-mods"><span class="ml">Modules used</span><span class="pill-tag">Overview</span><span class="pill-tag">Reports</span><span class="pill-tag">Admissions</span><span class="pill-tag">Communications</span><a class="wf-link" href="solutions.html">Full workflows →</a></div></div>
@@ -148,7 +152,7 @@
         <div class="wf-panel" role="tabpanel"><p class="wf-eyebrow">Admissions &amp; front office</p><h3>Admission officer</h3><div class="role-sub">One pipeline, enquiry to first day</div><ul class="wf-checks"><li>Register walk-ins and log counselling calls</li><li>Schedule entrance exams and record assessments</li><li>Issue offers, collect deposits, enrol the student</li><li>Admissions Outlook: seat demand &amp; what converts</li></ul><div class="wf-mods"><span class="ml">Modules used</span><span class="pill-tag">Admissions</span><span class="pill-tag">Students</span><span class="pill-tag">Communications</span><a class="wf-link" href="solutions.html">Full workflows →</a></div></div>
         <div class="wf-panel" role="tabpanel"><p class="wf-eyebrow">Teaching</p><h3>Teacher</h3><div class="role-sub">The classroom, in one place</div><ul class="wf-checks"><li>Take the daily register; mark present, late or absent</li><li>Enter marks in a live grid; request an unlock when needed</li><li>Set homework and evaluate submissions</li><li>Author lesson plans and message parents</li></ul><div class="wf-mods"><span class="ml">Modules used</span><span class="pill-tag">Attendance</span><span class="pill-tag">Academics</span><span class="pill-tag">Teaching</span><a class="wf-link" href="solutions.html">Full workflows →</a></div></div>
         <div class="wf-panel" role="tabpanel"><p class="wf-eyebrow">Finance &amp; HR</p><h3>Finance &amp; HR</h3><div class="role-sub">Money in, people paid</div><ul class="wf-checks"><li>Post fee demands to a class; record payments &amp; receipts</li><li>Track defaulters and run late fees</li><li>Run monthly gross-to-net payroll (PF, ESI, TDS)</li><li>File statutory returns and send encrypted payslips</li></ul><div class="wf-mods"><span class="ml">Modules used</span><span class="pill-tag">Fees &amp; payments</span><span class="pill-tag">Payroll</span><span class="pill-tag">Staff</span><a class="wf-link" href="solutions.html">Full workflows →</a></div></div>
-        <div class="wf-panel" role="tabpanel"><p class="wf-eyebrow">IT &amp; administration</p><h3>Super administrator</h3><div class="role-sub">Users, access and governance</div><ul class="wf-checks"><li>Change a user's roles — with a mandatory reason, logged</li><li>See gap tiles: unheld roles, single-holders, risky accounts</li><li>Issue scoped, expiring API tokens; delegate roles</li><li>Configure integrations and read the audit history</li></ul><div class="wf-mods"><span class="ml">Modules used</span><span class="pill-tag">Documents &amp; admin</span><span class="pill-tag">Security</span><a class="wf-link" href="solutions.html">Full workflows →</a></div></div>
+        <div class="wf-panel" role="tabpanel"><p class="wf-eyebrow">IT &amp; administration</p><h3>IT administrator</h3><div class="role-sub">Integrations, data import and sign-in settings</div><ul class="wf-checks"><li>Set up SMTP, SMS and WhatsApp integrations in Settings</li><li>Bulk-import students and staff, creating their login accounts</li><li>Manage session and sign-in settings for the school</li><li>Review access and role-change history; role changes stay with the super administrator</li></ul><div class="wf-mods"><span class="ml">Modules used</span><span class="pill-tag">Settings</span><span class="pill-tag">Staff</span><span class="pill-tag">Communications</span><a class="wf-link" href="solutions.html">Full workflows →</a></div></div>
       </div>
     </div>
     <div class="center" style="margin-top:2rem"><a class="btn btn-outline" href="solutions.html">See all roles &amp; workflows</a></div>
@@ -246,6 +250,6 @@
   </div>
 </footer>
 
-<script src="assets/app.js?v=29"></script>
+<script src="assets/app.js?v=57"></script>
 </body>
 </html>
