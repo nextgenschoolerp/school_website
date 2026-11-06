@@ -7,12 +7,12 @@
 <meta name="description" content="See Knowva on your school's data. A 30-minute walkthrough tailored to your role and your campuses.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=4">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23bd5117'/%3E%3Cpath d='M9 22V10m0 6l8-6m-8 6l8 6' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css?v=29">
+<link rel="icon" type="image/png" href="assets/logo-light.png">
 </head>
 <body>
 <header class="site-header"><div class="container"><nav class="nav" aria-label="Primary">
-  <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#bd5117"/><path d="M9 22V10m0 6l8-6m-8 6l8 6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Knowva Systems</a>
+  <a class="brand" href="index.html"><img class="mark" src="assets/logo-light.png" alt="" width="34" height="34"><span class="brand-text">Knowva<span>Systems</span></span></a>
   <div class="nav-links"><a href="product.html">Product</a><a href="capabilities.html">Capabilities</a><a href="solutions.html">Solutions</a><a href="security.html">Security</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a></div>
   <div class="nav-cta"><a class="btn btn-primary" href="demo.html">Book a demo</a></div>
   <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg></button>
@@ -30,22 +30,26 @@
         <div class="step"><div><strong>A checklist &amp; security overview</strong><div class="role">to share with your team</div></div></div>
         <div class="step"><div><strong>A sandbox with seeded data</strong><div class="role">to click around yourself</div></div></div>
       </div>
-      <p style="margin-top:1.6rem;color:var(--muted);font-size:.9rem">Prefer email? hello@knowva.systems</p>
+      <p style="margin-top:1.6rem;color:var(--muted);font-size:.9rem">Prefer email? hello@knowvasystems.com</p>
     </div>
 
     <div class="split-media">
-      <form class="estimator" style="max-width:none" onsubmit="return false">
-        <div class="field" style="margin-bottom:1rem"><label for="f-name">Name</label><input id="f-name" type="text" required></div>
-        <div class="field" style="margin-bottom:1rem"><label for="f-email">Work email</label><input id="f-email" type="email" required></div>
-        <div class="field" style="margin-bottom:1rem"><label for="f-school">School / group name</label><input id="f-school" type="text" required></div>
+      <form id="demo-form" class="estimator" style="max-width:none" data-access-key="d67ede28-7840-4f16-8cfb-e028a499311c">
+        <input type="hidden" name="subject" value="New demo request — Knowva website">
+        <input type="hidden" name="from_name" value="Knowva website">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+        <div class="field" style="margin-bottom:1rem"><label for="f-name">Name</label><input id="f-name" name="name" type="text" required></div>
+        <div class="field" style="margin-bottom:1rem"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" required></div>
+        <div class="field" style="margin-bottom:1rem"><label for="f-school">School / group name</label><input id="f-school" name="school" type="text" required></div>
         <div class="row" style="margin-bottom:1rem">
-          <div class="field"><label for="f-role">Your role</label><select id="f-role"><option>Leadership</option><option>Admissions / front office</option><option>Academics / exams</option><option>Teaching</option><option>Office / records</option><option>HR / payroll</option><option>Finance</option><option>IT / administration</option></select></div>
-          <div class="field"><label for="f-students">Approx. students</label><input id="f-students" type="number" min="0"></div>
+          <div class="field"><label for="f-role">Your role</label><select id="f-role" name="role"><option>Leadership</option><option>Admissions / front office</option><option>Academics / exams</option><option>Teaching</option><option>Office / records</option><option>HR / payroll</option><option>Finance</option><option>IT / administration</option></select></div>
+          <div class="field"><label for="f-students">Approx. students</label><input id="f-students" name="students" type="number" min="0"></div>
         </div>
-        <div class="field" style="margin-bottom:1rem"><label for="f-campus">Number of campuses</label><input id="f-campus" type="number" min="1" value="1"></div>
-        <div class="field" style="margin-bottom:1.2rem"><label for="f-note">What do you run today?</label><input id="f-note" type="text" placeholder="e.g. spreadsheets + a fees tool"></div>
+        <div class="field" style="margin-bottom:1rem"><label for="f-campus">Number of campuses</label><input id="f-campus" name="campuses" type="number" min="1" value="1"></div>
+        <div class="field" style="margin-bottom:1.2rem"><label for="f-note">What do you run today?</label><input id="f-note" name="current_tools" type="text" placeholder="e.g. spreadsheets + a fees tool"></div>
         <button class="btn btn-primary btn-block btn-lg" type="submit">Request my demo</button>
-        <p style="font-size:.78rem;color:var(--muted);margin:.9rem 0 0;text-align:center">We use your details only to arrange the demo. No spam, ever.</p>
+        <p class="form-status" role="status" aria-live="polite" style="font-size:.9rem;color:var(--muted);margin:.9rem 0 0;text-align:center;min-height:1.2rem"></p>
+        <p style="font-size:.78rem;color:var(--muted);margin:.5rem 0 0;text-align:center">We use your details only to arrange the demo. No spam, ever.</p>
       </form>
     </div>
   </div>
@@ -53,7 +57,7 @@
 
 <footer class="site-footer"><div class="container">
   <div class="footer-grid">
-    <div class="footer-brand"><a class="brand" href="index.html" style="margin-bottom:.8rem"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#bd5117"/><path d="M9 22V10m0 6l8-6m-8 6l8 6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Knowva Systems</a><p>School ERP for multi-campus schools and the people who run them every day.</p></div>
+    <div class="footer-brand"><a class="brand" href="index.html" style="margin-bottom:.8rem"><img class="mark" src="assets/logo-light.png" alt="" width="34" height="34"><span class="brand-text">Knowva<span>Systems</span></span></a><p>School ERP for multi-campus schools and the people who run them every day.</p></div>
     <div><h4>Product</h4><a href="product.html">All modules</a><a href="capabilities.html">Capabilities</a><a href="pricing.html">Pricing</a><a href="security.html">Security</a></div>
     <div><h4>Solutions</h4><a href="solutions.html">Leadership</a><a href="solutions.html">Admissions</a><a href="solutions.html">Teaching</a><a href="solutions.html">Finance &amp; HR</a></div>
     <div><h4>Company</h4><a href="about.html">About</a><a href="resources.html">Resources</a><a href="demo.html">Contact</a><a href="demo.html">Book a demo</a></div>
@@ -61,6 +65,12 @@
   </div>
   <div class="footer-bottom"><span>© 2026 Knowva Systems. All rights reserved.</span><span>Made for schools in India.</span></div>
 </div></footer>
-<script src="assets/app.js?v=4"></script>
+<dialog id="demo-confirm" class="confirm-dialog" aria-labelledby="demo-confirm-title">
+  <div class="confirm-mark" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="M5 12l5 5L20 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <h2 id="demo-confirm-title">Request received</h2>
+  <p>Thanks — we will confirm a slot within one business day. Check your inbox for a confirmation.</p>
+  <button class="btn btn-primary btn-block" type="button" onclick="this.closest('dialog').close()">Done</button>
+</dialog>
+<script src="assets/app.js?v=29"></script>
 </body>
 </html>

@@ -128,6 +128,46 @@
     render();
   }
 
+  // ---- demo request form (Web3Forms) ----
+  var demo = document.getElementById('demo-form');
+  if (demo) {
+    var status = demo.querySelector('.form-status');
+    var submitBtn = demo.querySelector('button[type="submit"]');
+    demo.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var key = demo.getAttribute('data-access-key');
+      if (!key || key.indexOf('YOUR_') === 0) {
+        status.textContent = 'Form is not connected yet. Please email hello@knowvasystems.com.';
+        return;
+      }
+      var payload = {};
+      new FormData(demo).forEach(function (v, k) { payload[k] = v; });
+      payload.access_key = key;
+      submitBtn.disabled = true;
+      status.textContent = 'Sending…';
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (j) {
+          if (j.success) {
+            demo.reset();
+            status.textContent = '';
+            var dialog = document.getElementById('demo-confirm');
+            if (dialog && dialog.showModal) dialog.showModal(); else alert('Thanks — we will confirm a slot within one business day.');
+          } else {
+            status.textContent = 'Something went wrong. Please email hello@knowvasystems.com.';
+          }
+        })
+        .catch(function () {
+          status.textContent = 'Network error. Please email hello@knowvasystems.com.';
+        })
+        .then(function () { submitBtn.disabled = false; });
+    });
+  }
+
   // ---- capability filter ----
   var cap = document.getElementById('cap-table');
   if (cap) {

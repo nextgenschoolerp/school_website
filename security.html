@@ -7,25 +7,23 @@
 <meta name="description" content="Server-authoritative RBAC, full audit trails, multi-tenant isolation, encrypted integration secrets and OIDC-based delivery — documented control by control.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=4">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23bd5117'/%3E%3Cpath d='M9 22V10m0 6l8-6m-8 6l8 6' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css?v=29">
+<link rel="icon" type="image/png" href="assets/logo-light.png">
 </head>
 <body>
 <header class="site-header"><div class="container"><nav class="nav" aria-label="Primary">
-  <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#bd5117"/><path d="M9 22V10m0 6l8-6m-8 6l8 6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Knowva Systems</a>
+  <a class="brand" href="index.html"><img class="mark" src="assets/logo-light.png" alt="" width="34" height="34"><span class="brand-text">Knowva<span>Systems</span></span></a>
   <div class="nav-links"><a href="product.html">Product</a><a href="capabilities.html">Capabilities</a><a href="solutions.html">Solutions</a><a href="security.html">Security</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a></div>
   <div class="nav-cta"><a class="btn btn-primary" href="demo.html">Book a demo</a></div>
   <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg></button>
 </nav></div></header>
 
-<section class="section">
+<section class="section sec-hero">
   <div class="container">
-    <div class="section-head center">
-      <p class="eyebrow">Enterprise-ready</p>
-      <h1>Built for students' data — and your IT team's sign-off</h1>
-      <p class="lead">A school holds minors' records; they deserve real controls. Role-based access on every action, a full audit trail of who did what, multi-tenant isolation between campuses, encrypted integration secrets and OIDC-based delivery — documented control by control, not hand-waved.</p>
-    </div>
-    <div style="display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center">
+    <p class="eyebrow">Enterprise security specs</p>
+    <h1 class="sec-h1">Built for students' data — and your <span class="sec-accent">IT team's sign-off</span></h1>
+    <p class="lead sec-lead">A school holds minors' records; they deserve real controls. Role-based access on every action, a full audit trail of who did what, multi-tenant isolation between campuses, encrypted integration secrets and OIDC-based delivery — documented control by control, not hand-waved.</p>
+    <div class="sec-pills">
       <span class="pill-tag">Server-authoritative RBAC</span>
       <span class="pill-tag">Full audit trail</span>
       <span class="pill-tag">Multi-tenant isolation</span>
@@ -37,41 +35,24 @@
 </section>
 
 <section class="section section-soft">
-  <div class="container split">
-    <div>
-      <p class="eyebrow">How access works</p>
-      <h2>The app asks what you can do, not what role you are</h2>
-      <p>Every microservice publishes its own access rules, reflected at runtime from the code that guards each endpoint — a single source of truth the interface follows exactly.</p>
-      <ul>
-        <li>Capability checks, not scattered role strings in the UI.</li>
-        <li>Hidden never means unenforced — the server returns 403 regardless.</li>
-        <li>"Done by…" names who can act, so nobody is over-exposed.</li>
-        <li>Field-level limits (pay, statutory IDs) on top of screen-level.</li>
-        <li>Governed role changes: mandatory reason, can't remove the last admin, full history.</li>
-      </ul>
+  <div class="container">
+    <div class="sp-grid-2">
+      <article class="sp-card sp-wide"><span class="sp-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></span><p class="sp-tag">Data protection &amp; isolation</p><h3>Encrypted integration secrets</h3><p class="sp-desc">Integration secrets (SMTP, SMS, WhatsApp) are encrypted with AES-256-GCM. Tenant and campus scoping is enforced by signed claims on every request.</p></article>
+      <article class="sp-card "><span class="sp-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l2 2M14 9l2 2"/></svg></span><p class="sp-tag">Granular field-level permissions</p><h3>Role-based access control (RBAC)</h3><p class="sp-desc">A permission matrix means teachers, accountants and staff only see the data their job requires — and the server returns 403 for anything else.</p></article>
     </div>
-    <div class="split-media"><div class="frame">
-      <div class="mock-bar" style="border:0;padding:.3rem .2rem .8rem"><strong style="color:var(--ink);font-family:'Plus Jakarta Sans',sans-serif">Live access rules</strong><span class="where" style="margin-left:auto">from the server</span></div>
-      <table style="min-width:0"><tbody>
-        <tr><td>Enrol student</td><td class="center"><span class="yes">Registrar +2</span></td></tr>
-        <tr><td>Collect seat deposit</td><td class="center"><span class="yes">Cashier, Principal</span></td></tr>
-        <tr><td>Change a user's roles</td><td class="center"><span class="yes">Super admin</span></td></tr>
-        <tr><td>View another's payslip</td><td class="center"><span class="no">blocked (403)</span></td></tr>
-      </tbody></table>
-    </div></div>
+    <div class="sp-grid-3">
+      <article class="sp-card "><span class="sp-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h11a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2V6a2 2 0 012-2z"/><path d="M9 9h7M9 13h7M9 17h4"/></svg></span><p class="sp-tag">Activity tracking</p><h3>Audit logs</h3><p class="sp-desc">Every change records user, IP, action, resource and outcome. Role changes have their own log, and records carry created-by and updated-by fields.</p></article>
+      <article class="sp-card "><span class="sp-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><p class="sp-tag">Privacy by design</p><h3>Privacy standards</h3><p class="sp-desc">Built around the principles of FERPA, GDPR and India’s DPDP Act. We do not claim certifications; we share our control evidence on request.</p></article>
+      <article class="sp-card "><span class="sp-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span><p class="sp-tag">Roadmap</p><h3>Backups &amp; recovery</h3><p class="sp-desc">Backup and restore are supported as configurable policy today. Full automation and tested recovery targets are on our roadmap.</p></article>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <h2 class="center" style="margin-bottom:2rem">Controls, by area</h2>
-    <div class="grid grid-2">
-      <article class="card"><div class="icon-circle ic-purple"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Authentication</h3><p>BCrypt hashing · 5-strike/30-min lockout · forced first-login password change · strong password policy · stateless JWT with sliding refresh &amp; idle timeout · server-side session records with admin revoke · single-use reset tokens · MFA policy.</p></article>
-      <article class="card"><div class="icon-circle ic-amber"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10M18 15l2 2 3-3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Authorization / RBAC</h3><p>Method-level access control across every service · reflected access-rules as the single source of truth · least-privilege safeguards · role delegation · scoped, expiring, single-view API tokens · constant-time internal keys · multi-tenant guard.</p></article>
-      <article class="card"><div class="icon-circle ic-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Audit &amp; accountability</h3><p>Central audit trail (user, IP, action, resource, outcome) · dedicated role-change log · row-level created-by / updated-by with optimistic locking across services.</p></article>
-      <article class="card"><div class="icon-circle ic-green"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6zM9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Data protection &amp; isolation</h3><p>Multi-tenant &amp; campus scoping via signed claims · AES-256-GCM encryption of integration secrets · environment-driven secrets · accessibility semantics throughout the UI.</p></article>
-      <article class="card"><div class="icon-circle ic-rose"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 12h14M5 12a7 7 0 017-7m-7 7a7 7 0 007 7m0-14a7 7 0 017 7m-7-7v14" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Infrastructure &amp; operations</h3><p>GitHub Actions CI/CD with AWS OIDC (no stored keys) · Kubernetes on EKS (Terraform) · Let's Encrypt TLS · centralised logging + distributed tracing · VPN admin access.</p></article>
-      <article class="card" style="background:var(--bg-tint)"><div class="icon-circle ic-purple"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 8v4m0 4h.01M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Roadmap</h3><p>MFA enforcement, field-level PII encryption, data anonymisation and automated backup/restore are supported as configurable policy today and are on the roadmap to full enforcement. We'll share our security overview and status candidly on request.</p></article>
+    <div class="spec-sheet">
+      <div class="spec-head">Technical specification sheet</div>
+      <div class="spec-row"><span class="spec-k">Integration secrets</span><span class="spec-v">AES-256-GCM encryption at rest</span></div><div class="spec-row"><span class="spec-k">Data in transit</span><span class="spec-v">TLS at the edge via Let's Encrypt</span></div><div class="spec-row"><span class="spec-k">Access control</span><span class="spec-v">Method-level RBAC; access rules served from the server</span></div><div class="spec-row"><span class="spec-k">Audit trail</span><span class="spec-v">Central log: user, IP, action, resource, outcome</span></div><div class="spec-row"><span class="spec-k">Role changes</span><span class="spec-v">Dedicated log; mandatory reason; last admin protected</span></div><div class="spec-row"><span class="spec-k">Tenancy</span><span class="spec-v">Campus scoping via signed tenant and branch claims</span></div><div class="spec-row"><span class="spec-k">Backups & recovery</span><span class="spec-v">Configurable policy; full automation is on the roadmap</span></div>
     </div>
     <div class="center" style="margin-top:2.4rem"><a class="btn btn-primary" href="demo.html">Request our security overview</a></div>
   </div>
@@ -79,7 +60,7 @@
 
 <footer class="site-footer"><div class="container">
   <div class="footer-grid">
-    <div class="footer-brand"><a class="brand" href="index.html" style="margin-bottom:.8rem"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#bd5117"/><path d="M9 22V10m0 6l8-6m-8 6l8 6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Knowva Systems</a><p>School ERP for multi-campus schools and the people who run them every day.</p></div>
+    <div class="footer-brand"><a class="brand" href="index.html" style="margin-bottom:.8rem"><img class="mark" src="assets/logo-light.png" alt="" width="34" height="34"><span class="brand-text">Knowva<span>Systems</span></span></a><p>School ERP for multi-campus schools and the people who run them every day.</p></div>
     <div><h4>Product</h4><a href="product.html">All modules</a><a href="capabilities.html">Capabilities</a><a href="pricing.html">Pricing</a><a href="security.html">Security</a></div>
     <div><h4>Solutions</h4><a href="solutions.html">Leadership</a><a href="solutions.html">Admissions</a><a href="solutions.html">Teaching</a><a href="solutions.html">Finance &amp; HR</a></div>
     <div><h4>Company</h4><a href="about.html">About</a><a href="resources.html">Resources</a><a href="demo.html">Contact</a><a href="demo.html">Book a demo</a></div>
@@ -87,6 +68,6 @@
   </div>
   <div class="footer-bottom"><span>© 2026 Knowva Systems. All rights reserved.</span><span>Made for schools in India.</span></div>
 </div></footer>
-<script src="assets/app.js?v=4"></script>
+<script src="assets/app.js?v=29"></script>
 </body>
 </html>
