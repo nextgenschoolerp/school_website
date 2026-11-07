@@ -13,7 +13,8 @@
   // mark current nav link
   var here = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(function (a) {
-    if (a.getAttribute('href') === here) a.classList.add('active');
+    var target = (a.getAttribute('href') || '').split('/').pop();
+    if (target === here) a.classList.add('active');
   });
 
   // ---- role-workflow tabs ----

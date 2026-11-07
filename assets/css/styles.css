@@ -457,6 +457,8 @@ video.hero-illus{background:#fdf8f4;object-fit:cover;border-radius:18px}
 @media(max-width:900px){.sec-hero-grid{grid-template-columns:1fr}.sec-hero-art img{margin:0 auto}}
 .sec-hero-art img{max-width:610px;margin:0 auto}
 .sec-hero-grid{grid-template-columns:.85fr 1.15fr}
+@media(max-width:900px){.sec-hero-grid{grid-template-columns:1fr;gap:1.6rem}}
+@media(max-width:620px){.sec-hero .sec-h1{font-size:clamp(1.8rem,8vw,2.2rem)}.sec-pills{gap:.45rem}.sec-pills .pill-tag{font-size:.82rem}}
 .sec-hero .sec-h1{font-size:clamp(2rem,3.5vw,3.05rem);max-width:none}
 .sol-hero-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:2.5rem;align-items:center}
 .sol-hero-grid .section-head{margin-bottom:0}
