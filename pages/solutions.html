@@ -7,13 +7,13 @@
 <meta name="description" content="A school system that shapes itself to every role: leadership, admissions, academics, teaching, office, HR, finance and IT. See the work each one owns.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/styles.css?v=58">
+<link rel="stylesheet" href="../assets/css/styles.css?v=59">
 <link rel="icon" type="image/png" href="../assets/img/logo-light.png">
 </head>
 <body>
 <header class="site-header"><div class="container"><nav class="nav" aria-label="Primary">
   <a class="brand" href="../index.html"><img class="mark" src="../assets/img/logo-light.png" alt="" width="34" height="34"><span class="brand-text">Knowva<span>Systems</span></span></a>
-  <div class="nav-links"><a href="product.html">Product</a><a href="capabilities.html">Capabilities</a><a href="solutions.html">Solutions</a><a href="security.html">Security</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a></div>
+  <div class="nav-links"><a href="product.html">Modules</a><a href="solutions.html">Solutions</a><a href="security.html">Security</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a></div>
   <div class="nav-cta"><a class="btn btn-primary" href="demo.html">Book a demo</a></div>
   <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg></button>
 </nav></div></header>
@@ -22,7 +22,7 @@
   <div class="container sol-hero-grid">
     <div class="section-head">
       <p class="eyebrow">Built around people</p>
-      <h1>A school system that shapes itself to every role</h1>
+      <h1>A school system that shapes itself to <span class="sec-accent">every role</span></h1>
       <p class="lead">Each person sees their own work, data and decisions. Everything else stays out of view. Pick your role to see how it fits your day.</p>
     </div>
     <figure class="sol-hero-art">
@@ -46,12 +46,80 @@
   </div>
 </section>
 
+<section class="section" id="capabilities">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">The checklist</p>
+      <h2>Every capability, named</h2>
+      <p class="lead">No vague "comprehensive module" claims. This is a sample of the concrete things Knowva does today, each mapped to the roles allowed to do it — the same rules the app enforces. Filter by module, or take the full list into your RFP.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="filters" role="group" aria-label="Filter by module">
+      <button class="chip active" data-filter="all">All modules</button>
+      <button class="chip" data-filter="students">Students</button>
+      <button class="chip" data-filter="admissions">Admissions</button>
+      <button class="chip" data-filter="payroll">Payroll</button>
+      <button class="chip" data-filter="academics">Academics</button>
+      <button class="chip" data-filter="teaching">Teaching</button>
+      <button class="chip" data-filter="attendance">Attendance</button>
+      <button class="chip" data-filter="fees">Fees</button>
+      <button class="chip" data-filter="comms">Communications</button>
+      <button class="chip" data-filter="admin">Admin &amp; access</button>
+    </div>
+
+    <div class="table-wrap">
+      <table id="cap-table">
+        <thead><tr><th>Capability</th><th>Module</th><th>Who can do it</th><th class="center">Status</th></tr></thead>
+        <tbody>
+          <tr data-module="students"><td>Enrol a new student (one multi-section form)</td><td>Students</td><td>Registrar, Office clerk</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="students"><td>Issue a transfer certificate with dual sign-off</td><td>Students</td><td>Principal, Registrar</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="students"><td>Record a conduct incident</td><td>Students</td><td>Class teacher, Principal</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="students"><td>Promote a class to the next year</td><td>Students</td><td>Registrar, Principal</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="students"><td>Print an ID card (barcode + verify link)</td><td>Students</td><td>Registrar, Office clerk</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="admissions"><td>Register a walk-in enquiry</td><td>Admissions</td><td>Admission officer, Counsellor</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="admissions"><td>Schedule an entrance exam (issues admit card)</td><td>Admissions</td><td>Admission officer</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="admissions"><td>Issue an offer and collect the seat deposit</td><td>Admissions</td><td>Admission officer, Cashier</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="admissions"><td>Enrol the student from the application</td><td>Admissions</td><td>Admission officer, Registrar</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="admissions"><td>Merit lists, waitlist, fee waivers</td><td>Admissions</td><td>Admissions team</td><td class="center"><span class="badge badge-roadmap">Roadmap</span></td></tr>
+          <tr data-module="payroll"><td>Run monthly gross-to-net payroll (PF/ESI/TDS)</td><td>Payroll</td><td>HR manager</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="payroll"><td>Generate statutory returns (PF ECR, ESIC, 24Q)</td><td>Payroll</td><td>Payroll accountant</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="payroll"><td>Bulk-email encrypted payslips; export bank batch</td><td>Payroll</td><td>HR manager</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="academics"><td>Enter marks in a live grid; mark Absent</td><td>Academics</td><td>Subject teacher</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="academics"><td>Approve unlock tickets (timed window, auto-relock)</td><td>Academics</td><td>Exam controller</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="academics"><td>Audit the immutable mark-change log</td><td>Academics</td><td>Academic auditor</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="teaching"><td>Run the automated conflict-free timetable generator</td><td>Teaching</td><td>Timetable in-charge</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="teaching"><td>Auto-assign substitution cover</td><td>Teaching</td><td>Substitution in-charge</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="teaching"><td>Assign homework; evaluate submissions</td><td>Teaching</td><td>Subject teacher</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="attendance"><td>Take a daily / AM-PM register; mark all present</td><td>Attendance</td><td>Class teacher</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="attendance"><td>Correct a register within 7 days; override lock</td><td>Attendance</td><td>Principal, Admin</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="attendance"><td>Monitor staff biometric punches &amp; anomalies</td><td>Attendance</td><td>HR, Leadership</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="fees"><td>Post demands to bill a whole class</td><td>Fees</td><td>Finance team</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="fees"><td>Record a payment; mark a cheque bounced</td><td>Fees</td><td>Cashier, Accounts clerk</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="fees"><td>Run late fees (grace days, fine/day, cap)</td><td>Fees</td><td>Finance team</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="fees"><td>Online payment gateway</td><td>Fees</td><td>—</td><td class="center"><span class="badge badge-roadmap">Roadmap</span></td></tr>
+          <tr data-module="comms"><td>Post a circular (WhatsApp→SMS/Email) with reach preview</td><td>Communications</td><td>Office, Leadership</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="comms"><td>Send an emergency alert (ignores quiet hours)</td><td>Communications</td><td>Leadership</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="comms"><td>Issue &amp; verify gate passes; register visitors</td><td>Communications</td><td>Office, Security</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="admin"><td>Change a user's roles (reason required, logged)</td><td>Admin &amp; access</td><td>Super administrator</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="admin"><td>Issue scoped, expiring API tokens (shown once)</td><td>Admin &amp; access</td><td>Super admin, IT admin</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="admin"><td>Bulk data import (Excel/CSV/ZIP, dry-run, error report)</td><td>Admin &amp; access</td><td>Administrator</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+          <tr data-module="admin"><td>Configure Email/SMS/WhatsApp providers; test send</td><td>Admin &amp; access</td><td>Administrator</td><td class="center"><span class="badge badge-live">Live</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:1rem">A representative sample. The full matrix spans 13 modules and 120+ capabilities — ask for the complete checklist on your demo.</p>
+
+    <div class="center" style="margin-top:2.4rem"><a class="btn btn-primary" href="demo.html">Get the full checklist</a></div>
+  </div>
+</section>
+
 <section class="section"><div class="container"><div class="cta-band"><span class="spark" aria-hidden="true"></span><h2>See your role in Knowva</h2><p>We'll sign in as your role on a demo school and run your real workflow end to end.</p><a class="btn btn-primary btn-lg" href="demo.html">Book a demo</a></div></div></section>
 
 <footer class="site-footer"><div class="container">
   <div class="footer-grid">
     <div class="footer-brand"><a class="brand" href="../index.html" style="margin-bottom:.8rem"><img class="mark" src="../assets/img/logo-light.png" alt="" width="34" height="34"><span class="brand-text">Knowva<span>Systems</span></span></a><p>School ERP for multi-campus schools and the people who run them every day.</p></div>
-    <div><h4>Product</h4><a href="product.html">All modules</a><a href="capabilities.html">Capabilities</a><a href="pricing.html">Pricing</a><a href="security.html">Security</a></div>
+    <div><h4>Modules</h4><a href="product.html">All modules</a><a href="pricing.html">Pricing</a><a href="security.html">Security</a></div>
     <div><h4>Solutions</h4><a href="solutions.html">Leadership</a><a href="solutions.html">Admissions</a><a href="solutions.html">Teaching</a><a href="solutions.html">Finance &amp; HR</a></div>
     <div><h4>Company</h4><a href="about.html">About</a><a href="resources.html">Resources</a><a href="demo.html">Contact</a><a href="demo.html">Book a demo</a></div>
     <div><h4>Get started</h4><a href="demo.html">Book a demo</a><a href="demo.html">Free trial</a><a href="pricing.html">See pricing</a></div>
