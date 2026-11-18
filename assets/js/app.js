@@ -6,11 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveals();
   initStatCounters();
   initHeroTilt();
+  initTiltCards();
   initMobileNav();
   initRoleTabs();
   initPricingCalculator();
   initCapabilitiesFilter();
   initDemoForm();
+  initBetaForm();
   initAccordions();
 });
 
@@ -18,14 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
    1. Scroll-triggered Reveal Animations
    ========================================================================== */
 function initScrollReveals() {
-  const revealItems = document.querySelectorAll('.reveal-item');
+  const revealItems = document.querySelectorAll('.reveal-item, .reveal-on-scroll');
   if (revealItems.length === 0) return;
 
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
+          entry.target.classList.add('revealed', 'is-revealed');
           obs.unobserve(entry.target);
         }
       });
@@ -36,7 +38,7 @@ function initScrollReveals() {
 
     revealItems.forEach(el => observer.observe(el));
   } else {
-    revealItems.forEach(el => el.classList.add('revealed'));
+    revealItems.forEach(el => el.classList.add('revealed', 'is-revealed'));
   }
 }
 
@@ -81,18 +83,34 @@ function initStatCounters() {
             if (!isNaN(target)) countUp(num, target, true);
           });
 
+          // Parent app 100% counter
+          const counter100 = entry.target.querySelector('.counter-number');
+          if (counter100 && !counter100.dataset.animated) {
+            counter100.dataset.animated = 'true';
+            let cur = 0;
+            const t = setInterval(() => {
+              cur += 2;
+              if (cur >= 100) {
+                counter100.textContent = '100%';
+                clearInterval(t);
+              } else {
+                counter100.textContent = cur + '%';
+              }
+            }, 20);
+          }
+
           obs.unobserve(entry.target);
         }
       });
     }, { threshold: 0.25 });
 
-    const statsSections = document.querySelectorAll('section.bg-slate-100, [data-stats-section]');
-    statsSections.forEach(sec => statObserver.observe(sec));
+    const statsSections = document.querySelectorAll('section.bg-slate-100, [data-stats-section], .counter-number');
+    statsSections.forEach(sec => statObserver.observe(sec.closest('section') || sec.closest('div') || sec));
   }
 }
 
 /* ==========================================================================
-   3. 3D Tilt Micro-Interaction for Hero Mockup
+   3. 3D Tilt Micro-Interactions (Hero Dashboard Mockup & Phone Mockups)
    ========================================================================== */
 function initHeroTilt() {
   const tiltWrapper = document.getElementById('heroDashboardMockup');
@@ -112,6 +130,32 @@ function initHeroTilt() {
 
     tiltWrapper.addEventListener('mouseleave', () => {
       tiltInner.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  }
+}
+
+function initTiltCards() {
+  const tiltContainers = document.querySelectorAll('.tilt-card-wrapper');
+  if (window.matchMedia('(pointer: fine)').matches) {
+    tiltContainers.forEach(wrapper => {
+      const card = wrapper.querySelector('.tilt-card');
+      if (!card) return;
+
+      wrapper.addEventListener('mousemove', (e) => {
+        const rect = wrapper.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -8;
+        const rotateY = ((x - centerX) / centerX) * 8;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+      });
+
+      wrapper.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
     });
   }
 }
@@ -151,7 +195,6 @@ function initMobileNav() {
     closeBtn.addEventListener('click', closeMenu);
   }
 
-  // Close when clicking outside or pressing Escape
   document.addEventListener('click', (e) => {
     if (!mobileMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
       closeMenu();
@@ -319,7 +362,7 @@ function initCapabilitiesFilter() {
 }
 
 /* ==========================================================================
-   8. Demo Form Submission (Demo page)
+   8. Demo & Beta Form Submissions
    ========================================================================== */
 function initDemoForm() {
   const demoForm = document.getElementById('book-demo-form');
@@ -337,6 +380,26 @@ function initDemoForm() {
       const isSubpage = window.location.pathname.includes('/pages/');
       const target = isSubpage ? 'demo-success.html' : 'pages/demo-success.html';
       window.location.href = target;
+    }, 400);
+  });
+}
+
+function initBetaForm() {
+  const form = document.getElementById('betaForm');
+  const successMsg = document.getElementById('betaSuccess');
+  if (!form || !successMsg) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const submitBtn = document.getElementById('submitBtn');
+    if (submitBtn) {
+      submitBtn.innerHTML = '<span>Processing...</span>';
+      submitBtn.disabled = true;
+    }
+    setTimeout(() => {
+      form.classList.add('hidden');
+      successMsg.classList.remove('hidden');
+      successMsg.classList.add('flex');
     }, 400);
   });
 }
