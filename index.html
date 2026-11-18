@@ -1,0 +1,1372 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta name="description" content="Unified school management, academics, fees, parent app and compliance for Indian K-12 schools.">
+<title>Knowva Systems — School ERP | Unified Platform for K-12</title><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "outline": "#8b7268", "primary-fixed-dim": "#ffb596", "secondary-fixed-dim": "#fcb972", "on-primary-fixed": "#360f00", "on-secondary-container": "#794909", "secondary-fixed": "#ffdcbc", "surface-bright": "#fbf8ff", "on-tertiary-fixed-variant": "#3a3d8e", "tertiary": "#4d51a3", "on-tertiary-fixed": "#080863", "background": "#fbf8ff", "on-surface": "#161b2d", "tertiary-fixed-dim": "#bfc1ff", "tertiary-container": "#666abd", "on-error": "#ffffff", "surface": "#fbf8ff", "surface-dim": "#d6d8f2", "on-primary": "#ffffff", "on-tertiary-container": "#faf7ff", "on-secondary": "#ffffff", "primary-fixed": "#ffdbcd", "secondary-container": "#ffbc74", "tertiary-fixed": "#e1e0ff", "surface-tint": "#a33e00", "on-primary-fixed-variant": "#7c2e00", "surface-container-highest": "#dee1fb", "surface-container-lowest": "#ffffff", "on-primary-container": "#fff6f4", "on-background": "#161b2d", "error-container": "#ffdad6", "on-secondary-fixed": "#2c1700", "primary-container": "#bd5117", "outline-variant": "#dec0b5", "on-tertiary": "#ffffff", "surface-container": "#ececff", "inverse-on-surface": "#efefff", "surface-variant": "#dee1fb", "primary": "#9b3b00", "inverse-surface": "#2b2f43", "on-surface-variant": "#574239", "inverse-primary": "#ffb596", "surface-container-high": "#e4e7ff", "secondary": "#855314", "on-error-container": "#93000a", "surface-container-low": "#f3f2ff", "on-secondary-fixed-variant": "#683d00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "margin": "1.5rem", "space-xs": "0.375rem", "space-2xl": "5rem", "gutter-desktop": "2rem", "space-sm": "0.625rem", "space-xl": "3rem", "margin-desktop": "4rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "margin-mobile": "1.25rem", "space-lg": "1.75rem" }, "fontFamily": { "display-hero": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-md": [ "DM Sans" ], "body-sm": [ "DM Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "title-card": [ "Plus Jakarta Sans" ], "label-caps": [ "DM Sans" ], "body-lg": [ "DM Sans" ], "display-hero-mobile": [ "Plus Jakarta Sans" ], "label-md": [ "DM Sans" ] }, "fontSize": { "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "headline-sm": [ "22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" } ], "body-sm": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "title-card": [ "19px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-caps": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "400" } ], "display-hero-mobile": [ "38px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "label-md": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" } ] } } } };</script><link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="assets/css/styles.css?v=2">
+</head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/40"><div class="h-20 max-w-7xl mx-auto px-margin lg:px-margin-desktop flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm shrink-0"><a href="index.html" class="flex items-center gap-2.5 text-decoration-none group"><div class="w-8 h-8 rounded-lg bg-[#bd5117] flex items-center justify-center text-white font-bold text-lg shadow-xs group-hover:scale-105 transition-transform flex-shrink-0"><span>K</span></div><div class="flex flex-col text-left"><span class="font-bold text-xl tracking-tight text-[#161b2d] leading-none">Knowva Systems</span><span class="text-[10px] font-semibold tracking-wider text-[#bd5117] uppercase block leading-none mt-1">SCHOOL ERP</span></div></a></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="text-primary font-headline-sm"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="product" href="pages/product.html">Product</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="capabilities" href="pages/capabilities.html">Capabilities</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="solutions" href="pages/solutions.html">Solutions</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="parent-app" href="pages/parent-app.html">Parent app</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="security" href="pages/security.html">Security</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="pricing" href="pages/pricing.html">Pricing</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="resources" href="pages/resources.html">Resources</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="about" href="pages/about.html">About</a></nav><div class="flex items-center gap-space-md shrink-0">
+<button id="mobile-nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" class="xl:hidden w-10 h-10 rounded-lg bg-surface-container-low border border-outline-variant flex items-center justify-center text-on-surface hover:text-primary transition-colors shrink-0">
+  <span class="material-symbols-outlined text-[24px]">menu</span>
+</button><a class="inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md px-5 py-2.5 rounded-[10px] hover:bg-primary transition-all shadow-[0_4px_14px_rgba(189,81,23,0.25)] active:scale-[0.99]" data-path="book-a-demo" href="pages/demo.html">Book a demo</a><button type="button" aria-label="User Profile" class="w-9 h-9 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:text-[#bd5117] hover:border-[#bd5117]/40 transition-colors shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg></button></div></div><!-- Mobile Navigation Drawer -->
+<div id="mobile-menu" class="hidden xl:hidden fixed inset-x-0 top-20 bg-surface-container-lowest/98 backdrop-blur-xl border-b border-outline-variant/60 shadow-2xl p-6 z-50 transition-all">
+  <nav class="flex flex-col gap-3 font-medium">
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="pages/product.html">Product</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="pages/capabilities.html">Capabilities</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="pages/solutions.html">Solutions</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="pages/parent-app.html">Parent app</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="pages/security.html">Security</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="pages/pricing.html">Pricing</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="pages/resources.html">Resources</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="pages/about.html">About</a>
+    <div class="pt-3 border-t border-outline-variant/30 flex flex-col gap-2">
+      <a class="w-full inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md px-5 py-3 rounded-[10px] hover:bg-primary transition-all shadow-md text-center" href="pages/demo.html">Book a demo</a>
+    </div>
+  </nav>
+</div>
+</header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- ========================================== -->
+<!-- 1. HERO SECTION                            -->
+<!-- ========================================== -->
+<section class="w-full bg-surface py-space-xl lg:py-space-2xl relative overflow-hidden">
+<!-- Ambient subtle background glow for organic depth -->
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -right-32 w-96 h-96 bg-tertiary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Left Hero Narrative (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col items-start">
+<!-- Eyebrow Badge -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-fixed/40 border border-outline-variant/60 mb-space-md shadow-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-[#1E6B55] animate-pulse"></span>
+<span class="font-label-caps text-label-caps tracking-wider uppercase text-on-surface-variant font-bold">
+              Next-Gen K–12 Cloud ERP for India
+            </span>
+</div>
+<!-- Hero Headline -->
+<h1 class="font-display-hero text-[44px] leading-[50px] lg:text-display-hero lg:leading-[64px] text-on-surface font-extrabold tracking-tight mb-space-md">
+            Run the whole school on one platform.
+          </h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-space-lg">
+            Knowva School ERP brings admissions, students, staff, academics, fees, transport and communications into one role-aware system, built for multi-campus schools and the people who run them every day.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm w-full sm:w-auto mb-space-md">
+<a class="inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md px-7 py-3.5 rounded-[10px] hover:bg-primary transition-all shadow-md hover:shadow-lg active:scale-[0.99] text-center" href="pages/demo.html">
+              Book a demo
+              <span class="material-symbols-outlined text-[18px] ml-1.5">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center bg-surface-container-lowest border border-outline-variant text-on-surface font-label-md text-label-md px-6 py-3.5 rounded-[10px] hover:bg-surface-container-low transition-all text-center" href="#modules">
+              Explore the product
+            </a>
+</div>
+<!-- Micro-proof note -->
+<p class="font-body-sm text-body-sm text-on-surface-variant/80 flex items-center gap-1.5 flex-wrap">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>No credit card required</span>
+<span>·</span>
+<span>1-month free trial</span>
+<span>·</span>
+<span class="font-semibold text-on-surface">CBSE, ICSE &amp; State Boards ready</span>
+</p>
+</div>
+<!-- Right Software Simulation (7 Cols) -->
+<div class="lg:col-span-7 relative">
+<!-- Main Desktop Dashboard Window -->
+<div class="bg-surface-container-lowest rounded-[20px] shadow-2xl border border-outline-variant/60 overflow-hidden">
+<!-- Window Topbar -->
+<div class="bg-surface-container-low px-4 py-3 border-b border-outline-variant/40 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error/60 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-secondary-container inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-[#1E6B55]/60 inline-block"></span>
+<span class="text-xs text-on-surface-variant font-medium ml-2 hidden sm:inline">knowva-erp.internal/school/st-jude-north</span>
+</div>
+<div class="flex items-center gap-2 text-xs text-on-surface-variant">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container text-tertiary font-medium">
+                  CBSE Affiliation #1930281
+                </span>
+<span class="w-2 h-2 rounded-full bg-[#1E6B55]"></span>
+<span class="font-semibold text-on-surface">Live Sync</span>
+</div>
+</div>
+<!-- Workspace Body -->
+<div class="flex h-[490px] overflow-hidden">
+<!-- Mini Sidebar -->
+<div class="w-16 sm:w-44 bg-[#1B1F30] text-white p-3 flex flex-col justify-between shrink-0">
+<div class="space-y-4">
+<div class="flex items-center gap-2 px-1">
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-bold text-sm">
+                      K
+                    </div>
+<div class="hidden sm:block">
+<p class="font-title-card text-xs font-bold leading-tight">Knowva ERP</p>
+<p class="text-[10px] text-gray-400">v4.8 Enterprise</p>
+</div>
+</div>
+<!-- Campus pill -->
+<div class="hidden sm:block bg-white/10 rounded-lg p-2 text-[11px] leading-tight text-gray-200">
+<p class="text-[9px] uppercase tracking-wider text-secondary-fixed">Campus</p>
+<p class="font-semibold truncate">North Campus (CBSE)</p>
+</div>
+<!-- Nav List -->
+<nav class="space-y-1">
+<div class="flex items-center gap-2 px-2 py-1.5 rounded-lg bg-primary-container text-white text-xs font-medium cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">dashboard</span>
+<span class="hidden sm:inline">Overview</span>
+</div>
+<div class="flex items-center gap-2 px-2 py-1.5 rounded-lg text-gray-300 hover:bg-white/5 text-xs font-medium cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+<span class="hidden sm:inline">Admissions</span>
+</div>
+<div class="flex items-center gap-2 px-2 py-1.5 rounded-lg text-gray-300 hover:bg-white/5 text-xs font-medium cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">school</span>
+<span class="hidden sm:inline">Students</span>
+</div>
+<div class="flex items-center gap-2 px-2 py-1.5 rounded-lg text-gray-300 hover:bg-white/5 text-xs font-medium cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span class="hidden sm:inline">Academics</span>
+</div>
+<div class="flex items-center gap-2 px-2 py-1.5 rounded-lg text-gray-300 hover:bg-white/5 text-xs font-medium cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span class="hidden sm:inline">Fees &amp; Dues</span>
+</div>
+<div class="flex items-center gap-2 px-2 py-1.5 rounded-lg text-gray-300 hover:bg-white/5 text-xs font-medium cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">directions_bus</span>
+<span class="hidden sm:inline">Transport</span>
+</div>
+</nav>
+</div>
+<div class="hidden sm:flex items-center gap-2 pt-2 border-t border-white/10 text-[11px] text-gray-400">
+<span class="material-symbols-outlined text-[16px]">security</span>
+<span>DPDP Certified</span>
+</div>
+</div>
+<!-- Main Canvas Area -->
+<div class="flex-1 bg-surface-container-low p-4 sm:p-5 overflow-y-auto">
+<!-- Action Breadcrumb -->
+<div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-outline-variant/30">
+<div>
+<h3 class="font-headline-sm text-sm sm:text-base font-bold text-on-surface">
+                      School Overview — St. Jude Global Academy
+                    </h3>
+<p class="text-[11px] text-on-surface-variant">Academic Year 2025–26 · Term 1 · Active Session</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-tertiary-fixed text-on-tertiary-fixed flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield_person</span>
+                      Role: Principal (All Access)
+                    </span>
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center relative">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">notifications</span>
+<span class="w-2 h-2 rounded-full bg-error absolute top-0.5 right-0.5"></span>
+</div>
+</div>
+</div>
+<!-- 4 KPI Metrics -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-4">
+<div class="bg-surface-container-lowest p-2.5 rounded-xl border border-outline-variant/40 shadow-xs">
+<div class="flex items-center justify-between mb-1">
+<span class="text-[10px] uppercase font-bold text-tertiary">Total Students</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">group</span>
+</div>
+<div class="font-bold text-base text-on-surface">2,842</div>
+<div class="text-[10px] text-[#1E6B55] font-semibold mt-0.5 flex items-center">
+<span class="material-symbols-outlined text-[12px]">trending_up</span> +124 this term
+                    </div>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-xl border border-outline-variant/40 shadow-xs">
+<div class="flex items-center justify-between mb-1">
+<span class="text-[10px] uppercase font-bold text-[#1E6B55]">Attendance Today</span>
+<span class="material-symbols-outlined text-[14px] text-[#1E6B55]">fact_check</span>
+</div>
+<div class="font-bold text-base text-on-surface">96.4%</div>
+<div class="text-[10px] text-on-surface-variant mt-0.5">2,740 present · 102 abs.</div>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-xl border border-outline-variant/40 shadow-xs">
+<div class="flex items-center justify-between mb-1">
+<span class="text-[10px] uppercase font-bold text-[#3D6898]">Staff on Campus</span>
+<span class="material-symbols-outlined text-[14px] text-[#3D6898]">badge</span>
+</div>
+<div class="font-bold text-base text-on-surface">142/148</div>
+<div class="text-[10px] text-on-surface-variant mt-0.5">6 on sanctioned leave</div>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-xl border border-outline-variant/40 shadow-xs">
+<div class="flex items-center justify-between mb-1">
+<span class="text-[10px] uppercase font-bold text-primary">Term Fees</span>
+<span class="material-symbols-outlined text-[14px] text-primary">currency_rupee</span>
+</div>
+<div class="font-bold text-base text-on-surface">₹4.18 Cr</div>
+<div class="text-[10px] text-[#1E6B55] font-semibold mt-0.5">95.0% on track</div>
+</div>
+</div>
+<!-- Middle Data Widgets -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+<!-- Attendance Trend Visual -->
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-outline-variant/40">
+<div class="flex items-center justify-between mb-2">
+<span class="font-title-card text-xs font-semibold text-on-surface">Weekly Attendance Trend</span>
+<span class="text-[10px] text-on-surface-variant font-medium">Avg: 95.7%</span>
+</div>
+<div class="h-20 flex items-end justify-between gap-2 pt-2 px-1">
+<div class="flex-1 flex flex-col items-center gap-1">
+<span class="text-[9px] text-on-surface-variant">95%</span>
+<div class="w-full bg-[#1E6B55]/30 rounded-t h-12"></div>
+<span class="text-[9px] font-semibold text-on-surface-variant">Mon</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<span class="text-[9px] text-on-surface-variant">96%</span>
+<div class="w-full bg-[#1E6B55]/50 rounded-t h-14"></div>
+<span class="text-[9px] font-semibold text-on-surface-variant">Tue</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<span class="text-[9px] text-on-surface-variant">94%</span>
+<div class="w-full bg-[#1E6B55]/30 rounded-t h-11"></div>
+<span class="text-[9px] font-semibold text-on-surface-variant">Wed</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<span class="text-[9px] text-on-surface-variant">97%</span>
+<div class="w-full bg-[#1E6B55]/80 rounded-t h-16"></div>
+<span class="text-[9px] font-semibold text-on-surface-variant">Thu</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<span class="text-[9px] text-primary font-bold">96.4%</span>
+<div class="w-full bg-[#1E6B55] rounded-t h-15"></div>
+<span class="text-[9px] font-bold text-primary">Fri</span>
+</div>
+</div>
+</div>
+<!-- Fee Collection Mini-bar -->
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-outline-variant/40">
+<div class="flex items-center justify-between mb-2">
+<span class="font-title-card text-xs font-semibold text-on-surface">Fee Inflows &amp; Modes</span>
+<span class="text-[10px] text-primary font-bold">₹4.18 Cr / ₹4.40 Cr</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2.5 mb-2 overflow-hidden flex">
+<div class="bg-[#1E6B55] h-full" style="width: 78%" title="UPI / Online 78%"></div>
+<div class="bg-secondary-container h-full" style="width: 18%" title="NACH Mandates 18%"></div>
+<div class="bg-outline-variant h-full" style="width: 4%" title="Cash / Cheque 4%"></div>
+</div>
+<div class="grid grid-cols-3 text-[10px] text-on-surface-variant gap-1 pt-1">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#1E6B55]"></span>
+<span>UPI 78%</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span>NACH 18%</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span>Counter 4%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Needs Attention Worklist -->
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-outline-variant/40">
+<div class="flex items-center justify-between mb-2">
+<span class="font-title-card text-xs font-semibold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">pending_actions</span>
+                      Needs Your Attention (Today)
+                    </span>
+<span class="text-[10px] font-semibold text-primary cursor-pointer">Resolve all →</span>
+</div>
+<div class="space-y-1.5 text-xs">
+<div class="flex items-center justify-between p-1.5 bg-surface-container-low rounded-lg">
+<span class="flex items-center gap-1.5 text-on-surface font-medium truncate">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                        12 Transfer Certificate (TC) applications pending sign-off
+                      </span>
+<span class="text-[10px] font-bold text-primary shrink-0 ml-2">Review</span>
+</div>
+<div class="flex items-center justify-between p-1.5 bg-surface-container-low rounded-lg">
+<span class="flex items-center gap-1.5 text-on-surface font-medium truncate">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                        4 Bus Routes reaching &gt;95% seating capacity (R-07, R-12)
+                      </span>
+<span class="text-[10px] font-bold text-on-surface shrink-0 ml-2">Re-route</span>
+</div>
+<div class="flex items-center justify-between p-1.5 bg-surface-container-low rounded-lg">
+<span class="flex items-center gap-1.5 text-on-surface font-medium truncate">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                        18 Sibling fee concession petitions ready for approval
+                      </span>
+<span class="text-[10px] font-bold text-on-surface shrink-0 ml-2">Approve</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Overlapping Floating Mobile Phone: Knowva Parent App -->
+<div class="absolute -bottom-8 -right-2 sm:-right-4 w-60 sm:w-64 bg-[#1B1F30] rounded-[28px] p-2.5 shadow-2xl border-4 border-[#2b2f43] hidden sm:block transform hover:-translate-y-1 transition-transform">
+<!-- Speaker notch -->
+<div class="w-20 h-3.5 bg-black rounded-full mx-auto mb-2 flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-white/20"></div>
+</div>
+<!-- Phone Screen -->
+<div class="bg-surface rounded-[20px] p-3 text-on-surface overflow-hidden">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[9px] uppercase tracking-wider font-bold text-primary">Knowva Parent App</span>
+<span class="text-[10px] text-on-surface-variant font-semibold">09:41 AM</span>
+</div>
+<!-- Student Profile Pill -->
+<div class="flex items-center gap-2 bg-surface-container-lowest p-2 rounded-xl border border-outline-variant/40 mb-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold text-xs">
+                  AS
+                </div>
+<div class="min-w-0">
+<p class="font-title-card text-xs font-bold leading-tight truncate">Aarav Sharma</p>
+<p class="text-[10px] text-on-surface-variant">Class VIII-B · Roll #14</p>
+</div>
+</div>
+<!-- Today status -->
+<div class="bg-[#1E6B55]/10 border border-[#1E6B55]/20 rounded-lg p-2 mb-2">
+<div class="flex items-center justify-between text-[11px]">
+<span class="font-semibold text-[#1E6B55] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Present
+                  </span>
+<span class="text-[10px] text-[#1E6B55]">Gate In: 08:05 AM</span>
+</div>
+</div>
+<!-- Quick Timetable -->
+<div class="text-[10px] text-on-surface-variant mb-2">
+<span class="font-semibold text-on-surface">Next:</span> Mathematics (Period 3) at 10:15 AM
+              </div>
+<!-- Due fee card -->
+<div class="bg-primary/5 border border-primary/20 rounded-lg p-2">
+<div class="flex items-center justify-between text-[10px] mb-1">
+<span class="font-bold text-on-surface">Q2 Fee Installment</span>
+<span class="font-bold text-primary">₹18,500</span>
+</div>
+<button class="w-full bg-primary-container text-on-primary text-[10px] font-semibold py-1 rounded-[6px] hover:bg-primary">
+                  Pay via UPI (Instant Receipt)
+                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 2. TRUST STRIP                             -->
+<!-- ========================================== -->
+<section class="w-full bg-[#F8F5F2] border-y border-[#E7E5DF] py-6">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-white shadow-xs border border-[#E7E5DF] flex items-center justify-center text-[#BD5117] shrink-0">
+<span class="material-symbols-outlined text-[20px]">corporate_fare</span>
+</div>
+<div>
+<p class="font-title-card text-xs lg:text-sm font-bold text-[#24283B] leading-tight">Multi-campus</p>
+<p class="font-body-sm text-[12px] text-[#565B6B]">Multi-tenant by design</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-white shadow-xs border border-[#E7E5DF] flex items-center justify-center text-[#8C591A] shrink-0">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<div>
+<p class="font-title-card text-xs lg:text-sm font-bold text-[#24283B] leading-tight">CBSE, ICSE &amp; State</p>
+<p class="font-body-sm text-[12px] text-[#565B6B]">Pre-built grade rubrics</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-white shadow-xs border border-[#E7E5DF] flex items-center justify-center text-[#5054A6] shrink-0">
+<span class="material-symbols-outlined text-[20px]">vpn_key</span>
+</div>
+<div>
+<p class="font-title-card text-xs lg:text-sm font-bold text-[#24283B] leading-tight">Role-based access</p>
+<p class="font-body-sm text-[12px] text-[#565B6B]">Governed on every click</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-white shadow-xs border border-[#E7E5DF] flex items-center justify-center text-[#1E6B55] shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div>
+<p class="font-title-card text-xs lg:text-sm font-bold text-[#24283B] leading-tight">Full audit trail</p>
+<p class="font-body-sm text-[12px] text-[#565B6B]">India DPDP Act compliant</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 3. FOURTEEN CONNECTED MODULES              -->
+<!-- ========================================== -->
+<section class="w-full bg-white py-space-xl lg:py-space-2xl" id="modules">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-[#BD5117] font-bold block mb-2">
+          Unified Architecture
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-[#24283B] font-bold tracking-tight mb-space-sm">
+          One platform, fourteen connected modules
+        </h2>
+<p class="font-body-lg text-body-lg text-[#565B6B]">
+          Every department shares the exact same single source of truth without double entry, fragile third-party integrations, or midnight CSV reconciliations.
+        </p>
+</div>
+<!-- 14 Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter mb-space-lg">
+<!-- 1. Overview -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 hover:border-[#BD5117] hover:shadow-lg transition-all duration-200 group">
+<div class="w-11 h-11 rounded-xl bg-[#5054A6]/10 text-[#5054A6] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">dashboard</span>
+</div>
+<h3 class="font-title-card text-title-card text-[#24283B] font-bold mb-2">Overview</h3>
+<p class="font-body-sm text-body-sm text-[#565B6B] leading-relaxed">
+            Executive real-time school KPIs, board metrics, cash flows, and multi-campus drilldowns for trustees and leadership.
+          </p>
+</div>
+<!-- 2. Students -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 hover:border-[#BD5117] hover:shadow-lg transition-all duration-200 group">
+<div class="w-11 h-11 rounded-xl bg-[#3D6898]/10 text-[#3D6898] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<h3 class="font-title-card text-title-card text-[#24283B] font-bold mb-2">Students</h3>
+<p class="font-body-sm text-body-sm text-[#565B6B] leading-relaxed">
+            360° student lifecycle from roll allocation to digital health records, disciplinary logs, and co-curricular achievements.
+          </p>
+</div>
+<!-- 3. Admissions -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 hover:border-[#BD5117] hover:shadow-lg transition-all duration-200 group">
+<div class="w-11 h-11 rounded-xl bg-[#FDEFE5] text-[#BD5117] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">contact_mail</span>
+</div>
+<h3 class="font-title-card text-title-card text-[#24283B] font-bold mb-2">Admissions</h3>
+<p class="font-body-sm text-body-sm text-[#565B6B] leading-relaxed">
+            Multi-stage enquiry CRM, campus walk-in token system, entrance exam scoring rubrics &amp; spot seat allocation.
+          </p>
+</div>
+<!-- 4. Staff & Faculty -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 hover:border-[#BD5117] hover:shadow-lg transition-all duration-200 group">
+<div class="w-11 h-11 rounded-xl bg-[#8C591A]/10 text-[#8C591A] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">badge</span>
+</div>
+<h3 class="font-title-card text-title-card text-[#24283B] font-bold mb-2">Staff &amp; Faculty</h3>
+<p class="font-body-sm text-body-sm text-[#565B6B] leading-relaxed">
+            Complete bio-data, biometric sync, teacher qualification registers, work-hour metrics &amp; automated relief teacher scheduling.
+          </p>
+</div>
+<!-- 5. Payroll & Leaves -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 hover:border-[#BD5117] hover:shadow-lg transition-all duration-200 group">
+<div class="w-11 h-11 rounded-xl bg-[#1E6B55]/10 text-[#1E6B55] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+</div>
+<h3 class="font-title-card text-title-card text-[#24283B] font-bold mb-2">Payroll &amp; Leaves</h3>
+<p class="font-body-sm text-body-sm text-[#565B6B] leading-relaxed">
+            Indian statutory compliance (EPF, ESI, TDS Form 16), customized salary bands, automated payslip delivery &amp; leave ledgers.
+          </p>
+</div>
+<!-- 6. Academics & Exams -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 hover:border-[#BD5117] hover:shadow-lg transition-all duration-200 group">
+<div class="w-11 h-11 rounded-xl bg-[#5054A6]/10 text-[#5054A6] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">assignment</span>
+</div>
+<h3 class="font-title-card text-title-card text-[#24283B] font-bold mb-2">Academics &amp; Exams</h3>
+<p class="font-body-sm text-body-sm text-[#565B6B] leading-relaxed">
+            CBSE 9-point grading, ICSE rubrics, question banks, hall tickets, weighted internal assessments &amp; automated report cards.
+          </p>
+</div>
+<!-- 7. Teaching & Planning -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 hover:border-[#BD5117] hover:shadow-lg transition-all duration-200 group">
+<div class="w-11 h-11 rounded-xl bg-[#3D6898]/10 text-[#3D6898] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">calendar_month</span>
+</div>
+<h3 class="font-title-card text-title-card text-[#24283B] font-bold mb-2">Teaching &amp; Planning</h3>
+<p class="font-body-sm text-body-sm text-[#565B6B] leading-relaxed">
+            Period timetables with teacher collision detection, syllabus tracking, digital lesson plans &amp; homework broadcast.
+          </p>
+</div>
+<!-- 8. Attendance -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 hover:border-[#BD5117] hover:shadow-lg transition-all duration-200 group">
+<div class="w-11 h-11 rounded-xl bg-[#A83E43]/10 text-[#A83E43] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">fact_check</span>
+</div>
+<h3 class="font-title-card text-title-card text-[#24283B] font-bold mb-2">Attendance</h3>
+<p class="font-body-sm text-body-sm text-[#565B6B] leading-relaxed">
+            Biometric facial recognition, RFID turnstile sync, or teacher 2-click roll call with automated instant SMS to parents.
+          </p>
+</div>
+<!-- 9. Fees & Payments -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 hover:border-[#BD5117] hover:shadow-lg transition-all duration-200 group">
+<div class="w-11 h-11 rounded-xl bg-[#FDEFE5] text-[#BD5117] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">credit_card</span>
+</div>
+<h3 class="font-title-card text-title-card text-[#24283B] font-bold mb-2">Fees &amp; Payments</h3>
+<p class="font-body-sm text-body-sm text-[#565B6B] leading-relaxed">
+            Custom installment structures, concessions, direct UPI gateway, bank NACH reconciliations &amp; physical counter receipts.
+          </p>
+</div>
+<!-- 10. Transport & Auxiliary -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 hover:border-[#BD5117] hover:shadow-lg transition-all duration-200 group">
+<div class="w-11 h-11 rounded-xl bg-[#8C591A]/10 text-[#8C591A] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">directions_bus</span>
+</div>
+<h3 class="font-title-card text-title-card text-[#24283B] font-bold mb-2">Transport &amp; Auxiliary</h3>
+<p class="font-body-sm text-body-sm text-[#565B6B] leading-relaxed">
+            GPS vehicle telemetry, stop-wise route manifests, driver fitness records, hostel mess allocation &amp; infirmary stock.
+          </p>
+</div>
+<!-- 11. Communications -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 hover:border-[#BD5117] hover:shadow-lg transition-all duration-200 group">
+<div class="w-11 h-11 rounded-xl bg-[#1E6B55]/10 text-[#1E6B55] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<h3 class="font-title-card text-title-card text-[#24283B] font-bold mb-2">Communications</h3>
+<p class="font-body-sm text-body-sm text-[#565B6B] leading-relaxed">
+            Official WhatsApp Business API integration, SMS alerts, push alerts &amp; urgent circulars with digital read-receipts.
+          </p>
+</div>
+<!-- 12. Academic Calendar -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 hover:border-[#BD5117] hover:shadow-lg transition-all duration-200 group">
+<div class="w-11 h-11 rounded-xl bg-[#3D6898]/10 text-[#3D6898] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">event</span>
+</div>
+<h3 class="font-title-card text-title-card text-[#24283B] font-bold mb-2">Academic Calendar</h3>
+<p class="font-body-sm text-body-sm text-[#565B6B] leading-relaxed">
+            Annual operational master schedule, examination datesheets, state gazetted holidays &amp; slot-wise PTM booking.
+          </p>
+</div>
+<!-- 13. Reports & Analytics -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 hover:border-[#BD5117] hover:shadow-lg transition-all duration-200 group">
+<div class="w-11 h-11 rounded-xl bg-[#A83E43]/10 text-[#A83E43] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">bar_chart</span>
+</div>
+<h3 class="font-title-card text-title-card text-[#24283B] font-bold mb-2">Reports &amp; Analytics</h3>
+<p class="font-body-sm text-body-sm text-[#565B6B] leading-relaxed">
+            Board inspection readiness registers, fee defaulter aging brackets, cohort trends &amp; teacher productivity analysis.
+          </p>
+</div>
+<!-- 14. Documents & Settings -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 hover:border-[#BD5117] hover:shadow-lg transition-all duration-200 group">
+<div class="w-11 h-11 rounded-xl bg-[#5054A6]/10 text-[#5054A6] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">folder_shared</span>
+</div>
+<h3 class="font-title-card text-title-card text-[#24283B] font-bold mb-2">Documents &amp; Settings</h3>
+<p class="font-body-sm text-body-sm text-[#565B6B] leading-relaxed">
+            Automated Transfer Certificates (TC) with verification QR codes, bonafide certificates, CBSE audit exports &amp; RBAC policies.
+          </p>
+</div>
+</div>
+<!-- Bottom Link -->
+<div class="text-center">
+<a class="inline-flex items-center gap-2 font-headline-sm text-sm sm:text-base font-bold text-[#BD5117] hover:text-[#A64510] transition-colors" href="#">
+<span>See every module with interactive live previews</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 4. ZERO RE-KEYING FLOW                     -->
+<!-- ========================================== -->
+<section class="w-full bg-[#F8F5F2] py-space-xl lg:py-space-2xl border-t border-[#E7E5DF]">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-[#BD5117] font-bold block mb-2">
+          Zero Re-Keying
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-[#24283B] font-bold tracking-tight mb-space-sm">
+          Data entered once, trusted everywhere
+        </h2>
+<p class="font-body-lg text-body-lg text-[#565B6B]">
+          Watch how a single admission cascades seamlessly into finance, daily academics, parent communications and board compliance without human re-entry.
+        </p>
+</div>
+<!-- Flow Container -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative mb-space-xl">
+<!-- Step 1 -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-5 shadow-xs relative">
+<div class="w-8 h-8 rounded-full bg-[#BD5117] text-white font-bold text-xs flex items-center justify-center mb-3">
+            01
+          </div>
+<span class="text-[10px] uppercase font-bold text-[#BD5117] tracking-wider block mb-1">Admissions CRM</span>
+<h4 class="font-title-card text-sm font-bold text-[#24283B] mb-2">Student Enrolled</h4>
+<p class="font-body-sm text-xs text-[#565B6B] leading-relaxed">
+            Parent submits verification docs. System instantly generates immutable Student ID and roll number.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-5 shadow-xs relative">
+<div class="w-8 h-8 rounded-full bg-[#8C591A] text-white font-bold text-xs flex items-center justify-center mb-3">
+            02
+          </div>
+<span class="text-[10px] uppercase font-bold text-[#8C591A] tracking-wider block mb-1">Fees &amp; Billing</span>
+<h4 class="font-title-card text-sm font-bold text-[#24283B] mb-2">Structure Assigned</h4>
+<p class="font-body-sm text-xs text-[#565B6B] leading-relaxed">
+            Auto-assigns class fee category, sibling concession logic, and generates Term 1 invoice with UPI payment link.
+          </p>
+</div>
+<!-- Step 3 -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-5 shadow-xs relative">
+<div class="w-8 h-8 rounded-full bg-[#3D6898] text-white font-bold text-xs flex items-center justify-center mb-3">
+            03
+          </div>
+<span class="text-[10px] uppercase font-bold text-[#3D6898] tracking-wider block mb-1">Academics</span>
+<h4 class="font-title-card text-sm font-bold text-[#24283B] mb-2">Synced to Class Roll</h4>
+<p class="font-body-sm text-xs text-[#565B6B] leading-relaxed">
+            Biometric credentials pushed to turnstiles; student auto-appears on teacher's daily roll and timetable roster.
+          </p>
+</div>
+<!-- Step 4 -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-5 shadow-xs relative">
+<div class="w-8 h-8 rounded-full bg-[#1E6B55] text-white font-bold text-xs flex items-center justify-center mb-3">
+            04
+          </div>
+<span class="text-[10px] uppercase font-bold text-[#1E6B55] tracking-wider block mb-1">Parent App</span>
+<h4 class="font-title-card text-sm font-bold text-[#24283B] mb-2">App Credentials Live</h4>
+<p class="font-body-sm text-xs text-[#565B6B] leading-relaxed">
+            Parents receive WhatsApp onboarding link, instant access to bus tracking, homework broadcast &amp; digital fee receipts.
+          </p>
+</div>
+<!-- Step 5 -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-5 shadow-xs relative">
+<div class="w-8 h-8 rounded-full bg-[#5054A6] text-white font-bold text-xs flex items-center justify-center mb-3">
+            05
+          </div>
+<span class="text-[10px] uppercase font-bold text-[#5054A6] tracking-wider block mb-1">Board Compliance</span>
+<h4 class="font-title-card text-sm font-bold text-[#24283B] mb-2">Audit Ready</h4>
+<p class="font-body-sm text-xs text-[#565B6B] leading-relaxed">
+            Instantly reflected in aggregate CBSE OASIS returns, state UDISE+ registers, and Transfer Certificate tracking.
+          </p>
+</div>
+</div>
+<!-- Security Foundation Banner -->
+<div class="bg-white rounded-[14px] border border-[#E7E5DF] p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#BD5117] text-[24px]">verified</span>
+<p class="font-body-sm text-sm text-[#24283B] font-medium">
+            All orchestrated under one immutable <strong>Role-Based Access Control (RBAC)</strong> security foundation with multi-campus data isolation.
+          </p>
+</div>
+<a class="font-label-md text-xs font-bold text-[#BD5117] hover:underline shrink-0" href="#security">
+          Learn about security →
+        </a>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 5. BUILT AROUND THE PEOPLE                 -->
+<!-- ========================================== -->
+<section class="w-full bg-white py-space-xl lg:py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-[#BD5117] font-bold block mb-2">
+          Tailored Personas
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-[#24283B] font-bold tracking-tight mb-space-sm">
+          Built around the people who run the school
+        </h2>
+<p class="font-body-lg text-body-lg text-[#565B6B]">
+          Customized interfaces, tailored permissions and focused workflows for every member of your educational institution.
+        </p>
+</div>
+<!-- 4 Persona Cards (2x2 Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-desktop mb-space-lg">
+<!-- Persona 1: Trustees & Leadership -->
+<div class="bg-[#F8F5F2] rounded-[16px] border border-[#E7E5DF] p-8 relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 rounded-full bg-white border border-[#E7E5DF] text-xs font-bold uppercase tracking-wider text-[#BD5117]">
+                Leadership &amp; Trustees
+              </span>
+<span class="material-symbols-outlined text-[#BD5117] text-[28px]">account_balance</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-[#24283B] font-bold mb-3">
+              Multi-branch oversight without phone calls
+            </h3>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center gap-2 text-sm text-[#565B6B]">
+<span class="material-symbols-outlined text-[16px] text-[#1E6B55]">check_circle</span>
+                Consolidated Capex/Opex &amp; cash flows across all sister institutions
+              </li>
+<li class="flex items-center gap-2 text-sm text-[#565B6B]">
+<span class="material-symbols-outlined text-[16px] text-[#1E6B55]">check_circle</span>
+                Real-time fee collection aging and bank reconciliation summaries
+              </li>
+<li class="flex items-center gap-2 text-sm text-[#565B6B]">
+<span class="material-symbols-outlined text-[16px] text-[#1E6B55]">check_circle</span>
+                Executive statutory compliance status (CBSE affiliation &amp; audit reports)
+              </li>
+</ul>
+</div>
+<div class="bg-white p-4 rounded-xl border-l-4 border-l-[#BD5117] border border-[#E7E5DF]">
+<p class="italic text-xs text-[#24283B] font-medium leading-relaxed">
+              "Instant clarity on cash flow and student retention across all 4 campuses without waiting for weekly spreadsheets."
+            </p>
+</div>
+</div>
+<!-- Persona 2: Admissions & Front Office -->
+<div class="bg-[#F8F5F2] rounded-[16px] border border-[#E7E5DF] p-8 relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 rounded-full bg-white border border-[#E7E5DF] text-xs font-bold uppercase tracking-wider text-[#8C591A]">
+                Admissions &amp; Front Office
+              </span>
+<span class="material-symbols-outlined text-[#8C591A] text-[28px]">support_agent</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-[#24283B] font-bold mb-3">
+              Enquiry to enrollment in under 8 minutes
+            </h3>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center gap-2 text-sm text-[#565B6B]">
+<span class="material-symbols-outlined text-[16px] text-[#1E6B55]">check_circle</span>
+                Automated enquiry pipeline from website, open-house, and walk-ins
+              </li>
+<li class="flex items-center gap-2 text-sm text-[#565B6B]">
+<span class="material-symbols-outlined text-[16px] text-[#1E6B55]">check_circle</span>
+                Spot token dispensing system for campus tours and entrance exams
+              </li>
+<li class="flex items-center gap-2 text-sm text-[#565B6B]">
+<span class="material-symbols-outlined text-[16px] text-[#1E6B55]">check_circle</span>
+                Digital document locker for birth certificates, Aadhaar &amp; transfer records
+              </li>
+</ul>
+</div>
+<div class="bg-white p-4 rounded-xl border-l-4 border-l-[#8C591A] border border-[#E7E5DF]">
+<p class="italic text-xs text-[#24283B] font-medium leading-relaxed">
+              "No physical paper trails. Parents complete document verification and pay the seat token fee on their phone in minutes."
+            </p>
+</div>
+</div>
+<!-- Persona 3: Teachers & Academic Coordinators -->
+<div class="bg-[#F8F5F2] rounded-[16px] border border-[#E7E5DF] p-8 relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 rounded-full bg-white border border-[#E7E5DF] text-xs font-bold uppercase tracking-wider text-[#3D6898]">
+                Teachers &amp; Coordinators
+              </span>
+<span class="material-symbols-outlined text-[#3D6898] text-[28px]">menu_book</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-[#24283B] font-bold mb-3">
+              Save 45 minutes of clerical work every day
+            </h3>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center gap-2 text-sm text-[#565B6B]">
+<span class="material-symbols-outlined text-[16px] text-[#1E6B55]">check_circle</span>
+                2-click digital roll call with instant absent notifications sent to parents
+              </li>
+<li class="flex items-center gap-2 text-sm text-[#565B6B]">
+<span class="material-symbols-outlined text-[16px] text-[#1E6B55]">check_circle</span>
+                Timetable clash resolver and automated relief substitute suggestions
+              </li>
+<li class="flex items-center gap-2 text-sm text-[#565B6B]">
+<span class="material-symbols-outlined text-[16px] text-[#1E6B55]">check_circle</span>
+                Bulk term marks entry with pre-configured CBSE 9-point grading matrices
+              </li>
+</ul>
+</div>
+<div class="bg-white p-4 rounded-xl border-l-4 border-l-[#3D6898] border border-[#E7E5DF]">
+<p class="italic text-xs text-[#24283B] font-medium leading-relaxed">
+              "End-of-term report card generation used to take an entire weekend. With Knowva, report cards are ready in 1 click."
+            </p>
+</div>
+</div>
+<!-- Persona 4: Finance, HR & Admin -->
+<div class="bg-[#F8F5F2] rounded-[16px] border border-[#E7E5DF] p-8 relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 rounded-full bg-white border border-[#E7E5DF] text-xs font-bold uppercase tracking-wider text-[#5054A6]">
+                HR, Finance &amp; Accounts
+              </span>
+<span class="material-symbols-outlined text-[#5054A6] text-[28px]">payments</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-[#24283B] font-bold mb-3">
+              Zero pending reconciliations at month-end
+            </h3>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center gap-2 text-sm text-[#565B6B]">
+<span class="material-symbols-outlined text-[16px] text-[#1E6B55]">check_circle</span>
+                Automated WhatsApp payment links and installment reminders
+              </li>
+<li class="flex items-center gap-2 text-sm text-[#565B6B]">
+<span class="material-symbols-outlined text-[16px] text-[#1E6B55]">check_circle</span>
+                1-click staff salary generation compliant with Indian EPF, ESI &amp; TDS
+              </li>
+<li class="flex items-center gap-2 text-sm text-[#565B6B]">
+<span class="material-symbols-outlined text-[16px] text-[#1E6B55]">check_circle</span>
+                Multi-head fee concession approval hierarchy with trustee digital sign-off
+              </li>
+</ul>
+</div>
+<div class="bg-white p-4 rounded-xl border-l-4 border-l-[#5054A6] border border-[#E7E5DF]">
+<p class="italic text-xs text-[#24283B] font-medium leading-relaxed">
+              "We slashed our uncollected fee defaulters from 14% to under 2.5% in the very first academic term."
+            </p>
+</div>
+</div>
+</div>
+<!-- Action link -->
+<div class="text-center">
+<a class="inline-flex items-center gap-2 font-headline-sm text-sm sm:text-base font-bold text-[#BD5117] hover:text-[#A64510]" href="pages/solutions.html">
+          Find your role and test tailored workflows →
+        </a>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 6. PARENT APP BAND (Dark Navy)             -->
+<!-- ========================================== -->
+<section class="w-full bg-[#1B1F30] text-white py-space-2xl relative overflow-hidden">
+<!-- Ambient subtle background circle -->
+<div class="absolute -bottom-20 -left-20 w-80 h-80 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Left Content (6 Cols) -->
+<div class="lg:col-span-6 flex flex-col items-start">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#BD5117] text-white text-xs font-bold uppercase tracking-wider mb-space-md">
+<span>New Release</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-white font-bold tracking-tight mb-space-sm">
+            Parents stay in the loop, on Android and iPhone.
+          </h2>
+<p class="font-body-lg text-body-lg text-gray-300 mb-space-lg leading-relaxed">
+            Delight 100% of your parent community with an intuitive, responsive mobile application that eliminates anxiety, reduces front-desk phone calls by 70%, and drives faster fee clearance.
+          </p>
+<!-- Feature Bullets -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-space-xl w-full">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-[#BD5117] shrink-0 mt-0.5">check_circle</span>
+<span class="text-sm text-gray-200">Real-time attendance &amp; instant leave applications</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-[#BD5117] shrink-0 mt-0.5">check_circle</span>
+<span class="text-sm text-gray-200">Daily homework diary, timetable &amp; notices</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-[#BD5117] shrink-0 mt-0.5">check_circle</span>
+<span class="text-sm text-gray-200">Exam datesheets, marks &amp; digital report cards</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-[#BD5117] shrink-0 mt-0.5">check_circle</span>
+<span class="text-sm text-gray-200">Instant fee dues &amp; UPI 1-click payment with GST receipts</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-[#BD5117] shrink-0 mt-0.5">check_circle</span>
+<span class="text-sm text-gray-200">Official school circulars with read-confirmations</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-[#BD5117] shrink-0 mt-0.5">check_circle</span>
+<span class="text-sm text-gray-200">Multilingual: English, Hindi &amp; regional languages</span>
+</div>
+</div>
+<!-- App Store Mock Badges -->
+<div class="flex flex-wrap items-center gap-3">
+<div class="flex items-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 px-4 py-2.5 rounded-[10px] cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-[24px]">android</span>
+<div class="text-left">
+<p class="text-[9px] uppercase tracking-wider text-gray-400">Available on</p>
+<p class="text-xs font-bold text-white">Google Play</p>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 px-4 py-2.5 rounded-[10px] cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-[24px]">phone_iphone</span>
+<div class="text-left">
+<p class="text-[9px] uppercase tracking-wider text-gray-400">Download for</p>
+<p class="text-xs font-bold text-white">Apple iOS</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Dual High-Fidelity Phone Showcase (6 Cols) -->
+<div class="lg:col-span-6 flex justify-center items-center gap-4 lg:gap-6 pt-8 lg:pt-0">
+<!-- Phone 1: Attendance & Home -->
+<div class="w-60 sm:w-64 bg-[#24283B] rounded-[32px] p-3 shadow-2xl border-4 border-[#3a3f55]">
+<!-- Notch -->
+<div class="w-20 h-4 bg-black rounded-full mx-auto mb-3"></div>
+<!-- Screen Content -->
+<div class="bg-surface rounded-[24px] p-3.5 text-on-surface">
+<!-- Student Header -->
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed-dim text-[#8C591A] font-bold text-xs flex items-center justify-center">
+                    DP
+                  </div>
+<div>
+<h5 class="text-xs font-bold leading-tight">Diya Patel</h5>
+<p class="text-[10px] text-on-surface-variant">Class V-A · Roll 08</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">notifications</span>
+</div>
+<!-- Monthly Attendance Stats -->
+<div class="bg-surface-container-low p-2.5 rounded-xl border border-outline-variant/30 mb-2.5">
+<div class="flex items-center justify-between text-xs mb-1">
+<span class="font-semibold text-on-surface">Monthly Attendance</span>
+<span class="font-bold text-[#1E6B55]">98.2%</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-[#1E6B55] h-full" style="width: 98%"></div>
+</div>
+<p class="text-[9px] text-on-surface-variant mt-1.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[11px] text-[#1E6B55]">verified</span>
+                  21 days attended, 0 unexcused leaves
+                </p>
+</div>
+<!-- Today's Schedule -->
+<div class="mb-2.5">
+<p class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant mb-1">Today's Subjects</p>
+<div class="space-y-1 text-[11px]">
+<div class="p-1.5 bg-surface-container-lowest rounded-lg border border-outline-variant/30 flex justify-between">
+<span class="font-medium text-on-surface">09:00 AM — English Lit.</span>
+<span class="text-[10px] text-on-surface-variant">Room 204</span>
+</div>
+<div class="p-1.5 bg-surface-container-lowest rounded-lg border border-outline-variant/30 flex justify-between">
+<span class="font-medium text-on-surface">10:30 AM — Science Lab</span>
+<span class="text-[10px] text-on-surface-variant">Chemistry Lab</span>
+</div>
+</div>
+</div>
+<!-- Live Bus Status -->
+<div class="bg-tertiary-fixed/30 border border-tertiary-fixed-dim/40 rounded-xl p-2.5 text-xs">
+<div class="flex items-center gap-1.5 text-tertiary font-bold mb-1">
+<span class="material-symbols-outlined text-[15px]">directions_bus</span>
+<span>Bus #04 On Route</span>
+</div>
+<p class="text-[10px] text-on-surface-variant">Departed campus at 03:15 PM. ETA at Green Park Stop: 03:42 PM.</p>
+</div>
+</div>
+</div>
+<!-- Phone 2: Fees & Instant UPI -->
+<div class="w-60 sm:w-64 bg-[#24283B] rounded-[32px] p-3 shadow-2xl border-4 border-[#3a3f55] hidden sm:block">
+<!-- Notch -->
+<div class="w-20 h-4 bg-black rounded-full mx-auto mb-3"></div>
+<!-- Screen Content -->
+<div class="bg-surface rounded-[24px] p-3.5 text-on-surface">
+<div class="flex items-center justify-between mb-3">
+<span class="text-[10px] uppercase font-bold text-primary">Fee Invoice #2025-Q2</span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-primary font-bold text-[9px]">Due in 5 days</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-outline-variant/30 mb-3">
+<p class="text-[11px] text-on-surface-variant mb-0.5">Total Amount Payable</p>
+<h4 class="text-xl font-extrabold text-on-surface">₹24,500</h4>
+<div class="text-[10px] text-on-surface-variant mt-2 space-y-1 border-t border-outline-variant/20 pt-2">
+<div class="flex justify-between">
+<span>Tuition Fee (Q2)</span>
+<span class="font-medium text-on-surface">₹18,000</span>
+</div>
+<div class="flex justify-between">
+<span>Transport Fee (Zone 2)</span>
+<span class="font-medium text-on-surface">₹4,500</span>
+</div>
+<div class="flex justify-between">
+<span>Computer Lab &amp; Library</span>
+<span class="font-medium text-on-surface">₹2,000</span>
+</div>
+</div>
+</div>
+<!-- UPI CTA -->
+<button class="w-full bg-[#1E6B55] hover:bg-[#165241] text-white py-2.5 rounded-[10px] text-xs font-bold flex items-center justify-center gap-1.5 shadow-sm mb-2 transition-colors">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+                Pay ₹24,500 via UPI
+              </button>
+<div class="flex items-center justify-center gap-1.5 text-[10px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] text-[#1E6B55]">lock</span>
+<span>RBI &amp; NPCI compliant 256-bit encryption</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 7. CAPABILITY CHECKLIST TEASER             -->
+<!-- ========================================== -->
+<section class="w-full bg-white py-space-xl lg:py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-[#BD5117] font-bold block mb-2">
+          Transparent Capabilities
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-[#24283B] font-bold tracking-tight mb-space-sm">
+          Every feature, named – nothing vague
+        </h2>
+<p class="font-body-lg text-body-lg text-[#565B6B]">
+          We don't hide capabilities behind enterprise sales speak. Inspect the exact features you get on day one.
+        </p>
+</div>
+<!-- Capability Table -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] overflow-hidden shadow-xs mb-space-lg">
+<div class="overflow-x-auto">
+<table class="w-full text-left text-sm border-collapse">
+<thead>
+<tr class="bg-[#F8F5F2] border-b border-[#E7E5DF] text-[#24283B]">
+<th class="py-3.5 px-6 font-bold text-xs uppercase tracking-wider">Capability</th>
+<th class="py-3.5 px-6 font-bold text-xs uppercase tracking-wider">Module</th>
+<th class="py-3.5 px-6 font-bold text-xs uppercase tracking-wider hidden sm:table-cell">Who</th>
+<th class="py-3.5 px-6 font-bold text-xs uppercase tracking-wider text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#E7E5DF] text-[#565B6B]">
+<tr class="hover:bg-[#F8F5F2]/50 transition-colors">
+<td class="py-4 px-6 font-medium text-[#24283B]">
+                  CBSE Continuous Comprehensive Evaluation (CCE) &amp; 9-point grading
+                </td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-[#5054A6]/10 text-[#5054A6]">
+                    Academics &amp; Exams
+                  </span>
+</td>
+<td class="py-4 px-6 hidden sm:table-cell text-xs">Principals, Teachers</td>
+<td class="py-4 px-6 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#1E6B55] text-white">
+                    Live
+                  </span>
+</td>
+</tr>
+<tr class="hover:bg-[#F8F5F2]/50 transition-colors">
+<td class="py-4 px-6 font-medium text-[#24283B]">
+                  Automated biometric facial recognition sync with parent SMS
+                </td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-[#A83E43]/10 text-[#A83E43]">
+                    Attendance
+                  </span>
+</td>
+<td class="py-4 px-6 hidden sm:table-cell text-xs">Front Office, Parents</td>
+<td class="py-4 px-6 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#1E6B55] text-white">
+                    Live
+                  </span>
+</td>
+</tr>
+<tr class="hover:bg-[#F8F5F2]/50 transition-colors">
+<td class="py-4 px-6 font-medium text-[#24283B]">
+                  Multi-head fee concession approval hierarchy with trustee sign-off
+                </td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-[#FDEFE5] text-[#BD5117]">
+                    Fees &amp; Payments
+                  </span>
+</td>
+<td class="py-4 px-6 hidden sm:table-cell text-xs">Accounts, Trustees</td>
+<td class="py-4 px-6 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#1E6B55] text-white">
+                    Live
+                  </span>
+</td>
+</tr>
+<tr class="hover:bg-[#F8F5F2]/50 transition-colors">
+<td class="py-4 px-6 font-medium text-[#24283B]">
+                  GPS live bus tracking with geofenced arrival notifications
+                </td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-[#8C591A]/10 text-[#8C591A]">
+                    Transport
+                  </span>
+</td>
+<td class="py-4 px-6 hidden sm:table-cell text-xs">Parents, Transport Head</td>
+<td class="py-4 px-6 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#1E6B55] text-white">
+                    Live
+                  </span>
+</td>
+</tr>
+<tr class="hover:bg-[#F8F5F2]/50 transition-colors">
+<td class="py-4 px-6 font-medium text-[#24283B]">
+                  AI-assisted timetable generator with teacher workload balancing
+                </td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-[#3D6898]/10 text-[#3D6898]">
+                    Teaching &amp; Planning
+                  </span>
+</td>
+<td class="py-4 px-6 hidden sm:table-cell text-xs">Academic Coordinators</td>
+<td class="py-4 px-6 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#BD5117] text-white">
+                    New
+                  </span>
+</td>
+</tr>
+<tr class="hover:bg-[#F8F5F2]/50 transition-colors">
+<td class="py-4 px-6 font-medium text-[#24283B]">
+                  Digital Transfer Certificate (TC) verification QR code system
+                </td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-[#5054A6]/10 text-[#5054A6]">
+                    Documents &amp; Settings
+                  </span>
+</td>
+<td class="py-4 px-6 hidden sm:table-cell text-xs">Admin Office, Regulators</td>
+<td class="py-4 px-6 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#1E6B55] text-white">
+                    Live
+                  </span>
+</td>
+</tr>
+<tr class="hover:bg-[#F8F5F2]/50 transition-colors">
+<td class="py-4 px-6 font-medium text-[#24283B]">
+                  CBSE OASIS &amp; SARAS compliance data exporter in 1 click
+                </td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-[#A83E43]/10 text-[#A83E43]">
+                    Reports &amp; Analytics
+                  </span>
+</td>
+<td class="py-4 px-6 hidden sm:table-cell text-xs">System Admin</td>
+<td class="py-4 px-6 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold border border-[#868B99] text-[#565B6B]">
+                    Coming soon
+                  </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Capability CTA -->
+<div class="text-center">
+<button class="inline-flex items-center gap-2 bg-surface-container-lowest border border-[#E7E5DF] text-[#24283B] hover:bg-[#F8F5F2] px-6 py-3.5 rounded-[10px] font-semibold text-sm transition-all shadow-xs">
+<span>Open the full 140+ capability checklist</span>
+<span class="material-symbols-outlined text-[18px]">checklist</span>
+</button>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 8. SECURITY & COMPLIANCE                   -->
+<!-- ========================================== -->
+<section class="w-full bg-[#F8F5F2] py-space-xl lg:py-space-2xl border-t border-[#E7E5DF]" id="security">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-[#BD5117] font-bold block mb-2">
+          Enterprise Governance
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-[#24283B] font-bold tracking-tight mb-space-sm">
+          Security your IT team can sign off
+        </h2>
+<p class="font-body-lg text-body-lg text-[#565B6B]">
+          Enterprise-grade safety, privacy by design, and strict adherence to India's DPDP Act and board guidelines.
+        </p>
+</div>
+<!-- 4 Pillars Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-lg">
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 shadow-xs">
+<div class="w-10 h-10 rounded-xl bg-[#BD5117]/10 text-[#BD5117] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-[22px]">manage_accounts</span>
+</div>
+<h4 class="font-title-card text-base font-bold text-[#24283B] mb-2">Field-Level RBAC</h4>
+<p class="font-body-sm text-xs text-[#565B6B] leading-relaxed">
+            Fine-grained permissions down to individual input fields. Class teachers only access their assigned division; accounts cannot alter examination scores.
+          </p>
+</div>
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 shadow-xs">
+<div class="w-10 h-10 rounded-xl bg-[#5054A6]/10 text-[#5054A6] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-[22px]">history_edu</span>
+</div>
+<h4 class="font-title-card text-base font-bold text-[#24283B] mb-2">Immutable Audit Trail</h4>
+<p class="font-body-sm text-xs text-[#565B6B] leading-relaxed">
+            Every login, marks alteration, fee concession, and record edit is permanently recorded with user identity, timestamp, and IP signature.
+          </p>
+</div>
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 shadow-xs">
+<div class="w-10 h-10 rounded-xl bg-[#1E6B55]/10 text-[#1E6B55] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-[22px]">domain_verification</span>
+</div>
+<h4 class="font-title-card text-base font-bold text-[#24283B] mb-2">Multi-Tenant Isolation</h4>
+<p class="font-body-sm text-xs text-[#565B6B] leading-relaxed">
+            Dedicated logical schemas prevent accidental cross-campus data leakage across large educational trusts and sister institutions.
+          </p>
+</div>
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 shadow-xs">
+<div class="w-10 h-10 rounded-xl bg-[#3D6898]/10 text-[#3D6898] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-[22px]">enhanced_encryption</span>
+</div>
+<h4 class="font-title-card text-base font-bold text-[#24283B] mb-2">AES-256 Encryption</h4>
+<p class="font-body-sm text-xs text-[#565B6B] leading-relaxed">
+            State-of-the-art encryption at rest and TLS 1.3 in transit. Automated daily geo-redundant snapshots hosted within AWS Mumbai data centers.
+          </p>
+</div>
+</div>
+<div class="text-center">
+<a class="inline-flex items-center gap-1.5 font-label-md text-sm font-bold text-[#BD5117] hover:underline" href="pages/security.html">
+          Read the complete security &amp; compliance whitepaper →
+        </a>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 9. PRICING TEASER                          -->
+<!-- ========================================== -->
+<section class="w-full bg-white py-space-xl lg:py-space-2xl">
+<div class="max-w-5xl mx-auto px-margin lg:px-margin-desktop">
+<div class="bg-[#F8F5F2] rounded-[24px] border border-[#E7E5DF] p-8 lg:p-12 relative overflow-hidden shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Pricing Callout Left (7 Cols) -->
+<div class="lg:col-span-7">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-[#BD5117] font-bold block mb-2">
+              Predictable Institutional Pricing
+            </span>
+<h2 class="font-headline-lg text-headline-lg text-[#24283B] font-bold tracking-tight mb-2">
+              Straightforward, honest pricing for schools
+            </h2>
+<p class="font-display-hero text-[32px] sm:text-[40px] leading-tight text-[#BD5117] font-extrabold mb-6">
+              Plans from ₹99 <span class="font-body-md text-base text-[#565B6B] font-normal">/ student / year</span>
+</p>
+<!-- Value checklist -->
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-2.5 text-sm text-[#24283B]">
+<span class="material-symbols-outlined text-[18px] text-[#1E6B55]">check</span>
+<span>No setup fee or upfront software license costs</span>
+</div>
+<div class="flex items-center gap-2.5 text-sm text-[#24283B]">
+<span class="material-symbols-outlined text-[18px] text-[#1E6B55]">check</span>
+<span>AWS cloud hosting, daily backups &amp; automatic software updates included</span>
+</div>
+<div class="flex items-center gap-2.5 text-sm text-[#24283B]">
+<span class="material-symbols-outlined text-[18px] text-[#1E6B55]">check</span>
+<span>1-month comprehensive free pilot using your real school data</span>
+</div>
+<div class="flex items-center gap-2.5 text-sm text-[#24283B]">
+<span class="material-symbols-outlined text-[18px] text-[#1E6B55]">check</span>
+<span>Zero vendor lock-in — export your complete database anytime in 1 click</span>
+</div>
+</div>
+</div>
+<!-- CTA Box Right (5 Cols) -->
+<div class="lg:col-span-5 bg-white p-6 rounded-[16px] border border-[#E7E5DF] text-center flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-[#FDEFE5] text-[#BD5117] flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[24px]">calculate</span>
+</div>
+<h4 class="font-title-card text-base font-bold text-[#24283B] mb-1">Estimate your cost</h4>
+<p class="font-body-sm text-xs text-[#565B6B] mb-5">
+              Select your student count and board requirements to get an immediate custom quotation.
+            </p>
+<div class="w-full space-y-2.5">
+<a class="w-full inline-flex items-center justify-center bg-[#BD5117] text-white hover:bg-[#A64510] py-3 rounded-[10px] font-semibold text-sm transition-all shadow-sm" href="pages/pricing.html">
+                See transparent pricing plans
+              </a>
+<a class="w-full inline-flex items-center justify-center bg-white border border-[#E7E5DF] text-[#24283B] hover:bg-[#F8F5F2] py-3 rounded-[10px] font-semibold text-sm transition-all" href="pages/pricing.html#calculator"'s cost
+              </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 10. STATS & SOCIAL PROOF                   -->
+<!-- ========================================== -->
+<section class="w-full bg-[#F8F5F2] py-space-xl lg:py-space-2xl border-t border-[#E7E5DF]">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<!-- 4 Stat Tiles -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mb-space-2xl">
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 text-center shadow-xs">
+<p class="font-display-hero text-3xl lg:text-4xl text-[#BD5117] font-extrabold mb-1">350+</p>
+<p class="font-title-card text-xs lg:text-sm font-bold text-[#24283B]">Campuses Live</p>
+<p class="font-body-sm text-[12px] text-[#565B6B]">Across 14 Indian states</p>
+</div>
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 text-center shadow-xs">
+<p class="font-display-hero text-3xl lg:text-4xl text-[#BD5117] font-extrabold mb-1">4.2 Lakh</p>
+<p class="font-title-card text-xs lg:text-sm font-bold text-[#24283B]">Students Managed</p>
+<p class="font-body-sm text-[12px] text-[#565B6B]">Active daily profiles</p>
+</div>
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 text-center shadow-xs">
+<p class="font-display-hero text-3xl lg:text-4xl text-[#BD5117] font-extrabold mb-1">99.98%</p>
+<p class="font-title-card text-xs lg:text-sm font-bold text-[#24283B]">Uptime SLA</p>
+<p class="font-body-sm text-[12px] text-[#565B6B]">AWS Mumbai Cloud infra</p>
+</div>
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-6 text-center shadow-xs">
+<p class="font-display-hero text-3xl lg:text-4xl text-[#BD5117] font-extrabold mb-1">&lt; 12m</p>
+<p class="font-title-card text-xs lg:text-sm font-bold text-[#24283B]">Support Response</p>
+<p class="font-body-sm text-[12px] text-[#565B6B]">Dedicated success reps</p>
+</div>
+</div>
+<!-- Testimonials -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-desktop">
+<!-- Card 1 -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-8 border-l-4 border-l-[#8C591A] shadow-xs flex flex-col justify-between">
+<div class="mb-6">
+<div class="flex text-[#8C591A] mb-3">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="font-body-lg text-sm sm:text-base text-[#24283B] italic leading-relaxed">
+              "Managing 3 campuses under our trust was a chaotic mess of disconnected spreadsheets and delayed fee reconciliations. Knowva brought total financial visibility to our board meetings in the first 60 days."
+            </p>
+</div>
+<div>
+<h5 class="font-title-card text-sm font-bold text-[#24283B]">Dr. Ramanathan K.</h5>
+<p class="font-body-sm text-xs text-[#565B6B]">Trustee &amp; Managing Director · Heritage Vidyapeeth Group</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white rounded-[16px] border border-[#E7E5DF] p-8 border-l-4 border-l-[#BD5117] shadow-xs flex flex-col justify-between">
+<div class="mb-6">
+<div class="flex text-[#BD5117] mb-3">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="font-body-lg text-sm sm:text-base text-[#24283B] italic leading-relaxed">
+              "Our teachers used to dread the end-of-term report card week. With Knowva's automated CBSE grading and timetable module, our administrative overhead dropped by nearly 60%."
+            </p>
+</div>
+<div>
+<h5 class="font-title-card text-sm font-bold text-[#24283B]">Sister Maria D'Souza</h5>
+<p class="font-body-sm text-xs text-[#565B6B]">Principal · St. Xavier's Senior Secondary School</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 11. FINAL HIGH-IMPACT CALL TO ACTION       -->
+<!-- ========================================== -->
+<section class="w-full bg-[#1B1F30] text-white py-space-2xl relative text-center overflow-hidden">
+<!-- Ambient subtle background circle -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-4xl mx-auto px-margin lg:px-margin-desktop relative z-10 flex flex-col items-center">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed font-bold block mb-3">
+        Experience The Difference
+      </span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl lg:text-headline-lg text-white font-extrabold tracking-tight mb-space-sm max-w-2xl">
+        See Knowva on your school's data.
+      </h2>
+<p class="font-body-lg text-base sm:text-lg text-gray-300 mb-space-lg max-w-2xl leading-relaxed">
+        Book a personalized 30-minute walkthrough with our education specialists. We'll map your current fee structures, timetable and board requirements live.
+      </p>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-space-sm w-full sm:w-auto mb-space-md">
+<a class="w-full sm:w-auto inline-flex items-center justify-center bg-[#BD5117] text-white hover:bg-[#A64510] text-base lg:text-lg font-bold px-8 py-4 rounded-[10px] transition-all shadow-lg hover:shadow-xl active:scale-[0.99]" href="pages/demo.html">
+          Book a demo
+          <span class="material-symbols-outlined text-[20px] ml-2">calendar_month</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 hover:bg-white/15 text-white border border-white/20 text-sm sm:text-base font-semibold px-6 py-4 rounded-[10px] transition-all" href="tel:+91800566982">
+<span class="material-symbols-outlined text-[18px] mr-2">phone_in_talk</span>
+          Talk to an implementation specialist (+91 800-KNOWVA)
+        </a>
+</div>
+<!-- Trust note -->
+<p class="text-xs text-gray-400 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">school</span>
+<span>Trusted by top CBSE, ICSE and State Board institutions across India.</span>
+</p>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low border-t border-outline-variant/40 pt-space-2xl pb-space-xl"><div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop mb-space-2xl"><div><h4 class="font-title-card text-title-card text-on-surface mb-space-md">Product</h4><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm"><a href="pages/product.html#overview" class="text-on-surface-variant hover:text-primary transition-colors">Overview</a></li><li class="font-body-sm text-body-sm"><a href="pages/product.html#students" class="text-on-surface-variant hover:text-primary transition-colors">Students</a></li><li class="font-body-sm text-body-sm"><a href="pages/product.html#admissions" class="text-on-surface-variant hover:text-primary transition-colors">Admissions</a></li><li class="font-body-sm text-body-sm"><a href="pages/product.html#staff" class="text-on-surface-variant hover:text-primary transition-colors">Staff &amp; faculty</a></li><li class="font-body-sm text-body-sm"><a href="pages/product.html#payroll" class="text-on-surface-variant hover:text-primary transition-colors">Payroll</a></li><li class="font-body-sm text-body-sm"><a href="pages/product.html#academics" class="text-on-surface-variant hover:text-primary transition-colors">Academics &amp; Exams</a></li><li class="font-body-sm text-body-sm"><a href="pages/product.html#teaching" class="text-on-surface-variant hover:text-primary transition-colors">Teaching &amp; Planning</a></li><li class="font-body-sm text-body-sm"><a href="pages/product.html#attendance" class="text-on-surface-variant hover:text-primary transition-colors">Attendance</a></li><li class="font-body-sm text-body-sm"><a href="pages/fees.html" class="text-on-surface-variant hover:text-primary transition-colors">Fees &amp; payments</a></li><li class="font-body-sm text-body-sm"><a href="pages/product.html#transport" class="text-on-surface-variant hover:text-primary transition-colors">Transport &amp; Auxiliary</a></li><li class="font-body-sm text-body-sm"><a href="pages/product.html#communications" class="text-on-surface-variant hover:text-primary transition-colors">Communications</a></li><li class="font-body-sm text-body-sm"><a href="pages/product.html#calendar" class="text-on-surface-variant hover:text-primary transition-colors">Calendar</a></li><li class="font-body-sm text-body-sm"><a href="pages/product.html#reports" class="text-on-surface-variant hover:text-primary transition-colors">Reports</a></li><li class="font-body-sm text-body-sm"><a href="pages/product.html#documents" class="text-on-surface-variant hover:text-primary transition-colors">Documents &amp; Settings</a></li></ul></div><div><h4 class="font-title-card text-title-card text-on-surface mb-space-md">Solutions</h4><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm"><a href="pages/solutions.html#trustees" class="text-on-surface-variant hover:text-primary transition-colors">Trustees &amp; Owners</a></li><li class="font-body-sm text-body-sm"><a href="pages/solutions.html#principals" class="text-on-surface-variant hover:text-primary transition-colors">Principals</a></li><li class="font-body-sm text-body-sm"><a href="pages/solutions.html#admissions" class="text-on-surface-variant hover:text-primary transition-colors">Admissions Head</a></li><li class="font-body-sm text-body-sm"><a href="pages/solutions.html#coordinators" class="text-on-surface-variant hover:text-primary transition-colors">Academic Coordinators</a></li><li class="font-body-sm text-body-sm"><a href="pages/solutions.html#teachers" class="text-on-surface-variant hover:text-primary transition-colors">Teachers</a></li><li class="font-body-sm text-body-sm"><a href="pages/solutions.html#finance" class="text-on-surface-variant hover:text-primary transition-colors">Finance &amp; Accounts</a></li><li class="font-body-sm text-body-sm"><a href="pages/solutions.html#transport" class="text-on-surface-variant hover:text-primary transition-colors">Transport Manager</a></li><li class="font-body-sm text-body-sm"><a href="pages/solutions.html#admins" class="text-on-surface-variant hover:text-primary transition-colors">IT &amp; System Admins</a></li></ul></div><div><h4 class="font-title-card text-title-card text-on-surface mb-space-md">Company</h4><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm"><a href="pages/about.html" class="text-on-surface-variant hover:text-primary transition-colors">About Knowva Systems</a></li><li class="font-body-sm text-body-sm"><a href="pages/security.html" class="text-on-surface-variant hover:text-primary transition-colors">Security &amp; Compliance</a></li><li class="font-body-sm text-body-sm"><a href="pages/resources.html" class="text-on-surface-variant hover:text-primary transition-colors">Resources &amp; Guides</a></li><li class="font-body-sm text-body-sm"><a href="pages/about.html#careers" class="text-on-surface-variant hover:text-primary transition-colors">Careers</a></li><li class="font-body-sm text-body-sm"><a href="pages/demo.html" class="text-on-surface-variant hover:text-primary transition-colors">Contact Us</a></li></ul></div><div><h4 class="font-title-card text-title-card text-on-surface mb-space-md">Legal &amp; Compliance</h4><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm"><a href="pages/security.html#privacy" class="text-on-surface-variant hover:text-primary transition-colors">Privacy Policy</a></li><li class="font-body-sm text-body-sm"><a href="pages/security.html#terms" class="text-on-surface-variant hover:text-primary transition-colors">Terms of Service</a></li><li class="font-body-sm text-body-sm"><a href="pages/security.html#dpdp" class="text-on-surface-variant hover:text-primary transition-colors">Student Data Safety (DPDP Act India)</a></li><li class="font-body-sm text-body-sm"><a href="pages/security.html#board-audit" class="text-on-surface-variant hover:text-primary transition-colors">CBSE/ICSE Board Audit readiness</a></li></ul></div></div><div class="border-t border-outline-variant/30 pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-left">© Knowva Systems Inc. All rights reserved. Made for schools in India.</p><div class="flex items-center gap-space-md text-on-surface-variant"><span class="material-symbols-outlined text-[20px] hover:text-primary transition-colors cursor-pointer">share</span><span class="material-symbols-outlined text-[20px] hover:text-primary transition-colors cursor-pointer">public</span><span class="material-symbols-outlined text-[20px] hover:text-primary transition-colors cursor-pointer">smart_display</span></div></div></div></footer>
+
+<span id="PING_CONTENT_PUSH_NOTIFICATION" style="display: none;"></span>
+
+<span id="PING_CONTENT_PUSH_NOTIFICATION" style="display: none;"></span>
+
+<script src="assets/js/app.js"></script>
+</body></html>

@@ -1,0 +1,1023 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta name="description" content="Explore the 14 integrated modules of Knowva School ERP covering academics, admissions, fees, transport, and governance.">
+<title>Product Architecture & 14 Modules — Knowva School ERP</title><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "outline": "#8b7268", "primary-fixed-dim": "#ffb596", "secondary-fixed-dim": "#fcb972", "on-primary-fixed": "#360f00", "on-secondary-container": "#794909", "secondary-fixed": "#ffdcbc", "surface-bright": "#fbf8ff", "on-tertiary-fixed-variant": "#3a3d8e", "tertiary": "#4d51a3", "on-tertiary-fixed": "#080863", "background": "#fbf8ff", "on-surface": "#161b2d", "tertiary-fixed-dim": "#bfc1ff", "tertiary-container": "#666abd", "on-error": "#ffffff", "surface": "#fbf8ff", "surface-dim": "#d6d8f2", "on-primary": "#ffffff", "on-tertiary-container": "#faf7ff", "on-secondary": "#ffffff", "primary-fixed": "#ffdbcd", "secondary-container": "#ffbc74", "tertiary-fixed": "#e1e0ff", "surface-tint": "#a33e00", "on-primary-fixed-variant": "#7c2e00", "surface-container-highest": "#dee1fb", "surface-container-lowest": "#ffffff", "on-primary-container": "#fff6f4", "on-background": "#161b2d", "error-container": "#ffdad6", "on-secondary-fixed": "#2c1700", "primary-container": "#bd5117", "outline-variant": "#dec0b5", "on-tertiary": "#ffffff", "surface-container": "#ececff", "inverse-on-surface": "#efefff", "surface-variant": "#dee1fb", "primary": "#9b3b00", "inverse-surface": "#2b2f43", "on-surface-variant": "#574239", "inverse-primary": "#ffb596", "surface-container-high": "#e4e7ff", "secondary": "#855314", "on-error-container": "#93000a", "surface-container-low": "#f3f2ff", "on-secondary-fixed-variant": "#683d00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "margin": "1.5rem", "space-xs": "0.375rem", "space-2xl": "5rem", "gutter-desktop": "2rem", "space-sm": "0.625rem", "space-xl": "3rem", "margin-desktop": "4rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "margin-mobile": "1.25rem", "space-lg": "1.75rem" }, "fontFamily": { "display-hero": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-md": [ "DM Sans" ], "body-sm": [ "DM Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "title-card": [ "Plus Jakarta Sans" ], "label-caps": [ "DM Sans" ], "body-lg": [ "DM Sans" ], "display-hero-mobile": [ "Plus Jakarta Sans" ], "label-md": [ "DM Sans" ] }, "fontSize": { "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "headline-sm": [ "22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" } ], "body-sm": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "title-card": [ "19px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-caps": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "400" } ], "display-hero-mobile": [ "38px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "label-md": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" } ] } } } };</script><link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<link rel="stylesheet" href="../assets/css/styles.css?v=2">
+</head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/40"><div class="h-20 max-w-7xl mx-auto px-margin lg:px-margin-desktop flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm shrink-0"><a href="#" class="flex items-center gap-2 font-display font-bold text-xl text-ink"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-xl shadow-sm">K</div><span>Knowva Systems</span></a></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="text-primary font-headline-sm"><a class="font-label-md text-label-md text-primary font-headline-sm font-semibold border-b-2 border-primary transition-colors py-space-xs" data-path="product" href="product.html" aria-current="page">Product</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="capabilities" href="capabilities.html">Capabilities</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="solutions" href="solutions.html">Solutions</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="parent-app" href="parent-app.html">Parent app</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="security" href="security.html">Security</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="pricing" href="pricing.html">Pricing</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="resources" href="resources.html">Resources</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="about" href="about.html">About</a></nav><div class="flex items-center gap-space-md shrink-0">
+<button id="mobile-nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" class="xl:hidden w-10 h-10 rounded-lg bg-surface-container-low border border-outline-variant flex items-center justify-center text-on-surface hover:text-primary transition-colors shrink-0">
+  <span class="material-symbols-outlined text-[24px]">menu</span>
+</button><a class="inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md px-5 py-2.5 rounded-[10px] hover:bg-primary transition-all shadow-[0_4px_14px_rgba(189,81,23,0.25)] active:scale-[0.99]" data-path="book-a-demo" href="demo.html">Book a demo</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><!-- Mobile Navigation Drawer -->
+<div id="mobile-menu" class="hidden xl:hidden fixed inset-x-0 top-20 bg-surface-container-lowest/98 backdrop-blur-xl border-b border-outline-variant/60 shadow-2xl p-6 z-50 transition-all">
+  <nav class="flex flex-col gap-3 font-medium">
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-primary font-bold bg-surface-container-low" href="product.html">Product</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="capabilities.html">Capabilities</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="solutions.html">Solutions</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="parent-app.html">Parent app</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="security.html">Security</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="pricing.html">Pricing</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="resources.html">Resources</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="about.html">About</a>
+    <div class="pt-3 border-t border-outline-variant/30 flex flex-col gap-2">
+      <a class="w-full inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md px-5 py-3 rounded-[10px] hover:bg-primary transition-all shadow-md text-center" href="demo.html">Book a demo</a>
+    </div>
+  </nav>
+</div>
+</header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Nav Active State Injector -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const navLinks = document.querySelectorAll('header nav a[data-path="product"]');
+      navLinks.forEach(link => {
+        link.classList.remove('text-on-surface-variant');
+        link.classList.add('text-primary', 'font-headline-sm');
+      });
+    });
+  </script>
+<!-- 1. HERO SECTION -->
+<section class="relative w-full bg-surface-container-lowest overflow-hidden pb-space-2xl pt-space-xl">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+<!-- Eyebrow Pill -->
+<div class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-primary-fixed text-primary font-label-caps uppercase tracking-wider mb-space-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Complete K-12 Product Architecture</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight mb-space-md">
+          One platform, fourteen connected modules.
+        </h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mb-space-xl">
+          Built as connected modules on a shared, role-aware core, so a student enrolled in Admissions appears in Students, is billed in Fees, and shows up in Attendance and Academics without re-keying anything.
+        </p>
+<!-- Dual CTAs -->
+<div class="flex flex-wrap items-center justify-center gap-space-md mb-space-2xl">
+<a class="inline-flex items-center justify-center gap-space-xs bg-primary-container text-on-primary font-label-md px-7 py-3.5 rounded-[10px] hover:bg-primary transition-all shadow-[0_4px_14px_rgba(189,81,23,0.25)] hover:-translate-y-0.5 active:scale-[0.99]" href="demo.html">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+<span>Book a demo</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs bg-surface-container-lowest text-on-surface font-label-md px-7 py-3.5 rounded-[10px] hover:bg-surface-container-low transition-all shadow-sm hover:-translate-y-0.5" href="#architecture">
+<span>See how it fits together</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+</div>
+<!-- Live Sync Status Banner Preview -->
+<div class="w-full bg-surface-container-low rounded-2xl p-space-md shadow-md">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container-lowest rounded-xl p-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+<span class="font-label-caps text-on-surface uppercase tracking-wider">Unified Core Bus: Real-Time Sync</span>
+<span class="text-on-surface-variant font-body-sm text-xs hidden sm:inline">• Latency &lt; 42ms</span>
+</div>
+<!-- Panoramic Interactive Chips -->
+<div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto py-1 text-xs">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-tertiary font-medium">
+<span class="material-symbols-outlined text-[14px]">how_to_reg</span> Admissions
+              </span>
+<span class="text-outline-variant font-bold">→</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-primary font-medium">
+<span class="material-symbols-outlined text-[14px]">school</span> Students #STU-2026-104
+              </span>
+<span class="text-outline-variant font-bold">→</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-secondary font-medium">
+<span class="material-symbols-outlined text-[14px]">receipt_long</span> Fee Ledger Created
+              </span>
+<span class="text-outline-variant font-bold">→</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-tertiary font-medium">
+<span class="material-symbols-outlined text-[14px]">fact_check</span> Attendance Register
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. FOURTEEN MODULES: IN TWO LOGICAL GROUPS -->
+<section class="w-full bg-surface py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-2xl">
+<div>
+<span class="font-label-caps text-primary uppercase tracking-widest block mb-space-xs">System Modules Catalog</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Complete functional taxonomy</h2>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1.5 rounded-xl">
+<button class="px-4 py-2 rounded-lg font-label-md bg-surface-container-lowest text-primary shadow-sm transition-all" id="tab-all" onclick="filterModules('all')">All (14)</button>
+<button class="px-4 py-2 rounded-lg font-label-md text-on-surface-variant hover:text-on-surface transition-all" id="tab-workspace" onclick="filterModules('workspace')">Workspace (10)</button>
+<button class="px-4 py-2 rounded-lg font-label-md text-on-surface-variant hover:text-on-surface transition-all" id="tab-governance" onclick="filterModules('governance')">Governance (4)</button>
+</div>
+</div>
+<!-- GROUP A: WORKSPACE MODULES -->
+<div class="module-group mb-space-2xl" id="group-workspace">
+<div class="flex items-center gap-space-sm mb-space-lg">
+<div class="h-6 w-1 bg-primary rounded-full"></div>
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Workspace Modules</h3>
+<span class="font-label-caps text-on-surface-variant bg-surface-container px-2.5 py-0.5 rounded-full">Daily Academic &amp; Administrative Core</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Module 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">dashboard</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-caps text-xs px-2.5 py-1 rounded-full bg-surface-container text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Live
+                </span>
+</div>
+<span id="overview" class="relative -top-24 block"></span><h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Overview &amp; Dashboards</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Role-shaped command centre: real-time KPIs and an actionable worklist linking directly to underlying tasks across campuses.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md hover:gap-2 transition-all" href="#overview">
+              Learn more <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Module 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">badge</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-caps text-xs px-2.5 py-1 rounded-full bg-surface-container text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Live
+                </span>
+</div>
+<span id="students" class="relative -top-24 block"></span><h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Students</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                360° student records: digital lifecycle from enrolment, promotion, disciplinary logs, digital transfer certificates, and health profiles.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md hover:gap-2 transition-all" href="#students">
+              Learn more <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Module 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">contact_mail</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-caps text-xs px-2.5 py-1 rounded-full bg-surface-container text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Live
+                </span>
+</div>
+<span id="admissions" class="relative -top-24 block"></span><h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Admissions</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Enquiry-to-enrolment CRM: multi-channel enquiry desk, parent counselling, entrance exam rosters, merit lists, and spot deposit processing.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md hover:gap-2 transition-all" href="#admissions">
+              Learn more <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Module 4 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed-dim flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">groups</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-caps text-xs px-2.5 py-1 rounded-full bg-surface-container text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Live
+                </span>
+</div>
+<span id="staff" class="relative -top-24 block"></span><h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Staff &amp; Faculty</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Staff directory, onboarding, biometric logs, leave balance, qualifications, Indian official service books, and self-service portal.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md hover:gap-2 transition-all" href="#staff">
+              Learn more <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Module 5 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-caps text-xs px-2.5 py-1 rounded-full bg-surface-container text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Live
+                </span>
+</div>
+<span id="payroll" class="relative -top-24 block"></span><h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Payroll</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Gross-to-net computation, Indian statutory compliances (EPF, ESI, TDS Form 16, PT), password-protected payslips, and 1-click NEFT files.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md hover:gap-2 transition-all" href="#payroll">
+              Learn more <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Module 6 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">assignment_turned_in</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-caps text-xs px-2.5 py-1 rounded-full bg-surface-container text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Live
+                </span>
+</div>
+<span id="academics" class="relative -top-24 block"></span><h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Academics &amp; Exams</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                CBSE 9-point grading, ICSE rubrics, question banks, invigilation rosters, lock/unlock tickets for mark governance, and report card generators.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md hover:gap-2 transition-all" href="#academics">
+              Learn more <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Module 7 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">calendar_view_week</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-caps text-xs px-2.5 py-1 rounded-full bg-surface-container text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Live
+                </span>
+</div>
+<span id="teaching" name="teaching"><span id="planning"></span><a class="relative -top-24 block"></span><h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Teaching &amp; Planning</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Intelligent timetable scheduler, 1-click morning substitution cover, syllabus completion tracking, homework broadcasting, and lesson plans.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md hover:gap-2 transition-all" href="#planning">
+              Learn more <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Module 8 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">fact_check</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-caps text-xs px-2.5 py-1 rounded-full bg-surface-container text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Live
+                </span>
+</div>
+<span id="attendance" class="relative -top-24 block"></span><h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Attendance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Daily or AM/PM period registers, teacher 2-click lock window, biometric facial/RFID staff punches, instant parent SMS on absence, and 95% target analytics.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md hover:gap-2 transition-all" href="#attendance">
+              Learn more <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Module 9 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed-dim flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-caps text-xs px-2.5 py-1 rounded-full bg-surface-container text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Live
+                </span>
+</div>
+<span id="fees" class="relative -top-24 block"></span><h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Fees &amp; Payments</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Flexible fee heads, instalment schedules, online UPI demands, automated bank reconciliation, counter receipts, fine rules, and defaulter ageing registers.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md hover:gap-2 transition-all" href="#fees">
+              Learn more <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Module 10 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed-dim flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">directions_bus</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-caps text-xs px-2.5 py-1 rounded-full bg-surface-container text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Live
+                </span>
+</div>
+<span id="transport" class="relative -top-24 block"></span><h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Transport &amp; Auxiliary</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Bus routes, vehicle GPS telemetry with geofenced stops, live bus tracker for parents, hostel room allotment, library RFID, and infirmary inventory.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md hover:gap-2 transition-all" href="#transport">
+              Learn more <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- GROUP B: SCHOOL MANAGEMENT & GOVERNANCE -->
+<div class="module-group" id="group-governance">
+<div class="flex items-center gap-space-sm mb-space-lg">
+<div class="h-6 w-1 bg-tertiary rounded-full"></div>
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">School Management &amp; Governance</h3>
+<span class="font-label-caps text-on-surface-variant bg-surface-container px-2.5 py-0.5 rounded-full">Institutional Trust Oversight</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Module 11 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-caps text-xs px-2 py-0.5 rounded-full bg-surface-container text-tertiary">Live</span>
+</div>
+<span id="communications" name="communications"><span id="comms"></span><a class="relative -top-24 block"></span><h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Communications</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Official circular broadcasts via WhatsApp Business API, SMS alerts, emergency notifications, gate passes, and grievance logs.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md hover:gap-2 transition-all" href="#comms">
+              Learn more <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Module 12 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">calendar_month</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-caps text-xs px-2 py-0.5 rounded-full bg-surface-container text-tertiary">Live</span>
+</div>
+<span id="calendar" class="relative -top-24 block"></span><h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Calendar</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Master institutional calendar, term dates, vacation rosters, parent-teacher meeting (PTM) booking, and synchronized iCal/Google exports.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md hover:gap-2 transition-all" href="#calendar">
+              Learn more <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Module 13 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">analytics</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-caps text-xs px-2 py-0.5 rounded-full bg-surface-container text-tertiary">Live</span>
+</div>
+<span id="reports" class="relative -top-24 block"></span><h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Reports</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Custom report builder, trust-wide KPI dashboard, CBSE OASIS / SARAS board compliance data exporters, and cohort retention stats.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md hover:gap-2 transition-all" href="#reports">
+              Learn more <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Module 14 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[24px]">settings_suggest</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-caps text-xs px-2 py-0.5 rounded-full bg-surface-container text-tertiary">Live</span>
+</div>
+<span id="documents" name="documents"><span id="settings"></span><a class="relative -top-24 block"></span><h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Documents &amp; Settings</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Central document repository, multi-campus governance, custom roll ID numbering, granular RBAC users, and bulk Excel data import tools.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 text-primary font-label-md hover:gap-2 transition-all" href="#settings">
+              Learn more <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- JS for Filter Tabs -->
+<script>
+    function filterModules(type) {
+      const gWork = document.getElementById('group-workspace');
+      const gGov = document.getElementById('group-governance');
+      const tabAll = document.getElementById('tab-all');
+      const tabWork = document.getElementById('tab-workspace');
+      const tabGov = document.getElementById('tab-governance');
+
+      // Reset tabs style
+      [tabAll, tabWork, tabGov].forEach(t => {
+        t.className = 'px-4 py-2 rounded-lg font-label-md text-on-surface-variant hover:text-on-surface transition-all';
+      });
+
+      if (type === 'all') {
+        gWork.style.display = 'block';
+        gGov.style.display = 'block';
+        tabAll.className = 'px-4 py-2 rounded-lg font-label-md bg-surface-container-lowest text-primary shadow-sm transition-all';
+      } else if (type === 'workspace') {
+        gWork.style.display = 'block';
+        gGov.style.display = 'none';
+        tabWork.className = 'px-4 py-2 rounded-lg font-label-md bg-surface-container-lowest text-primary shadow-sm transition-all';
+      } else if (type === 'governance') {
+        gWork.style.display = 'none';
+        gGov.style.display = 'block';
+        tabGov.className = 'px-4 py-2 rounded-lg font-label-md bg-surface-container-lowest text-primary shadow-sm transition-all';
+      }
+    }
+  </script>
+<!-- 3. HOW THE MODULES FIT TOGETHER (System Architecture Diagram) -->
+<section class="w-full bg-surface-container-low py-space-2xl" id="architecture">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<div class="text-center max-w-3xl mx-auto mb-space-2xl">
+<span class="font-label-caps text-primary uppercase tracking-widest block mb-space-xs">System Interconnectivity</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-sm">
+          How the modules fit together
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          At the centre is the single source of truth: our Role-Based Access Control and Institutional Data Core. Every module reads from and writes to the same unified ledger.
+        </p>
+</div>
+<!-- Architectural Diagram Canvas -->
+<div class="relative bg-surface-container-lowest rounded-3xl p-space-lg lg:p-space-xl shadow-lg overflow-hidden">
+<!-- Background Grid Pattern Decoration -->
+<div class="absolute inset-0 opacity-15 pointer-events-none" style="background-image: radial-gradient(#BD5117 1px, transparent 1px); background-size: 24px 24px;"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-space-lg items-center">
+<!-- Left Satellites -->
+<div class="flex flex-col gap-space-md order-2 lg:order-1">
+<!-- Satellite 1: Admissions -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center gap-space-sm mb-2">
+<span class="material-symbols-outlined text-primary text-[20px]">how_to_reg</span>
+<h4 class="font-title-card text-title-card text-on-surface">1. Admissions Pipeline</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">
+                Enquiry captured via portal or walk-in. Entrance scores logged.
+              </p>
+<div class="inline-flex items-center gap-1.5 text-xs text-primary font-medium">
+<span>Auto-provisions Student ID</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Satellite 2: Student Ledger -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center gap-space-sm mb-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">account_balance_wallet</span>
+<h4 class="font-title-card text-title-card text-on-surface">2. Fee Structure &amp; Ledger</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">
+                Generates quarterly instalment schedule matching RTE/scholarship criteria.
+              </p>
+<div class="inline-flex items-center gap-1.5 text-xs text-secondary font-medium">
+<span>Locks exam hall ticket if overdue</span>
+<span class="material-symbols-outlined text-[14px]">sync_alt</span>
+</div>
+</div>
+<!-- Satellite 3: Timetable Engine -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center gap-space-sm mb-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">schedule</span>
+<h4 class="font-title-card text-title-card text-on-surface">3. Master Schedule</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">
+                Room allocations, teacher load restrictions, lab clash verification.
+              </p>
+<div class="inline-flex items-center gap-1.5 text-xs text-tertiary font-medium">
+<span>Auto morning substitution</span>
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span>
+</div>
+</div>
+</div>
+<!-- Central Core Hub -->
+<div class="order-1 lg:order-2 flex flex-col items-center justify-center p-space-lg bg-surface-container rounded-3xl shadow-md text-center relative">
+<div class="w-20 h-20 rounded-2xl bg-primary-container text-on-primary flex items-center justify-center shadow-lg mb-space-md">
+<span class="material-symbols-outlined text-[40px]">shield_lock</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-caps text-xs px-3 py-1 rounded-full bg-surface-container-lowest text-primary font-bold mb-space-xs">
+              CENTRAL NEXUS
+            </span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">
+              Unified School Core &amp; RBAC Engine
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mb-space-md">
+              Multi-tenant architecture with institutional campus isolation, SHA-256 tamper-proof logs, and instantaneous role-based permission evaluation.
+            </p>
+<div class="grid grid-cols-2 gap-2 w-full text-left bg-surface-container-lowest p-3 rounded-xl">
+<div class="flex items-center gap-1.5 text-xs text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>DPDP Act 2023</span>
+</div>
+<div class="flex items-center gap-1.5 text-xs text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>CBSE OASIS API</span>
+</div>
+<div class="flex items-center gap-1.5 text-xs text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Biometric Sync</span>
+</div>
+<div class="flex items-center gap-1.5 text-xs text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Audit Logs Sealed</span>
+</div>
+</div>
+</div>
+<!-- Right Satellites -->
+<div class="flex flex-col gap-space-md order-3">
+<!-- Satellite 4: Academic Grading -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center gap-space-sm mb-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">grading</span>
+<h4 class="font-title-card text-title-card text-on-surface">4. Academic &amp; Exam Engine</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">
+                Term broadsheets, 9-point scale CBSE/ICSE report cards, moderation locks.
+              </p>
+<div class="inline-flex items-center gap-1.5 text-xs text-tertiary font-medium">
+<span>Instant parent report publishing</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Satellite 5: Biometric Attendance -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center gap-space-sm mb-2">
+<span class="material-symbols-outlined text-primary text-[20px]">fingerprint</span>
+<h4 class="font-title-card text-title-card text-on-surface">5. Attendance &amp; Gates</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">
+                Class registers + biometric facial staff check-in + RFID student turnstiles.
+              </p>
+<div class="inline-flex items-center gap-1.5 text-xs text-primary font-medium">
+<span>Immediate absentee SMS alert</span>
+<span class="material-symbols-outlined text-[14px]">notification_important</span>
+</div>
+</div>
+<!-- Satellite 6: Parent Mobile App -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center gap-space-sm mb-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">smartphone</span>
+<h4 class="font-title-card text-title-card text-on-surface">6. Parent Mobile Portal</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">
+                GPS live bus tracking, fee receipts via UPI, digital report cards &amp; PTM booking.
+              </p>
+<div class="inline-flex items-center gap-1.5 text-xs text-secondary font-medium">
+<span>Push notifications &amp; Circulars</span>
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Diagram Legend -->
+<div class="mt-space-xl pt-space-md flex flex-wrap items-center justify-center gap-space-lg text-xs font-label-caps text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span>Synchronous Real-Time Data Flow</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<span>Role-Governed Ledger (RBAC)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span>Cryptographic Audit Logging</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. THREE ALTERNATING FEATURE ROWS WITH DETAILED UI MOCKUPS -->
+<section class="w-full bg-surface-container-lowest py-space-2xl space-y-space-2xl">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<!-- ROW A: Admissions Pipeline Board (Text Left / Mockup Right) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<div class="lg:col-span-5 space-y-space-sm">
+<span class="font-label-caps text-primary uppercase tracking-widest">Enrolment Automation</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Track every applicant from first enquiry to enrolled student without spreadsheets.
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Replace chaotic paper forms and offline spreadsheets. Knowva gives admissions teams a pipeline dashboard with real-time stage conversions, entrance examination score moderation, provisional offer letters, and automatic seat deposit settlement.
+          </p>
+<ul class="space-y-space-xs pt-space-xs font-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+              Automatic student UID &amp; profile creation upon fee clearance
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+              Entrance test hall ticket generation with batch timings
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+              WhatsApp &amp; SMS reminders for document submission deadlines
+            </li>
+</ul>
+</div>
+<div class="lg:col-span-7 bg-surface-container-low p-space-md rounded-2xl shadow-md overflow-x-auto">
+<!-- Kanban Header -->
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-title-card text-on-surface font-semibold text-sm">Admissions Cycle 2026-27</span>
+<span class="text-xs bg-surface-container-highest px-2 py-0.5 rounded font-label-caps text-tertiary">CBSE &amp; ICSE</span>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<span class="font-label-caps text-on-surface-variant">Total Pipeline: 103 applicants</span>
+</div>
+</div>
+<!-- Kanban Columns Simulation -->
+<div class="grid grid-cols-3 gap-space-sm min-w-[540px]">
+<!-- Column 1: New Enquiry -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-xs text-on-surface font-bold">New Enquiry</span>
+<span class="text-xs bg-surface-container px-1.5 py-0.5 rounded font-semibold text-on-surface-variant">24</span>
+</div>
+<!-- Card 1 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low text-xs">
+<div class="font-semibold text-on-surface">Aarav K. Sharma</div>
+<div class="text-on-surface-variant flex items-center justify-between mt-1">
+<span>Grade 6 • CBSE</span>
+<span class="text-[10px] bg-primary-fixed text-primary px-1 rounded">Walk-in</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low text-xs">
+<div class="font-semibold text-on-surface">Meera V. Pillai</div>
+<div class="text-on-surface-variant flex items-center justify-between mt-1">
+<span>Grade 1 • ICSE</span>
+<span class="text-[10px] bg-surface-container text-tertiary px-1 rounded">Web Form</span>
+</div>
+</div>
+</div>
+<!-- Column 2: Assessment Passed -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-xs text-on-surface font-bold">Assessment Passed</span>
+<span class="text-xs bg-surface-container px-1.5 py-0.5 rounded font-semibold text-on-surface-variant">12</span>
+</div>
+<!-- Card 1 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low text-xs">
+<div class="font-semibold text-on-surface">Rohan Deshmukh</div>
+<div class="text-on-surface-variant flex items-center justify-between mt-1">
+<span>Grade 9 • 88% Merit</span>
+<span class="text-[10px] bg-surface-container text-tertiary px-1 rounded font-bold">Recommended</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low text-xs">
+<div class="font-semibold text-on-surface">Ananya Mukherjee</div>
+<div class="text-on-surface-variant flex items-center justify-between mt-1">
+<span>Grade 11 (Sci) • 92%</span>
+<span class="text-[10px] bg-surface-container text-tertiary px-1 rounded font-bold">Recommended</span>
+</div>
+</div>
+</div>
+<!-- Column 3: Enrolled -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-xs text-primary font-bold">Enrolled &amp; Provisioned</span>
+<span class="text-xs bg-primary-fixed text-primary px-1.5 py-0.5 rounded font-bold">38</span>
+</div>
+<!-- Card 1 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low text-xs">
+<div class="font-semibold text-on-surface">Devansh Singhania</div>
+<div class="text-on-surface-variant flex flex-col mt-1 gap-0.5 text-[11px]">
+<span class="text-tertiary font-mono font-medium">STU-2026-00142</span>
+<span class="text-on-surface-variant">Fee Deposit: ₹45,000 (Paid)</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low text-xs">
+<div class="font-semibold text-on-surface">Tanya R. Iyer</div>
+<div class="text-on-surface-variant flex flex-col mt-1 gap-0.5 text-[11px]">
+<span class="text-tertiary font-mono font-medium">STU-2026-00143</span>
+<span class="text-on-surface-variant">Fee Deposit: ₹45,000 (Paid)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ROW B: Exam Marks Governance & Approval Tickets (Mockup Left / Text Right) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Mockup Left -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-md rounded-2xl shadow-md order-2 lg:order-1 relative">
+<!-- Marks Governance Table -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm overflow-x-auto">
+<div class="flex items-center justify-between pb-3 mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">lock</span>
+<span class="font-label-md text-xs text-on-surface font-bold uppercase tracking-wider">
+                  Class 10-A • Mathematics Mid-Term (Grades Sealed)
+                </span>
+</div>
+<span class="text-[11px] text-on-surface-variant">Locked: 14 Oct by Dept Head</span>
+</div>
+<table class="w-full text-left text-xs">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-caps">
+<tr>
+<th class="p-2">Roll</th>
+<th class="p-2">Student</th>
+<th class="p-2">PT 1 (20)</th>
+<th class="p-2">Theory (80)</th>
+<th class="p-2">Prac (20)</th>
+<th class="p-2">Total (120)</th>
+<th class="p-2">CBSE Grade</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<tr class="bg-surface-container-lowest">
+<td class="p-2 font-mono">1001</td>
+<td class="p-2 font-medium">Aditya Vardhan</td>
+<td class="p-2">18</td>
+<td class="p-2">74</td>
+<td class="p-2">19</td>
+<td class="p-2 font-bold">111</td>
+<td class="p-2"><span class="bg-surface-container text-tertiary px-1.5 py-0.5 rounded font-bold">A1</span></td>
+</tr>
+<tr class="bg-surface-container-low">
+<td class="p-2 font-mono">1002</td>
+<td class="p-2 font-medium">Bhavya Nair</td>
+<td class="p-2">16</td>
+<td class="p-2">68</td>
+<td class="p-2">18</td>
+<td class="p-2 font-bold">102</td>
+<td class="p-2"><span class="bg-surface-container text-tertiary px-1.5 py-0.5 rounded font-bold">A2</span></td>
+</tr>
+<tr class="bg-surface-container-lowest">
+<td class="p-2 font-mono">1003</td>
+<td class="p-2 font-medium">Chetan K. Rao</td>
+<td class="p-2">14</td>
+<td class="p-2">59</td>
+<td class="p-2">17</td>
+<td class="p-2 font-bold">90</td>
+<td class="p-2"><span class="bg-secondary-fixed text-secondary px-1.5 py-0.5 rounded font-bold">B1</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Floating Interactive Unlock Ticket Card -->
+<div class="mt-space-sm bg-surface-container-lowest rounded-xl p-3.5 shadow-lg">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">vpn_key</span>
+<span class="font-label-md text-xs font-bold text-on-surface">Request Unlock Ticket #TK-8492</span>
+</div>
+<span class="text-[10px] bg-secondary-fixed text-secondary px-2 py-0.5 rounded font-bold">Pending OTP Approval</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-2">
+<span class="font-medium text-on-surface">Teacher:</span> Mrs. Sunita Rao • <span class="font-medium text-on-surface">Subject:</span> Grade 10-A Mathematics<br>
+<span class="font-medium text-on-surface">Reason:</span> Re-evaluation of answer booklet #42 following student scrutiny petition.
+            </p>
+<div class="flex items-center justify-end gap-2 pt-1">
+<button class="px-3 py-1 text-xs rounded bg-surface-container text-on-surface font-medium hover:bg-surface-container-high transition-colors">Reject</button>
+<button class="px-3 py-1 text-xs rounded bg-primary-container text-on-primary font-medium hover:bg-primary transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Approve with Principal OTP
+              </button>
+</div>
+</div>
+</div>
+<!-- Text Right -->
+<div class="lg:col-span-5 space-y-space-sm order-1 lg:order-2">
+<span class="font-label-caps text-primary uppercase tracking-widest">Academic Rigour &amp; Trust</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            CBSE &amp; ICSE grading integrity with audit-sealed lock tickets.
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Prevent unmonitored backroom grade alterations after marks submission. Knowva implements dual-custody verification: teachers enter assessments, Department Heads moderate, and final broadsheets are cryptographically sealed.
+          </p>
+<ul class="space-y-space-xs pt-space-xs font-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+              Formal unlock tickets requiring Principal digital OTP signatures
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+              Automatic conversion into CBSE 9-point or ICSE percentage scales
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+              Complete immutable modification trails recorded in the governance log
+            </li>
+</ul>
+</div>
+</div>
+<!-- ROW C: Timetable Week Grid & Substitution (Text Left / Mockup Right) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<div class="lg:col-span-5 space-y-space-sm">
+<span class="font-label-caps text-primary uppercase tracking-widest">Operations Efficiency</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Clash-free timetable scheduling with 1-click morning substitution.
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            When a faculty member applies for medical leave at 7:30 AM, academic coordinators do not scramble through physical registers. Knowva instantly calculates free, subject-qualified faculty, resolves room conflicts, and sends automated WhatsApp roster updates.
+          </p>
+<ul class="space-y-space-xs pt-space-xs font-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+              Automated timetable generator with NEP 2020 workload constraints
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+              One-click teacher substitution broadcast before 8:00 AM assembly
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+              Direct room and laboratory capacity clash prevention
+            </li>
+</ul>
+</div>
+<div class="lg:col-span-7 bg-surface-container-low p-space-md rounded-2xl shadow-md">
+<!-- Timetable UI Simulation -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm mb-space-sm overflow-x-auto">
+<div class="flex items-center justify-between pb-2 mb-2">
+<span class="font-label-md text-xs font-bold text-on-surface">Grade 9-B Weekly Schedule • Room 204</span>
+<span class="text-xs bg-primary-fixed text-primary px-2 py-0.5 rounded font-semibold">Today: Wednesday</span>
+</div>
+<!-- Schedule Slot Row -->
+<div class="grid grid-cols-5 gap-1.5 text-xs text-center min-w-[420px]">
+<div class="p-2 rounded bg-surface-container-low">
+<span class="font-label-caps text-[10px] text-on-surface-variant block">P1 (08:30)</span>
+<span class="font-bold text-on-surface">English</span>
+<span class="text-[10px] text-on-surface-variant block">Ms. Deepa</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<span class="font-label-caps text-[10px] text-on-surface-variant block">P2 (09:15)</span>
+<span class="font-bold text-on-surface">Mathematics</span>
+<span class="text-[10px] text-on-surface-variant block">Mr. N. Verma</span>
+</div>
+<div class="p-2 rounded bg-primary-fixed text-primary shadow-sm">
+<span class="font-label-caps text-[10px] block font-bold">P3 (10:00)</span>
+<span class="font-bold">Physics (Leave)</span>
+<span class="text-[10px] block">Mr. R. Sharma</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<span class="font-label-caps text-[10px] text-on-surface-variant block">P4 (11:00)</span>
+<span class="font-bold text-on-surface">History</span>
+<span class="text-[10px] text-on-surface-variant block">Mrs. Sen</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<span class="font-label-caps text-[10px] text-on-surface-variant block">P5 (11:45)</span>
+<span class="font-bold text-on-surface">Comp Sci</span>
+<span class="text-[10px] text-on-surface-variant block">Mr. Joshi</span>
+</div>
+</div>
+</div>
+<!-- Automated Substitution Action Panel -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">smart_toy</span>
+</div>
+<div class="text-xs">
+<div class="font-bold text-on-surface">Recommended Replacement for Period 3</div>
+<div class="text-on-surface-variant">Dr. Ananya Sen (Science Faculty • Free in P3 • Room 204 Booked)</div>
+</div>
+</div>
+<button class="shrink-0 w-full sm:w-auto px-4 py-2 bg-primary-container text-on-primary rounded-lg font-label-md text-xs hover:bg-primary transition-all flex items-center justify-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">send</span> Assign &amp; Notify (WhatsApp)
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. CONFIGURABILITY & LOCALISATION SECTION -->
+<section class="w-full bg-surface-container-low py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<div class="text-center max-w-3xl mx-auto mb-space-2xl">
+<span class="font-label-caps text-primary uppercase tracking-widest block mb-space-xs">Institution Tailoring</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-sm">
+          Configured for your trust's unique operating model.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Every institution has its own legacy, numbering conventions, and regional workflows. Knowva conforms to your school, not the other way around.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Config Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[24px]">palette</span>
+</div>
+<h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Custom Crest &amp; Branding</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Upload institutional crests, set exact hex palettes, and customize official digital watermarks for Transfer Certificates &amp; report cards.
+            </p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low text-xs font-mono text-on-surface-variant">
+            Asset: crest_highres.svg<br>
+            Watermark: Applied
+          </div>
+</div>
+<!-- Config Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[24px]">domain</span>
+</div>
+<h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Multi-Campus Switcher</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Seamlessly toggle between North Campus (CBSE) and South Campus (ICSE/IB) with isolated registers and unified group-level financial reports.
+            </p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low text-xs font-mono text-on-surface-variant">
+            Scope: North Campus (CBSE)<br>
+            Access: Role: Head Principal
+          </div>
+</div>
+<!-- Config Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[24px]">pin</span>
+</div>
+<h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Configurable ID Formats</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Define custom dynamic patterns for student rolls, faculty IDs, and counter fee receipts matching your existing historical records.
+            </p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low text-xs font-mono text-on-surface-variant">
+            Pattern: REC/{YYYY}-{YY}/{####}<br>
+            Sample: REC/2026-27/0891
+          </div>
+</div>
+<!-- Config Card 4 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest text-on-surface flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[24px]">translate</span>
+</div>
+<h4 class="font-title-card text-title-card text-on-surface mb-space-xs">Multilingual &amp; FY Alignment</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              English, Hindi, and regional board localization; native Indian April–March fiscal year cycle support with custom State grading scales.
+            </p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low text-xs font-mono text-on-surface-variant">
+            Fiscal: 01-Apr to 31-Mar<br>
+            Language: Eng / हिंदी / Reg
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. FINAL HIGH-CONVERSION CTA BAND -->
+<section class="w-full bg-inverse-surface text-inverse-on-surface py-space-2xl relative overflow-hidden">
+<!-- Ambient subtle background glow -->
+<div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-primary/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-tertiary/20 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop relative z-10 text-center">
+<div class="max-w-3xl mx-auto space-y-space-md">
+<span class="font-label-caps text-secondary-fixed uppercase tracking-widest block">Unified Institutional Software</span>
+<h2 class="font-headline-lg text-headline-lg tracking-tight text-surface-container-lowest">
+          Ready to unify your entire school's operations?
+        </h2>
+<p class="font-body-lg text-body-lg text-surface-container-highest max-w-2xl mx-auto">
+          Join over 350 progressive Indian schools running admissions, academics, fees, and compliance on Knowva.
+        </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center justify-center gap-space-md pt-space-md">
+<a class="inline-flex items-center justify-center gap-space-xs bg-surface-container-lowest/10 text-surface-container-lowest font-label-md px-6 py-3.5 rounded-[10px] hover:bg-surface-container-lowest/20 transition-all" href="capabilities.html">
+<span>Compare line-by-line in Capabilities Checklist</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs bg-primary-container text-on-primary font-label-md px-7 py-3.5 rounded-[10px] hover:bg-primary transition-all shadow-[0_4px_14px_rgba(189,81,23,0.35)] hover:-translate-y-0.5 active:scale-[0.99]" href="demo.html">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+<span>Book a personalized demo</span>
+</a>
+</div>
+<!-- Reassurance Tags -->
+<div class="pt-space-md flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs text-surface-dim font-label-caps tracking-wider">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">schedule</span>
+            30-minute tailored walkthrough
+          </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">credit_card_off</span>
+            No credit card required
+          </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">verified</span>
+            Full CBSE / ICSE alignment
+          </span>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low border-t border-outline-variant/40 pt-space-2xl pb-space-xl"><div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop mb-space-2xl"><div><h4 class="font-title-card text-title-card text-on-surface mb-space-md">Product</h4><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm"><a href="product.html#overview" class="text-on-surface-variant hover:text-primary transition-colors">Overview</a></li><li class="font-body-sm text-body-sm"><a href="product.html#students" class="text-on-surface-variant hover:text-primary transition-colors">Students</a></li><li class="font-body-sm text-body-sm"><a href="product.html#admissions" class="text-on-surface-variant hover:text-primary transition-colors">Admissions</a></li><li class="font-body-sm text-body-sm"><a href="product.html#staff" class="text-on-surface-variant hover:text-primary transition-colors">Staff &amp; faculty</a></li><li class="font-body-sm text-body-sm"><a href="product.html#payroll" class="text-on-surface-variant hover:text-primary transition-colors">Payroll</a></li><li class="font-body-sm text-body-sm"><a href="product.html#academics" class="text-on-surface-variant hover:text-primary transition-colors">Academics &amp; Exams</a></li><li class="font-body-sm text-body-sm"><a href="product.html#teaching" class="text-on-surface-variant hover:text-primary transition-colors">Teaching &amp; Planning</a></li><li class="font-body-sm text-body-sm"><a href="product.html#attendance" class="text-on-surface-variant hover:text-primary transition-colors">Attendance</a></li><li class="font-body-sm text-body-sm"><a href="fees.html" class="text-on-surface-variant hover:text-primary transition-colors">Fees &amp; payments</a></li><li class="font-body-sm text-body-sm"><a href="product.html#transport" class="text-on-surface-variant hover:text-primary transition-colors">Transport &amp; Auxiliary</a></li><li class="font-body-sm text-body-sm"><a href="product.html#communications" class="text-on-surface-variant hover:text-primary transition-colors">Communications</a></li><li class="font-body-sm text-body-sm"><a href="product.html#calendar" class="text-on-surface-variant hover:text-primary transition-colors">Calendar</a></li><li class="font-body-sm text-body-sm"><a href="product.html#reports" class="text-on-surface-variant hover:text-primary transition-colors">Reports</a></li><li class="font-body-sm text-body-sm"><a href="product.html#documents" class="text-on-surface-variant hover:text-primary transition-colors">Documents &amp; Settings</a></li></ul></div><div><h4 class="font-title-card text-title-card text-on-surface mb-space-md">Solutions</h4><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm"><a href="solutions.html#trustees" class="text-on-surface-variant hover:text-primary transition-colors">Trustees &amp; Owners</a></li><li class="font-body-sm text-body-sm"><a href="solutions.html#principals" class="text-on-surface-variant hover:text-primary transition-colors">Principals</a></li><li class="font-body-sm text-body-sm"><a href="solutions.html#admissions" class="text-on-surface-variant hover:text-primary transition-colors">Admissions Head</a></li><li class="font-body-sm text-body-sm"><a href="solutions.html#coordinators" class="text-on-surface-variant hover:text-primary transition-colors">Academic Coordinators</a></li><li class="font-body-sm text-body-sm"><a href="solutions.html#teachers" class="text-on-surface-variant hover:text-primary transition-colors">Teachers</a></li><li class="font-body-sm text-body-sm"><a href="solutions.html#finance" class="text-on-surface-variant hover:text-primary transition-colors">Finance &amp; Accounts</a></li><li class="font-body-sm text-body-sm"><a href="solutions.html#transport" class="text-on-surface-variant hover:text-primary transition-colors">Transport Manager</a></li><li class="font-body-sm text-body-sm"><a href="solutions.html#admins" class="text-on-surface-variant hover:text-primary transition-colors">IT &amp; System Admins</a></li></ul></div><div><h4 class="font-title-card text-title-card text-on-surface mb-space-md">Company</h4><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm"><a href="about.html" class="text-on-surface-variant hover:text-primary transition-colors">About Knowva Systems</a></li><li class="font-body-sm text-body-sm"><a href="security.html" class="text-on-surface-variant hover:text-primary transition-colors">Security &amp; Compliance</a></li><li class="font-body-sm text-body-sm"><a href="resources.html" class="text-on-surface-variant hover:text-primary transition-colors">Resources &amp; Guides</a></li><li class="font-body-sm text-body-sm"><a href="about.html#careers" class="text-on-surface-variant hover:text-primary transition-colors">Careers</a></li><li class="font-body-sm text-body-sm"><a href="demo.html" class="text-on-surface-variant hover:text-primary transition-colors">Contact Us</a></li></ul></div><div><h4 class="font-title-card text-title-card text-on-surface mb-space-md">Legal &amp; Compliance</h4><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm"><a href="security.html#privacy" class="text-on-surface-variant hover:text-primary transition-colors">Privacy Policy</a></li><li class="font-body-sm text-body-sm"><a href="security.html#terms" class="text-on-surface-variant hover:text-primary transition-colors">Terms of Service</a></li><li class="font-body-sm text-body-sm"><a href="security.html#dpdp" class="text-on-surface-variant hover:text-primary transition-colors">Student Data Safety (DPDP Act India)</a></li><li class="font-body-sm text-body-sm"><a href="security.html#board-audit" class="text-on-surface-variant hover:text-primary transition-colors">CBSE/ICSE Board Audit readiness</a></li></ul></div></div><div class="border-t border-outline-variant/30 pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-left">© Knowva Systems Inc. All rights reserved. Made for schools in India.</p><div class="flex items-center gap-space-md text-on-surface-variant"><span class="material-symbols-outlined text-[20px] hover:text-primary transition-colors cursor-pointer">share</span><span class="material-symbols-outlined text-[20px] hover:text-primary transition-colors cursor-pointer">public</span><span class="material-symbols-outlined text-[20px] hover:text-primary transition-colors cursor-pointer">smart_display</span></div></div></div></footer>
+
+<span id="PING_CONTENT_PUSH_NOTIFICATION" style="display: none;"></span>
+
+<span id="PING_CONTENT_PUSH_NOTIFICATION" style="display: none;"></span><script src="../assets/js/app.js"></script>
+</body></html>

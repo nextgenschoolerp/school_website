@@ -1,0 +1,911 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta name="description" content="Tailored workflows and interfaces for trustees, principals, admissions heads, teachers, finance teams, and IT.">
+<title>Role-Based Solutions — Knowva School ERP</title><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "outline": "#8b7268", "primary-fixed-dim": "#ffb596", "secondary-fixed-dim": "#fcb972", "on-primary-fixed": "#360f00", "on-secondary-container": "#794909", "secondary-fixed": "#ffdcbc", "surface-bright": "#fbf8ff", "on-tertiary-fixed-variant": "#3a3d8e", "tertiary": "#4d51a3", "on-tertiary-fixed": "#080863", "background": "#fbf8ff", "on-surface": "#161b2d", "tertiary-fixed-dim": "#bfc1ff", "tertiary-container": "#666abd", "on-error": "#ffffff", "surface": "#fbf8ff", "surface-dim": "#d6d8f2", "on-primary": "#ffffff", "on-tertiary-container": "#faf7ff", "on-secondary": "#ffffff", "primary-fixed": "#ffdbcd", "secondary-container": "#ffbc74", "tertiary-fixed": "#e1e0ff", "surface-tint": "#a33e00", "on-primary-fixed-variant": "#7c2e00", "surface-container-highest": "#dee1fb", "surface-container-lowest": "#ffffff", "on-primary-container": "#fff6f4", "on-background": "#161b2d", "error-container": "#ffdad6", "on-secondary-fixed": "#2c1700", "primary-container": "#bd5117", "outline-variant": "#dec0b5", "on-tertiary": "#ffffff", "surface-container": "#ececff", "inverse-on-surface": "#efefff", "surface-variant": "#dee1fb", "primary": "#9b3b00", "inverse-surface": "#2b2f43", "on-surface-variant": "#574239", "inverse-primary": "#ffb596", "surface-container-high": "#e4e7ff", "secondary": "#855314", "on-error-container": "#93000a", "surface-container-low": "#f3f2ff", "on-secondary-fixed-variant": "#683d00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "margin": "1.5rem", "space-xs": "0.375rem", "space-2xl": "5rem", "gutter-desktop": "2rem", "space-sm": "0.625rem", "space-xl": "3rem", "margin-desktop": "4rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "margin-mobile": "1.25rem", "space-lg": "1.75rem" }, "fontFamily": { "display-hero": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-md": [ "DM Sans" ], "body-sm": [ "DM Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "title-card": [ "Plus Jakarta Sans" ], "label-caps": [ "DM Sans" ], "body-lg": [ "DM Sans" ], "display-hero-mobile": [ "Plus Jakarta Sans" ], "label-md": [ "DM Sans" ] }, "fontSize": { "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "headline-sm": [ "22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" } ], "body-sm": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "title-card": [ "19px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-caps": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "400" } ], "display-hero-mobile": [ "38px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "label-md": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" } ] } } } };</script><link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<link rel="stylesheet" href="../assets/css/styles.css?v=2">
+</head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/40"><div class="h-20 max-w-7xl mx-auto px-margin lg:px-margin-desktop flex items-center justify-between gap-gutter"><a href="#" class="flex items-center gap-2 font-display font-bold text-xl text-ink shrink-0"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-xl shadow-sm">K</div><span>Knowva Systems</span></a><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="text-primary font-headline-sm font-semibold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="product" href="product.html">Product</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="capabilities" href="capabilities.html">Capabilities</a><a class="font-label-md text-label-md text-primary font-headline-sm font-semibold border-b-2 border-primary transition-colors py-space-xs" data-path="solutions" href="solutions.html" aria-current="page">Solutions</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="parent-app" href="parent-app.html">Parent app</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="security" href="security.html">Security</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="pricing" href="pricing.html">Pricing</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="resources" href="resources.html">Resources</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="about" href="about.html">About</a></nav><div class="flex items-center gap-space-md shrink-0">
+<button id="mobile-nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" class="xl:hidden w-10 h-10 rounded-lg bg-surface-container-low border border-outline-variant flex items-center justify-center text-on-surface hover:text-primary transition-colors shrink-0">
+  <span class="material-symbols-outlined text-[24px]">menu</span>
+</button><a class="inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md px-5 py-2.5 rounded-[10px] hover:bg-primary transition-all shadow-[0_4px_14px_rgba(189,81,23,0.25)] active:scale-[0.99]" data-path="book-a-demo" href="demo.html">Book a demo</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><!-- Mobile Navigation Drawer -->
+<div id="mobile-menu" class="hidden xl:hidden fixed inset-x-0 top-20 bg-surface-container-lowest/98 backdrop-blur-xl border-b border-outline-variant/60 shadow-2xl p-6 z-50 transition-all">
+  <nav class="flex flex-col gap-3 font-medium">
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="product.html">Product</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="capabilities.html">Capabilities</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-primary font-bold bg-surface-container-low" href="solutions.html">Solutions</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="parent-app.html">Parent app</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="security.html">Security</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="pricing.html">Pricing</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="resources.html">Resources</a>
+    <a class="px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface" href="about.html">About</a>
+    <div class="pt-3 border-t border-outline-variant/30 flex flex-col gap-2">
+      <a class="w-full inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md px-5 py-3 rounded-[10px] hover:bg-primary transition-all shadow-md text-center" href="demo.html">Book a demo</a>
+    </div>
+  </nav>
+</div>
+</header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- ==========================================
+       1. HERO SECTION & REASSURANCE BANNER
+       ========================================== -->
+<section class="relative w-full bg-surface-bright pt-12 pb-20 px-margin lg:px-margin-desktop overflow-hidden">
+<!-- Subtle warm atmospheric gradient accents -->
+<div class="absolute -top-32 right-1/4 w-96 h-96 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-24 -left-20 w-80 h-80 bg-secondary-fixed/25 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<!-- Eyebrow Pill -->
+<div class="flex items-center justify-center sm:justify-start mb-6">
+<span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container text-primary font-label-caps text-label-caps uppercase tracking-wider shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Role-Based Governance &amp; Access
+        </span>
+</div>
+<!-- Main Headline & Narrative Subtitle -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-end mb-16">
+<div class="lg:col-span-8">
+<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-on-surface tracking-tight mb-6">
+            Built around the people who run the school.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+            Knowva shapes itself to each desk: you see your work, your data, and your decisions, while strict cryptographic boundaries keep everyone else out. No menu bloat, no unauthorized edits, and zero data leakage between campuses.
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-sm justify-end">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[26px]">verified_user</span>
+</div>
+<div>
+<p class="font-title-card text-title-card text-on-surface font-semibold">DPDP Act Compliant</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Indian Student Data Sovereignty 2024</p>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed/40 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[26px]">approval_delegation</span>
+</div>
+<div>
+<p class="font-title-card text-title-card text-on-surface font-semibold">Board Audit Trail</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">CBSE OASIS &amp; ICSE CISCE Ready</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust & Assurance Metrics Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter bg-surface-container-lowest p-space-lg rounded-xl shadow-md">
+<div class="flex flex-col space-y-2 p-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">view_quilt</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">8 Workspaces</span>
+</div>
+<p class="font-title-card text-title-card font-semibold text-on-surface">Tailored Desks</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dedicated role queues, zero clutter, and automated priority tasking for each administrative desk.</p>
+</div>
+<div class="flex flex-col space-y-2 p-space-sm bg-surface-container-low/50 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">security</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Zero Leakage</span>
+</div>
+<p class="font-title-card text-title-card font-semibold text-on-surface">Field-Level RBAC</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Granular data masking. A teacher never sees fee ledgers; a cashier never modifies examination marks.</p>
+</div>
+<div class="flex flex-col space-y-2 p-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">how_to_reg</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Dual-Custody</span>
+</div>
+<p class="font-title-card text-title-card font-semibold text-on-surface">Multi-Signatory Logic</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Transfer certificates, marksheets, fee concessions, and staff exits require independent cryptographic authorization.</p>
+</div>
+<div class="flex flex-col space-y-2 p-space-sm bg-surface-container-low/50 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">swap_horiz</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Explicit Hand-Offs</span>
+</div>
+<p class="font-title-card text-title-card font-semibold text-on-surface">Zero Dead-Ends</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Out-of-scope actions clearly state 'Done by [Role]' so approvals never stall in anonymous bottlenecks.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       2. EIGHT SPECIALIZED ROLE WORKSPACES
+       ========================================== -->
+<section class="w-full bg-surface py-20 px-margin lg:px-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-space-md">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Institutional Roles</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
+            Engineered for every administrative desk.
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Discover how each stakeholder experiences a distraction-free, role-sealed portal configured specifically for Indian educational compliance.
+        </p>
+</div>
+<!-- 4x2 Grid on Desktop -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- CARD 1: Leadership & Governance -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed/40 text-primary flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[28px]">account_balance</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold tracking-wide bg-primary-fixed text-on-primary-fixed">TRUSTEES &amp; DIRECTORS</span>
+</div>
+<span id="trustees" class="relative -top-24 block"></span><span id="principals" class="relative -top-24 block"></span><h3 class="font-title-card text-title-card text-on-surface font-bold mb-3">Leadership &amp; Governance</h3>
+<div class="bg-surface-container-low p-2.5 rounded-lg mb-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-snug">
+<span class="font-semibold text-primary not-italic">Pain solved:</span> Blind spots between branches, chasing accountants for daily collections, and sudden audit panics.
+              </p>
+</div>
+<div class="space-y-2 mb-6">
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">What you own:</p>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Consolidated multi-branch financial &amp; seat yield KPIs</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>High-value fee concession approvals &amp; waivers</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Board-ready governance audit registers</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Institutional emergency broadcast authorizations</span>
+</li>
+</ul>
+</div>
+</div>
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-primary font-semibold group-hover:gap-2.5 transition-all pt-2" href="#workflows">
+            Explore governance workflow <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- CARD 2: Admissions & Front Office -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[28px]">contact_phone</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold tracking-wide bg-secondary-fixed/70 text-on-secondary-fixed">FRONT DESK &amp; COUNSELLORS</span>
+</div>
+<span id="admissions" class="relative -top-24 block"></span><h3 class="font-title-card text-title-card text-on-surface font-bold mb-3">Admissions &amp; Front Office</h3>
+<div class="bg-surface-container-low p-2.5 rounded-lg mb-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-snug">
+<span class="font-semibold text-secondary not-italic">Pain solved:</span> Lost parent leads across WhatsApp chats, double-booked entrance slots, and untracked prospectus cash.
+              </p>
+</div>
+<div class="space-y-2 mb-6">
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">What you own:</p>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Unified digital &amp; walk-in lead pipeline (CRM)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Entrance exam scheduling &amp; slot issuance</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Instant seat-blocking token release</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Prospectus registration fee cash receipts</span>
+</li>
+</ul>
+</div>
+</div>
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-secondary font-semibold group-hover:gap-2.5 transition-all pt-2" href="#workflows">
+            Explore admissions workflow <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- CARD 3: Academics & Exams -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[28px]">assignment_turned_in</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold tracking-wide bg-tertiary-fixed text-on-tertiary-fixed">EXAM CONTROLLERS</span>
+</div>
+<span id="coordinators" class="relative -top-24 block"></span><h3 class="font-title-card text-title-card text-on-surface font-bold mb-3">Academics &amp; Exams</h3>
+<div class="bg-surface-container-low p-2.5 rounded-lg mb-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-snug">
+<span class="font-semibold text-tertiary not-italic">Pain solved:</span> Post-submission marks alterations, manual 9-point CBSE grade conversions, and report card delays.
+              </p>
+</div>
+<div class="space-y-2 mb-6">
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">What you own:</p>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Cryptographic marks entry lock &amp; grace windows</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Continuous assessment (CCE / NEP 2020) tabulation</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Batch report card rendering with dual signatures</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>CBSE OASIS &amp; ICSE board data direct export</span>
+</li>
+</ul>
+</div>
+</div>
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-tertiary font-semibold group-hover:gap-2.5 transition-all pt-2" href="#workflows">
+            Explore academic workflow <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- CARD 4: Teaching Staff -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest text-on-surface flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[28px]">school</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold tracking-wide bg-surface-container text-on-surface">TEACHERS &amp; EDUCATORS</span>
+</div>
+<span id="teachers" class="relative -top-24 block"></span><h3 class="font-title-card text-title-card text-on-surface font-bold mb-3">Teaching &amp; Classroom</h3>
+<div class="bg-surface-container-low p-2.5 rounded-lg mb-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-snug">
+<span class="font-semibold text-on-surface not-italic">Pain solved:</span> 40 minutes eaten every morning by roll calls, manual diary notices, and last-minute substitution chaos.
+              </p>
+</div>
+<div class="space-y-2 mb-6">
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">What you own:</p>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>2-tap period attendance with absentee SMS trigger</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Lesson diary &amp; NCERT syllabus tracking</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Rich homework dispatches directly to parent app</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>1-tap period substitution accept or decline</span>
+</li>
+</ul>
+</div>
+</div>
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-primary font-semibold group-hover:gap-2.5 transition-all pt-2" href="#workflows">
+            Explore teaching workflow <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- CARD 5: Office & Records -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 ring-2 ring-primary/20">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[28px]">folder_shared</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold tracking-wide bg-primary text-on-primary">REGISTRARS &amp; CLERKS</span>
+</div>
+<span id="transport" class="relative -top-24 block"></span><h3 class="font-title-card text-title-card text-on-surface font-bold mb-3">Office &amp; Records</h3>
+<div class="bg-surface-container-low p-2.5 rounded-lg mb-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-snug">
+<span class="font-semibold text-primary not-italic">Pain solved:</span> Lost hardcopy files, fraudulent duplicate certificates, and high-stress yearly section rollover errors.
+              </p>
+</div>
+<div class="space-y-2 mb-6">
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">What you own:</p>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Master 360° student biographical &amp; health dossier</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Multi-signatory Transfer Certificates (TC) &amp; Bonafide</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>PEN (Permanent Education Number) tracking</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>End-of-year automated class &amp; roll rollover</span>
+</li>
+</ul>
+</div>
+</div>
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-primary font-semibold group-hover:gap-2.5 transition-all pt-2" href="#workflows">
+            Explore registry workflow <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- CARD 6: HR & Payroll -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed/50 text-secondary flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[28px]">badge</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold tracking-wide bg-secondary-fixed text-on-secondary-fixed">HR &amp; ESTABLISHMENT</span>
+</div>
+<h3 class="font-title-card text-title-card text-on-surface font-bold mb-3">HR &amp; Payroll</h3>
+<div class="bg-surface-container-low p-2.5 rounded-lg mb-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-snug">
+<span class="font-semibold text-secondary not-italic">Pain solved:</span> Biometric device discrepancies, error-prone manual PF/ESI calculations, and exposed salary slips.
+              </p>
+</div>
+<div class="space-y-2 mb-6">
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">What you own:</p>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Faculty biometric punch sync &amp; multi-tier leave desk</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>1-click statutory payroll (EPF, ESI, Professional Tax)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Encrypted digital salary slips delivered to staff app</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Service book registry with qualification archives</span>
+</li>
+</ul>
+</div>
+</div>
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-secondary font-semibold group-hover:gap-2.5 transition-all pt-2" href="#workflows">
+            Explore HR workflow <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- CARD 7: Finance & Accounts -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed/60 text-tertiary flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[28px]">payments</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold tracking-wide bg-tertiary-fixed text-on-tertiary-fixed">ACCOUNTS &amp; CASHIERS</span>
+</div>
+<span id="finance" class="relative -top-24 block"></span><h3 class="font-title-card text-title-card text-on-surface font-bold mb-3">Finance &amp; Accounts</h3>
+<div class="bg-surface-container-low p-2.5 rounded-lg mb-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-snug">
+<span class="font-semibold text-tertiary not-italic">Pain solved:</span> Endless counter queues, delayed bank reconciliations, unlogged cash drawers, and clumsy defaulter calls.
+              </p>
+</div>
+<div class="space-y-2 mb-6">
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">What you own:</p>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Multi-head fee demands &amp; UPI gateway settlement</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Instant thermal &amp; laser GST-compliant receipt prints</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>End-of-day counter closing &amp; cash drawer handovers</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Automated WhatsApp fee reminders with payment links</span>
+</li>
+</ul>
+</div>
+</div>
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-tertiary font-semibold group-hover:gap-2.5 transition-all pt-2" href="#workflows">
+            Explore finance workflow <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- CARD 8: IT & Administration -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[28px]">admin_panel_settings</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold tracking-wide bg-surface-container-highest text-on-surface">SYSTEM ADMINISTRATORS</span>
+</div>
+<span id="admins" class="relative -top-24 block"></span><h3 class="font-title-card text-title-card text-on-surface font-bold mb-3">IT &amp; Systems Admin</h3>
+<div class="bg-surface-container-low p-2.5 rounded-lg mb-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-snug">
+<span class="font-semibold text-on-surface not-italic">Pain solved:</span> Accidental super-admin permission spills, credential sharing across desks, and untracked database modifications.
+              </p>
+</div>
+<div class="space-y-2 mb-6">
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">What you own:</p>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Central identity directory &amp; custom role builder</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Campus IP whitelisting &amp; device hardware binding</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Tamper-evident system activity audit log viewer</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Multi-cloud encrypted database snapshot backups</span>
+</li>
+</ul>
+</div>
+</div>
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-primary font-semibold group-hover:gap-2.5 transition-all pt-2" href="#workflows">
+            Explore IT workflow <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       3. INTERACTIVE SIGNATURE WORKFLOWS SECTION
+       ========================================== -->
+<section class="w-full bg-surface-container-low/70 py-24 px-margin lg:px-margin-desktop" id="workflows">
+<div class="max-w-7xl mx-auto">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-12">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-3 inline-block">Collaborative Governance</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight mb-4">
+          Signature institutional workflows that prevent mistakes.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Real educational management requires checks and balances. See how Knowva routes critical responsibilities across desks with cryptographic audit trails and zero dropped handoffs.
+        </p>
+</div>
+<!-- Role Tabs Bar -->
+<div class="flex items-center justify-start md:justify-center overflow-x-auto pb-4 mb-10 gap-2 scrollbar-none" id="workflow-tabs">
+<button class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface bg-surface-container-lowest shrink-0 transition-colors">
+          Leadership
+        </button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface bg-surface-container-lowest shrink-0 transition-colors">
+          Admissions
+        </button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface bg-surface-container-lowest shrink-0 transition-colors">
+          Academics
+        </button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface bg-surface-container-lowest shrink-0 transition-colors">
+          Teaching
+        </button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-primary text-on-primary font-semibold shadow-sm shrink-0">
+          Office &amp; records
+        </button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface bg-surface-container-lowest shrink-0 transition-colors">
+          HR &amp; Payroll
+        </button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface bg-surface-container-lowest shrink-0 transition-colors">
+          Finance
+        </button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface bg-surface-container-lowest shrink-0 transition-colors">
+          IT &amp; Admin
+        </button>
+</div>
+<!-- Active Showcase Container (Office & Records: Dual-Signatory TC) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-stretch bg-surface-container-lowest p-6 md:p-10 rounded-xl shadow-lg">
+<!-- Left Side: Workflow Stepper / Narrative -->
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-primary-fixed text-on-primary-fixed text-[12px] font-bold mb-4">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+              Dual-Custody Governance — Tamper Proof
+            </div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">
+              Transfer Certificate (TC) Issuance
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+              A student cannot be removed or handed an exit document by a single staff member. Knowva enforces a 3-step clearance protocol requiring physical and cryptographic dual-custody.
+            </p>
+<!-- Stepper List -->
+<div class="space-y-6 relative pl-6">
+<!-- Stepper continuous connector bar -->
+<div class="absolute left-2.5 top-3 bottom-3 w-0.5 bg-primary/20"></div>
+<!-- Step 1 -->
+<div class="relative flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs shrink-0 z-10">
+<span class="material-symbols-outlined text-[14px]">done</span>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-0.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">1. Initiation &amp; No-Dues Clearance</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-surface-container text-on-surface-variant">Front Office / Registrar</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    System polls Library, Science Lab, Hostel, and Fee ledger. Automatic lock prevents TC generation if pending books or unpaid dues exist.
+                  </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs shrink-0 z-10">
+<span class="material-symbols-outlined text-[14px]">done</span>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-0.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">2. Conduct &amp; Academic Appraisal</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-surface-container text-on-surface-variant">Class Teacher &amp; Academic Head</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Teacher verifies attendance percentage, conduct remarks, and last board exam passed. Digital endorsement logged with audit timestamp.
+                  </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-xs shrink-0 z-10 animate-pulse">
+                  3
+                </div>
+<div>
+<div class="flex items-center gap-2 mb-0.5">
+<span class="font-label-md text-label-md font-semibold text-primary">3. Final Dual-Signatory Seal</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-primary-fixed text-on-primary-fixed">School Principal / Director</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    TC is only rendered when the Principal signs off with a secure OTP/PIN. PDF is generated with an unalterable QR verification hash.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8">
+<div class="p-3.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Result upon final signature:</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Automated Roll Deactivation</span>
+</div>
+</div>
+</div>
+<!-- Right Side: High-Fidelity UI Artifact Simulation -->
+<div class="lg:col-span-7 bg-surface p-5 sm:p-7 rounded-xl shadow-inner flex flex-col justify-between">
+<div>
+<!-- Modal Header simulation -->
+<div class="flex flex-wrap items-center justify-between pb-4 mb-4 gap-2">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</div>
+<div>
+<p class="font-title-card text-title-card font-bold text-on-surface">Transfer Certificate Approval</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-mono">STU-2026-00142 | TC-2026-094</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full text-xs font-semibold bg-secondary-fixed text-on-secondary-fixed flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                  Pending Signatory 2 of 2
+                </span>
+</div>
+</div>
+<!-- Student Summary Strip -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-3.5 bg-surface-container-lowest rounded-lg mb-5 shadow-sm">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Student Name</p>
+<p class="font-label-md text-label-md font-bold text-on-surface truncate">Aarav M. Sharma</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Class &amp; Section</p>
+<p class="font-label-md text-label-md font-bold text-on-surface">X-B (ICSE Wing)</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">PEN / UID</p>
+<p class="font-label-md text-label-md font-bold text-on-surface font-mono">2021884920</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">No-Dues Status</p>
+<p class="font-label-md text-label-md font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Cleared
+                </p>
+</div>
+</div>
+<!-- Signatory Status Cards -->
+<div class="space-y-3 mb-5">
+<!-- Signatory 1: Registrar -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary font-bold text-xs">
+                    MJ
+                  </div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Mrs. Meena Joshi (Registrar)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Clearance &amp; Ledger Check · 14 Jan 2027, 10:14 AM</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded text-xs font-semibold bg-surface-container text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> VERIFIED
+                </span>
+</div>
+<!-- Signatory 2: Principal (Pending Action) -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest ring-1 ring-primary flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-bold text-xs">
+                    KR
+                  </div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Dr. K. S. Ramanathan (Principal)</p>
+<p class="font-body-sm text-body-sm text-primary font-medium">Awaiting Principal Hardware PIN / Sign-off</p>
+</div>
+</div>
+<button class="px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary transition-all">
+                  Authorize &amp; Sign
+                </button>
+</div>
+</div>
+<!-- Certificate Security Document Preview Strip -->
+<div class="p-4 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 bg-surface-container rounded flex items-center justify-center p-1 shrink-0">
+<!-- SVG representation of Board QR Code -->
+<svg class="w-12 h-12 text-on-surface" fill="currentColor" viewBox="0 0 24 24">
+<path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm10-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm14 2h2v4h-2v-4zm-4-4h2v2h-2v-2zm2 2h2v2h-2v-2zm2-2h4v2h-4v-2zm0 6h4v2h-4v-2zm-4 0h2v2h-2v-2z"></path>
+</svg>
+</div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Tamper-Proof Verification Hash</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-mono text-xs">SHA-256: d8f4…a91c · Public Board Portal Validated</p>
+</div>
+</div>
+<div class="hidden sm:flex flex-col items-end">
+<span class="text-xs font-semibold text-on-surface-variant">Document State</span>
+<span class="text-xs font-mono font-bold text-secondary">AWAITING_KEY_2</span>
+</div>
+</div>
+</div>
+<!-- Bottom Footer Notice -->
+<div class="mt-6 pt-3 flex items-center justify-between text-xs text-on-surface-variant">
+<span class="flex items-center gap-1 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">gavel</span>
+              Complies with CISCE &amp; State Education Code Sec 41(A)
+            </span>
+<span class="font-mono">Knowva Audit v4.2</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       4. WHAT YOU SEE, AND WHAT YOU DON'T (RBAC)
+       ========================================== -->
+<section class="w-full bg-surface-bright py-24 px-margin lg:px-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Narrative Column -->
+<div class="lg:col-span-6">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-3 block">Security by Design, Clutter-Free by Default</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight mb-6">
+            What you see, and what you don't.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+            In legacy school ERPs, users are either flooded with fifty confusing menus they don’t understand, or blocked by generic red permission errors after doing twenty minutes of typing. Knowva’s cryptographic architecture works fundamentally differently:
+          </p>
+<div class="space-y-4 mb-8">
+<div class="flex items-start gap-3.5">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary font-bold text-sm shrink-0 mt-0.5">
+                1
+              </div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Proactive Field-Level Pruning</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The app checks your verified role permissions before rendering every single table column, button, and input field. You are never burdened with features that belong to another desk.</p>
+</div>
+</div>
+<div class="flex items-start gap-3.5">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary font-bold text-sm shrink-0 mt-0.5">
+                2
+              </div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Multi-Tenant Campus Isolation</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The server cryptographically validates each API payload against campus bounds. A South Campus administrator cannot query or update North Campus files without federated elevation.</p>
+</div>
+</div>
+<div class="flex items-start gap-3.5">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary font-bold text-sm shrink-0 mt-0.5">
+                3
+              </div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Zero Dead-End Friction</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Steps outside your authority don't leave you guessing. Restricted buttons clearly display "Done by [Role]" handoff guidance so work moves forward instantly without phone tag.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Visual UI Simulation Column -->
+<div class="lg:col-span-6">
+<div class="bg-surface-container-lowest p-6 sm:p-8 rounded-xl shadow-xl relative overflow-hidden">
+<!-- Decorative badge -->
+<div class="flex items-center justify-between mb-6 pb-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-title-card text-title-card font-bold text-on-surface">Class X-A Term Assessment Console</span>
+</div>
+<span class="px-2.5 py-1 rounded font-mono text-xs font-semibold bg-surface-container text-on-surface-variant">
+                Logged in as: Class Teacher (Meenakshi S.)
+              </span>
+</div>
+<!-- Subject Marks Summary Table snippet -->
+<div class="space-y-3 mb-6">
+<div class="p-3 bg-surface-container-low rounded-lg flex items-center justify-between text-xs font-semibold text-on-surface-variant uppercase font-label-caps">
+<span>Roll &amp; Student</span>
+<span>Term Marks (100)</span>
+<span>Grading</span>
+<span>Verification</span>
+</div>
+<!-- Student Row 1 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<span class="font-mono font-bold text-on-surface-variant text-sm">01</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Aditya V. Deshmukh</span>
+</div>
+<span class="font-mono font-bold text-on-surface">94 / 100</span>
+<span class="px-2 py-0.5 rounded text-xs font-bold bg-surface-container text-primary">A1</span>
+<span class="text-xs text-primary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Signed
+                </span>
+</div>
+<!-- Student Row 2 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<span class="font-mono font-bold text-on-surface-variant text-sm">02</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Bhavna G. Patel</span>
+</div>
+<span class="font-mono font-bold text-on-surface">88 / 100</span>
+<span class="px-2 py-0.5 rounded text-xs font-bold bg-surface-container text-primary">A2</span>
+<span class="text-xs text-primary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Signed
+                </span>
+</div>
+</div>
+<!-- Action Area with Active vs Guarded RBAC Button -->
+<div class="p-5 rounded-xl bg-surface-container-low space-y-4">
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Available Actions for Your Scope:</p>
+<div class="flex flex-col sm:flex-row items-center gap-4">
+<!-- Action 1: Permitted -->
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-[10px] bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary transition-all">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+                  Save Class Marks Draft
+                </button>
+<!-- Action 2: Guarded & Clear Hand-Off -->
+<div class="relative w-full sm:w-auto group">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-[10px] bg-surface-dim text-on-surface-variant cursor-not-allowed opacity-80 font-label-md text-label-md" disabled="">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+                    Publish to CBSE Board Portal
+                  </button>
+<!-- Floating Tooltip explaining the baton -->
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-72 p-3 bg-inverse-surface text-inverse-on-surface rounded-lg shadow-xl text-left z-20 pointer-events-none transition-all">
+<div class="flex items-center gap-1.5 text-primary-fixed mb-1 font-bold text-xs">
+<span class="material-symbols-outlined text-[14px]">info</span>
+                      Action Restricted: Principal / Exam Controller
+                    </div>
+<p class="text-xs leading-snug text-inverse-on-surface/90">
+                      Your role allows entry and draft revision. Official publishing to the CBSE OASIS portal requires the signature of the Academic Controller.
+                    </p>
+<div class="w-2.5 h-2.5 bg-inverse-surface rotate-45 absolute -bottom-1 left-1/2 -translate-x-1/2"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 text-xs text-on-surface-variant pt-1">
+<span class="material-symbols-outlined text-[16px] text-primary">route</span>
+<span>Zero dead ends. Your staff always know exactly who holds the administrative baton.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       5. CALL TO ACTION BAND
+       ========================================== -->
+<section class="w-full bg-inverse-surface py-24 px-margin lg:px-margin-desktop text-inverse-on-surface relative overflow-hidden">
+<!-- Atmospheric deep glow -->
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-5xl mx-auto text-center relative z-10">
+<!-- CTA Eyebrow -->
+<span class="px-4 py-1.5 rounded-full bg-surface-container-highest/10 text-primary-fixed font-label-caps text-label-caps uppercase tracking-wider mb-6 inline-block">
+        Role-Specific Personalization
+      </span>
+<!-- Headline & Subtitle -->
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-display-hero text-inverse-on-surface font-extrabold tracking-tight mb-6">
+        Ready to give every desk in your school the right tools?
+      </h2>
+<p class="font-body-lg text-body-lg text-inverse-on-surface/80 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Schedule a personalized 30-minute walkthrough tailored to your exact responsibilities—whether you are a Trustee tracking cross-branch yield or a Principal streamlining board examinations.
+      </p>
+<!-- Role Selector Simulation -->
+<div class="max-w-2xl mx-auto bg-surface-container-lowest/10 backdrop-blur-md p-4 rounded-xl mb-8">
+<p class="font-label-caps text-label-caps text-inverse-on-surface/70 uppercase mb-3 text-left">Select your primary role for the live demo environment:</p>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-2" id="role-demo-pills">
+<button class="px-3 py-2 rounded-lg text-xs font-semibold bg-primary text-on-primary shadow-sm">
+            Trustee / Owner
+          </button>
+<button class="px-3 py-2 rounded-lg text-xs font-semibold bg-surface-container-lowest/10 text-inverse-on-surface hover:bg-surface-container-lowest/20 transition-colors">
+            Principal
+          </button>
+<button class="px-3 py-2 rounded-lg text-xs font-semibold bg-surface-container-lowest/10 text-inverse-on-surface hover:bg-surface-container-lowest/20 transition-colors">
+            Finance Head
+          </button>
+<button class="px-3 py-2 rounded-lg text-xs font-semibold bg-surface-container-lowest/10 text-inverse-on-surface hover:bg-surface-container-lowest/20 transition-colors">
+            Exam Head
+          </button>
+<button class="px-3 py-2 rounded-lg text-xs font-semibold bg-surface-container-lowest/10 text-inverse-on-surface hover:bg-surface-container-lowest/20 transition-colors">
+            IT Admin
+          </button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-space-md mb-12">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary-container text-on-primary font-label-md text-label-md px-8 py-3.5 rounded-[10px] hover:bg-primary transition-all shadow-[0_4px_14px_rgba(189,81,23,0.35)] active:scale-[0.99] font-semibold" href="#">
+          Book a role-tailored demo
+          <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-surface-container-lowest/10 text-inverse-on-surface font-label-md text-label-md px-8 py-3.5 rounded-[10px] hover:bg-surface-container-lowest/20 transition-all font-semibold" href="#">
+          Speak with an institutional consultant
+          <span class="material-symbols-outlined text-[18px]">support_agent</span>
+</a>
+</div>
+<!-- Assurance Points -->
+<div class="flex flex-wrap items-center justify-center gap-6 text-inverse-on-surface/70 text-xs font-medium">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-fixed text-[16px]">verified</span>
+          No generic sales pitch
+        </span>
+<span class="hidden sm:inline text-inverse-on-surface/30">·</span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-fixed text-[16px]">database</span>
+          Preloaded with Indian board sandbox data
+        </span>
+<span class="hidden sm:inline text-inverse-on-surface/30">·</span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-fixed text-[16px]">checklist</span>
+          CBSE, ICSE &amp; State Boards compliant
+        </span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interactions for Role Pill selection in CTA
+  document.querySelectorAll('#role-demo-pills button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('#role-demo-pills button').forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        btn.classList.add('bg-surface-container-lowest/10', 'text-inverse-on-surface');
+      });
+      button.classList.remove('bg-surface-container-lowest/10', 'text-inverse-on-surface');
+      button.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+    });
+  });
+
+  // Micro-interaction for Workflow Tab bar
+  document.querySelectorAll('#workflow-tabs button').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('#workflow-tabs button').forEach(t => {
+        t.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm', 'font-semibold');
+        t.classList.add('text-on-surface-variant', 'bg-surface-container-lowest');
+      });
+      tab.classList.remove('text-on-surface-variant', 'bg-surface-container-lowest');
+      tab.classList.add('bg-primary', 'text-on-primary', 'shadow-sm', 'font-semibold');
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-low border-t border-outline-variant/40 pt-space-2xl pb-space-xl"><div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop mb-space-2xl"><div><h4 class="font-title-card text-title-card text-on-surface mb-space-md">Product</h4><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm"><a href="product.html#overview" class="text-on-surface-variant hover:text-primary transition-colors">Overview</a></li><li class="font-body-sm text-body-sm"><a href="product.html#students" class="text-on-surface-variant hover:text-primary transition-colors">Students</a></li><li class="font-body-sm text-body-sm"><a href="product.html#admissions" class="text-on-surface-variant hover:text-primary transition-colors">Admissions</a></li><li class="font-body-sm text-body-sm"><a href="product.html#staff" class="text-on-surface-variant hover:text-primary transition-colors">Staff &amp; faculty</a></li><li class="font-body-sm text-body-sm"><a href="product.html#payroll" class="text-on-surface-variant hover:text-primary transition-colors">Payroll</a></li><li class="font-body-sm text-body-sm"><a href="product.html#academics" class="text-on-surface-variant hover:text-primary transition-colors">Academics &amp; Exams</a></li><li class="font-body-sm text-body-sm"><a href="product.html#teaching" class="text-on-surface-variant hover:text-primary transition-colors">Teaching &amp; Planning</a></li><li class="font-body-sm text-body-sm"><a href="product.html#attendance" class="text-on-surface-variant hover:text-primary transition-colors">Attendance</a></li><li class="font-body-sm text-body-sm"><a href="fees.html" class="text-on-surface-variant hover:text-primary transition-colors">Fees &amp; payments</a></li><li class="font-body-sm text-body-sm"><a href="product.html#transport" class="text-on-surface-variant hover:text-primary transition-colors">Transport &amp; Auxiliary</a></li><li class="font-body-sm text-body-sm"><a href="product.html#communications" class="text-on-surface-variant hover:text-primary transition-colors">Communications</a></li><li class="font-body-sm text-body-sm"><a href="product.html#calendar" class="text-on-surface-variant hover:text-primary transition-colors">Calendar</a></li><li class="font-body-sm text-body-sm"><a href="product.html#reports" class="text-on-surface-variant hover:text-primary transition-colors">Reports</a></li><li class="font-body-sm text-body-sm"><a href="product.html#documents" class="text-on-surface-variant hover:text-primary transition-colors">Documents &amp; Settings</a></li></ul></div><div><h4 class="font-title-card text-title-card text-on-surface mb-space-md">Solutions</h4><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm"><a href="solutions.html#trustees" class="text-on-surface-variant hover:text-primary transition-colors">Trustees &amp; Owners</a></li><li class="font-body-sm text-body-sm"><a href="solutions.html#principals" class="text-on-surface-variant hover:text-primary transition-colors">Principals</a></li><li class="font-body-sm text-body-sm"><a href="solutions.html#admissions" class="text-on-surface-variant hover:text-primary transition-colors">Admissions Head</a></li><li class="font-body-sm text-body-sm"><a href="solutions.html#coordinators" class="text-on-surface-variant hover:text-primary transition-colors">Academic Coordinators</a></li><li class="font-body-sm text-body-sm"><a href="solutions.html#teachers" class="text-on-surface-variant hover:text-primary transition-colors">Teachers</a></li><li class="font-body-sm text-body-sm"><a href="solutions.html#finance" class="text-on-surface-variant hover:text-primary transition-colors">Finance &amp; Accounts</a></li><li class="font-body-sm text-body-sm"><a href="solutions.html#transport" class="text-on-surface-variant hover:text-primary transition-colors">Transport Manager</a></li><li class="font-body-sm text-body-sm"><a href="solutions.html#admins" class="text-on-surface-variant hover:text-primary transition-colors">IT &amp; System Admins</a></li></ul></div><div><h4 class="font-title-card text-title-card text-on-surface mb-space-md">Company</h4><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm"><a href="about.html" class="text-on-surface-variant hover:text-primary transition-colors">About Knowva Systems</a></li><li class="font-body-sm text-body-sm"><a href="security.html" class="text-on-surface-variant hover:text-primary transition-colors">Security &amp; Compliance</a></li><li class="font-body-sm text-body-sm"><a href="resources.html" class="text-on-surface-variant hover:text-primary transition-colors">Resources &amp; Guides</a></li><li class="font-body-sm text-body-sm"><a href="about.html#careers" class="text-on-surface-variant hover:text-primary transition-colors">Careers</a></li><li class="font-body-sm text-body-sm"><a href="demo.html" class="text-on-surface-variant hover:text-primary transition-colors">Contact Us</a></li></ul></div><div><h4 class="font-title-card text-title-card text-on-surface mb-space-md">Legal &amp; Compliance</h4><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm"><a href="security.html#privacy" class="text-on-surface-variant hover:text-primary transition-colors">Privacy Policy</a></li><li class="font-body-sm text-body-sm"><a href="security.html#terms" class="text-on-surface-variant hover:text-primary transition-colors">Terms of Service</a></li><li class="font-body-sm text-body-sm"><a href="security.html#dpdp" class="text-on-surface-variant hover:text-primary transition-colors">Student Data Safety (DPDP Act India)</a></li><li class="font-body-sm text-body-sm"><a href="security.html#board-audit" class="text-on-surface-variant hover:text-primary transition-colors">CBSE/ICSE Board Audit readiness</a></li></ul></div></div><div class="border-t border-outline-variant/30 pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-left">© Knowva Systems Inc. All rights reserved. Made for schools in India.</p><div class="flex items-center gap-space-md text-on-surface-variant"><span class="material-symbols-outlined text-[20px] hover:text-primary transition-colors cursor-pointer">share</span><span class="material-symbols-outlined text-[20px] hover:text-primary transition-colors cursor-pointer">public</span><span class="material-symbols-outlined text-[20px] hover:text-primary transition-colors cursor-pointer">smart_display</span></div></div></div></footer>
+
+<span id="PING_CONTENT_PUSH_NOTIFICATION" style="display: none;"></span>
+
+<span id="PING_CONTENT_PUSH_NOTIFICATION" style="display: none;"></span><script src="../assets/js/app.js"></script>
+</body></html>

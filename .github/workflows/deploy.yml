@@ -1,0 +1,70 @@
+name: Deploy School Website to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Lint, Audit & Validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Audit Repository for Accidentally Committed Secrets
+        run: |
+          echo "Scanning repository for exposed keys or credentials..."
+          SECRET_MATCHES=$(grep -rnE --exclude-dir=".git" --exclude-dir=".github" "(AIza[0-9A-Za-z_-]{35}|ghp_[0-9a-zA-Z]{36}|AKIA[0-9A-Z]{16}|-----BEGIN (RSA|EC|OPENSSH) PRIVATE KEY-----)" . || true)
+          if [ -n "$SECRET_MATCHES" ]; then
+            echo "::error::Suspicious secret pattern detected in repository!"
+            echo "$SECRET_MATCHES"
+            exit 1
+          fi
+          echo "Secret scan clean: No secrets detected."
+
+      - name: Validate Site Structure, CNAME & Internal Links
+        run: python scripts/validate_site.py
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: validate
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
