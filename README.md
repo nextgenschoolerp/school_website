@@ -80,10 +80,10 @@ Serve the folder with any static HTTP server:
 
 ```bash
 # Using Python 3:
-python -m http.server 4599
+python -m http.server 4600
 ```
 
-Open [http://localhost:4599](http://localhost:4599) in your browser.
+Open [http://localhost:4600](http://localhost:4600) in your browser.
 
 ---
 

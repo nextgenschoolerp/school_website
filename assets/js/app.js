@@ -1,8 +1,11 @@
 /**
- * Knowva Systems — School ERP Frontend Interactions
+ * Knowva Systems — School ERP Frontend Interactions & Motion
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initScrollReveals();
+  initStatCounters();
+  initHeroTilt();
   initMobileNav();
   initRoleTabs();
   initPricingCalculator();
@@ -12,7 +15,109 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. Mobile Navigation
+   1. Scroll-triggered Reveal Animations
+   ========================================================================== */
+function initScrollReveals() {
+  const revealItems = document.querySelectorAll('.reveal-item');
+  if (revealItems.length === 0) return;
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealItems.forEach(el => observer.observe(el));
+  } else {
+    revealItems.forEach(el => el.classList.add('revealed'));
+  }
+}
+
+/* ==========================================================================
+   2. Animated Number Counters
+   ========================================================================== */
+function initStatCounters() {
+  const countUp = (el, target, isDecimal = false) => {
+    const duration = 1800;
+    const steps = 60;
+    const stepTime = duration / steps;
+    let current = 0;
+    const step = target / steps;
+
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      if (isDecimal && target === 99.98) {
+        el.textContent = current >= target ? '99.98' : current.toFixed(2);
+      } else {
+        el.textContent = isDecimal ? current.toFixed(1) : Math.floor(current);
+      }
+    }, stepTime);
+  };
+
+  if ('IntersectionObserver' in window) {
+    const statObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const integers = entry.target.querySelectorAll('.counter-val');
+          integers.forEach(num => {
+            const target = parseFloat(num.getAttribute('data-target'));
+            if (!isNaN(target)) countUp(num, target, false);
+          });
+
+          const decimals = entry.target.querySelectorAll('.counter-decimal');
+          decimals.forEach(num => {
+            const target = parseFloat(num.getAttribute('data-target'));
+            if (!isNaN(target)) countUp(num, target, true);
+          });
+
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.25 });
+
+    const statsSections = document.querySelectorAll('section.bg-slate-100, [data-stats-section]');
+    statsSections.forEach(sec => statObserver.observe(sec));
+  }
+}
+
+/* ==========================================================================
+   3. 3D Tilt Micro-Interaction for Hero Mockup
+   ========================================================================== */
+function initHeroTilt() {
+  const tiltWrapper = document.getElementById('heroDashboardMockup');
+  if (tiltWrapper && window.matchMedia('(pointer: fine)').matches) {
+    const tiltInner = tiltWrapper.querySelector('.tilt-card-inner') || tiltWrapper;
+    tiltWrapper.addEventListener('mousemove', (e) => {
+      const rect = tiltWrapper.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -5;
+      const rotateY = ((x - centerX) / centerX) * 5;
+
+      tiltInner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    tiltWrapper.addEventListener('mouseleave', () => {
+      tiltInner.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  }
+}
+
+/* ==========================================================================
+   4. Mobile Navigation Drawer
    ========================================================================== */
 function initMobileNav() {
   const toggleBtn = document.getElementById('mobile-nav-toggle');
@@ -61,7 +166,7 @@ function initMobileNav() {
 }
 
 /* ==========================================================================
-   2. Role Switcher Tabs (Solutions page & Home page)
+   5. Role Switcher Tabs (Solutions page & Home page)
    ========================================================================== */
 function initRoleTabs() {
   const tabContainers = document.querySelectorAll('[data-role-tabs]');
@@ -73,7 +178,6 @@ function initRoleTabs() {
       tab.addEventListener('click', () => {
         const targetRole = tab.getAttribute('data-role-tab');
 
-        // Update tabs active styling
         tabs.forEach(t => {
           t.classList.remove('active', 'border-primary', 'text-primary', 'bg-white', 'shadow-sm');
           t.classList.add('text-on-surface-variant');
@@ -81,7 +185,6 @@ function initRoleTabs() {
         tab.classList.add('active', 'border-primary', 'text-primary', 'bg-white', 'shadow-sm');
         tab.classList.remove('text-on-surface-variant');
 
-        // Show matching panel
         panels.forEach(panel => {
           if (panel.getAttribute('data-role-panel') === targetRole) {
             panel.classList.remove('hidden');
@@ -95,7 +198,7 @@ function initRoleTabs() {
 }
 
 /* ==========================================================================
-   3. Pricing Calculator (Pricing page)
+   6. Pricing Calculator (Pricing page)
    ========================================================================== */
 function initPricingCalculator() {
   const slider = document.getElementById('student-count-slider');
@@ -113,12 +216,10 @@ function initPricingCalculator() {
       countDisplay.textContent = students.toLocaleString('en-IN');
     }
 
-    // Base rate per student based on scale
-    let baseRate = 99; // Standard base plan ₹99/student/yr
+    let baseRate = 99;
     if (students > 3000) baseRate = 85;
     else if (students > 1500) baseRate = 92;
 
-    // Board tier adjustments
     let boardMultiplier = 1.0;
     boardRadios.forEach(radio => {
       if (radio.checked) {
@@ -127,7 +228,6 @@ function initPricingCalculator() {
       }
     });
 
-    // Addons
     let addonsPerStudent = 0;
     addonCheckboxes.forEach(cb => {
       if (cb.checked) {
@@ -156,12 +256,11 @@ function initPricingCalculator() {
   boardRadios.forEach(r => r.addEventListener('change', updatePricing));
   addonCheckboxes.forEach(cb => cb.addEventListener('change', updatePricing));
 
-  // Initialize
   updatePricing();
 }
 
 /* ==========================================================================
-   4. Capabilities Filter & Search (Capabilities page)
+   7. Capabilities Filter & Search (Capabilities page)
    ========================================================================== */
 function initCapabilitiesFilter() {
   const searchInput = document.getElementById('capability-search');
@@ -220,7 +319,7 @@ function initCapabilitiesFilter() {
 }
 
 /* ==========================================================================
-   5. Demo Form Submission (Demo page)
+   8. Demo Form Submission (Demo page)
    ========================================================================== */
 function initDemoForm() {
   const demoForm = document.getElementById('book-demo-form');
@@ -235,7 +334,6 @@ function initDemoForm() {
     }
 
     setTimeout(() => {
-      // Determine if we are at root or in pages/
       const isSubpage = window.location.pathname.includes('/pages/');
       const target = isSubpage ? 'demo-success.html' : 'pages/demo-success.html';
       window.location.href = target;
@@ -244,7 +342,7 @@ function initDemoForm() {
 }
 
 /* ==========================================================================
-   6. Accordions / FAQ Toggles
+   9. Accordions / FAQ Toggles
    ========================================================================== */
 function initAccordions() {
   const accordionHeaders = document.querySelectorAll('[data-accordion-toggle]');
