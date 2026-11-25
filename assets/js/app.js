@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initStatCounters();
   initHeroTilt();
   initTiltCards();
-  initMobileNav();
   initRoleTabs();
   initPricingCalculator();
   initCapabilitiesFilter();
@@ -158,54 +157,6 @@ function initTiltCards() {
       });
     });
   }
-}
-
-/* ==========================================================================
-   4. Mobile Navigation Drawer
-   ========================================================================== */
-function initMobileNav() {
-  const toggleBtn = document.getElementById('mobile-nav-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const closeBtn = document.getElementById('mobile-nav-close');
-
-  if (!toggleBtn || !mobileMenu) return;
-
-  function openMenu() {
-    mobileMenu.classList.remove('hidden');
-    toggleBtn.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeMenu() {
-    mobileMenu.classList.add('hidden');
-    toggleBtn.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  }
-
-  toggleBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (mobileMenu.classList.contains('hidden')) {
-      openMenu();
-    } else {
-      closeMenu();
-    }
-  });
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeMenu);
-  }
-
-  document.addEventListener('click', (e) => {
-    if (!mobileMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
-      closeMenu();
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
-      closeMenu();
-    }
-  });
 }
 
 /* ==========================================================================

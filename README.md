@@ -1,6 +1,6 @@
 # Knowva Systems — School ERP Website
 
-Static, high-performance marketing and product site for **Knowva Systems** and the **Knowva School ERP** platform. Engineered with modern semantic HTML5, Tailwind CSS design tokens, Material Symbols, and vanilla JavaScript (no build tools required).
+Static, high-performance marketing and product site for **Knowva Systems** and the **Knowva School ERP** platform. Built with semantic HTML5, Tailwind CSS (loaded from the Tailwind CDN, with design tokens in `tailwind-config`), a custom stylesheet, Material Symbols, and vanilla JavaScript. No build step is required: the site is plain files served as-is.
 
 Based on the **Warm Institutional Modernism** design system pulled from Google Stitch project [15212067254820986152](https://stitch.google.com/projects/15212067254820986152).
 
@@ -41,36 +41,70 @@ Based on the **Warm Institutional Modernism** design system pulled from Google S
 ## 📁 Repository Structure
 
 ```
-├── index.html                   # Root landing page (GitHub Pages root entrypoint)
-├── CNAME                        # Custom domain mapping (school.knowvasystems.com)
-├── manifest.json                # PWA Web App Manifest
-├── favicon.ico                  # Multi-resolution favicon (16, 32, 48px)
-├── pages/                       # All subpages
-│   ├── about.html
-│   ├── capabilities.html
-│   ├── demo.html
-│   ├── demo-success.html
-│   ├── fees.html
-│   ├── parent-app.html
-│   ├── pricing.html
-│   ├── product.html
-│   ├── resources.html
-│   ├── security.html
-│   └── solutions.html
+├── index.html                   # Home page and GitHub Pages entrypoint
+├── CNAME                        # Custom domain (school.knowvasystems.com)
+├── manifest.json                # PWA Web App Manifest (name, theme colour, icons)
+├── favicon.ico                  # Site favicon
+├── pages/                       # All other pages (11 HTML files)
+│   ├── about.html               # Company, leadership, careers
+│   ├── capabilities.html        # Searchable feature checklist
+│   ├── demo.html                # Book-a-demo form
+│   ├── demo-success.html        # Demo confirmation
+│   ├── fees.html                # Fees & payments module
+│   ├── parent-app.html          # Parent mobile app showcase
+│   ├── pricing.html             # Pricing and cost estimator
+│   ├── product.html             # Product architecture and modules
+│   ├── resources.html           # Playbooks, evaluation matrices, migration guides
+│   ├── security.html            # Security and IT controls
+│   └── solutions.html           # Role-based solutions
 ├── assets/
 │   ├── css/
-│   │   └── styles.css           # Design tokens, interactive states, transitions
+│   │   └── styles.css           # Custom styles: layout, reveal/hover states, transitions
 │   ├── js/
-│   │   └── app.js               # Mobile nav, role tabs, pricing slider, search filter
-│   ├── icons/                   # PWA & touch icons (180x180, 192x192, 512x512)
-│   ├── img/                     # Local brand assets, hero illustrations, consultant portrait
-│   └── video/                   # Hero and feature product videos (MP4 & WebM)
+│   │   └── app.js               # Page interactions (see below)
+│   ├── icons/                   # Favicons and PWA/touch icons (180, 192, 512 px, plus a 512 px favicon PNG)
+│   ├── img/                     # Brand logos, hero and section illustrations, consultant photo
+│   └── video/                   # Hero and features product videos (MP4 & WebM)
 ├── scripts/
-│   └── validate_site.py         # Link, anchor, and essential files integrity checker
+│   └── validate_site.py         # Checks essential files, CNAME and internal links/anchors
 └── .github/
     └── workflows/
-        └── deploy.yml           # Automated CI/CD validation & GitHub Pages deployment
+        └── deploy.yml           # CI validation, secret scan and GitHub Pages deployment
 ```
+
+### Shared site header
+
+The header is defined once, in `assets/js/site-header.js` (markup) and `assets/css/site-header.css` (styles). Every page has the same mount point where the header used to be:
+
+```html
+<div id="site-header" data-root="../"></div>   <!-- "" on index.html, "../" in pages/ -->
+<script src="../assets/js/site-header.js"></script>
+```
+
+- The current page's menu item gets `aria-current="page"`. `fees.html` highlights **Product**. The home page has no menu item, so nothing is highlighted there.
+- Breakpoints: 1200px and up shows the inline menu. Below 1200px (tablet and mobile) the menu becomes a drawer. Below 640px the "Book a demo" button moves into the drawer.
+- To add or rename a menu item, edit `NAV_ITEMS` in `site-header.js`. Every page updates.
+
+### Shared site footer
+
+The footer works the same way: `assets/js/site-footer.js` (content and links) and `assets/css/site-footer.css` (styles). Every page has `<div id="site-footer" data-root="…">` where the footer used to be. To change footer links, edit `FOOTER_COLUMNS` in `site-footer.js`. Every page updates.
+
+### What `assets/js/app.js` does
+
+Each feature starts on `DOMContentLoaded` and does nothing if its markup is missing on the page.
+
+| Feature | Behaviour | Where it is used |
+|---|---|---|
+| Scroll reveals | Fades in `.reveal-item` / `.reveal-on-scroll` elements as they enter the viewport | `index.html`, `pages/parent-app.html` |
+| Stat counters | Counts numeric stats up to their target value | Pages with counter markup |
+| Hero and card tilt | Mouse-driven 3D tilt on the hero dashboard (`#heroDashboardMockup`) and tilt cards | `index.html` |
+| Mobile navigation | Moved to `site-header.js` (see below) | — |
+| Book-a-demo form | Handles the `#book-demo-form` submission | `pages/demo.html` |
+| Beta sign-up form | Handles the `#betaForm` submission and shows `#betaSuccess` | `pages/parent-app.html` |
+| Role tabs | Switches persona panels inside `[data-role-tabs]` | Markup not on any page yet |
+| Pricing calculator | Per-student estimator (slider, board tier, add-ons) | Markup not on any page yet |
+| Capabilities filter | Live search and count badge for the feature checklist | Markup not on any page yet |
+| Accordions | Expand and collapse via `[data-accordion-toggle]` | Markup not on any page yet |
 
 ---
 
@@ -98,4 +132,13 @@ python scripts/validate_site.py
 Checks:
 - Essential files (`index.html`, `CNAME`, `styles.css`, `app.js`).
 - CNAME correctness (`school.knowvasystems.com`).
-- All 700+ internal `href`, `src`, `poster`, and `#anchor` references across all 12 pages.
+- Every local `href`, `src`, `poster` and `#anchor` reference in all 12 HTML pages, and local `url(...)` references in CSS. External links are not fetched.
+
+---
+
+## 🌐 Deployment
+
+The workflow in `.github/workflows/deploy.yml` runs on pushes and pull requests to `main`, and on manual dispatch:
+
+1. **validate:** scans the repository for accidentally committed keys (Google, GitHub, AWS and private key patterns), then runs `scripts/validate_site.py`.
+2. **deploy:** runs only on pushes to `main` (or manual dispatch) after validation passes, and publishes the repository root to GitHub Pages.
