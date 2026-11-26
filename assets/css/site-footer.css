@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Shared site footer (rendered by assets/js/site-footer.js on every page)
+   Layout:
+     < 768px    one column
+     >= 768px   two columns
+     >= 1024px  four columns
+   ========================================================================== */
+
+.kv-footer {
+  --kv-ft-bg: #f3f2ff;
+  --kv-ft-ink: #161b2d;
+  --kv-ft-muted: #574239;
+  --kv-ft-primary: #bd5117;
+  --kv-ft-border: rgba(222, 192, 181, 0.45);
+
+  width: 100%;
+  background: var(--kv-ft-bg);
+  border-top: 1px solid var(--kv-ft-border);
+  padding: 64px 0 40px;
+  font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  box-sizing: border-box;
+}
+
+.kv-footer *,
+.kv-footer *::before,
+.kv-footer *::after {
+  box-sizing: border-box;
+}
+
+.kv-ft-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 1024px) {
+  .kv-footer { padding: 80px 0 40px; }
+  .kv-ft-inner { padding: 0 64px; }
+}
+
+/* ---------- Columns ---------- */
+.kv-ft-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px 32px;
+  margin-bottom: 56px;
+}
+
+@media (min-width: 768px) {
+  .kv-ft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .kv-ft-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.kv-ft-col h4 {
+  margin: 0 0 16px;
+  font-family: "Plus Jakarta Sans", "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--kv-ft-ink);
+}
+
+.kv-ft-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kv-ft-col a {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--kv-ft-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.kv-ft-col a:hover,
+.kv-ft-col a:focus-visible {
+  color: var(--kv-ft-primary);
+}
+
+/* ---------- Bottom bar ---------- */
+.kv-ft-bottom {
+  border-top: 1px solid var(--kv-ft-border);
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: center;
+}
+
+.kv-ft-bottom p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--kv-ft-muted);
+}
+
+.kv-ft-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--kv-ft-muted);
+}
+
+.kv-ft-icons .material-symbols-outlined {
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .kv-ft-bottom {
+    flex-direction: row;
+    text-align: left;
+  }
+}

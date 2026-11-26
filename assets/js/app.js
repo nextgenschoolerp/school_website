@@ -1,217 +1,381 @@
-/* Knowva site — small, dependency-free interactions. */
-(function () {
-  // mobile nav
-  var toggle = document.querySelector('.nav-toggle');
-  var nav = document.querySelector('.nav');
-  if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  }
+/**
+ * Knowva Systems — School ERP Frontend Interactions & Motion
+ */
 
-  // mark current nav link
-  var here = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(function (a) {
-    var target = (a.getAttribute('href') || '').split('/').pop();
-    if (target === here) a.classList.add('active');
-  });
+document.addEventListener('DOMContentLoaded', () => {
+  initScrollReveals();
+  initStatCounters();
+  initHeroTilt();
+  initTiltCards();
+  initRoleTabs();
+  initPricingCalculator();
+  initCapabilitiesFilter();
+  initDemoForm();
+  initBetaForm();
+  initAccordions();
+});
 
-  // ---- role-workflow tabs ----
-  var wf = document.getElementById('wf');
-  if (wf) {
-    var tabs = wf.querySelectorAll('.wf-tab');
-    var panels = wf.querySelectorAll('.wf-panel');
-    tabs.forEach(function (tab) {
-      tab.addEventListener('click', function () {
-        var i = +tab.getAttribute('data-wf');
-        tabs.forEach(function (t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
-        panels.forEach(function (p) { p.classList.remove('active'); });
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-        if (panels[i]) panels[i].classList.add('active');
-      });
-    });
-  }
+/* ==========================================================================
+   1. Scroll-triggered Reveal Animations
+   ========================================================================== */
+function initScrollReveals() {
+  const revealItems = document.querySelectorAll('.reveal-item, .reveal-on-scroll');
+  if (revealItems.length === 0) return;
 
-  // ---- stat count-up (one deliberate moment, on scroll into view) ----
-  var stats = document.querySelectorAll('.stat .n');
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (stats.length && 'IntersectionObserver' in window && !reduce) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        io.unobserve(e.target);
-        var el = e.target, raw = el.textContent.trim();
-        var m = raw.match(/^(\d[\d,]*)(\D*)$/);
-        if (!m) return;
-        var target = parseInt(m[1].replace(/,/g, ''), 10), suffix = m[2] || '';
-        var start = null, dur = 900;
-        function step(ts) {
-          if (start === null) start = ts;
-          var p = Math.min((ts - start) / dur, 1);
-          var eased = 1 - Math.pow(1 - p, 3);
-          el.textContent = Math.round(target * eased).toLocaleString('en-IN') + suffix;
-          if (p < 1) requestAnimationFrame(step);
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed', 'is-revealed');
+          obs.unobserve(entry.target);
         }
-        requestAnimationFrame(step);
       });
-    }, { threshold: 0.6 });
-    stats.forEach(function (s) { io.observe(s); });
-  }
-
-  // ---- pricing estimator ----
-  var est = document.getElementById('estimator');
-  if (est) {
-    var RATES = { essentials: 99, standard: 199, complete: 299 };
-    var MIN = 15000;
-    var inr = function (n) {
-      return '₹' + n.toLocaleString('en-IN', { maximumFractionDigits: 2 });
-    };
-    function slabCost(rate, students) {
-      // income-tax-style slabs: 1-500 full, 501-1500 85%, 1501-5000 70%
-      var bands = [
-        { upto: 500, mult: 1 },
-        { upto: 1500, mult: 0.85 },
-        { upto: 5000, mult: 0.70 }
-      ];
-      var prev = 0, total = 0, lines = [];
-      for (var i = 0; i < bands.length; i++) {
-        var b = bands[i];
-        if (students <= prev) break;
-        var inBand = Math.min(students, b.upto) - prev;
-        if (inBand > 0) {
-          var r = +(rate * b.mult).toFixed(2);
-          total += inBand * r;
-          lines.push({ count: inBand, rate: r, pct: Math.round(b.mult * 100) });
-        }
-        prev = b.upto;
-      }
-      return { total: total, lines: lines };
-    }
-    function render() {
-      var students = Math.max(0, parseInt(est.querySelector('#est-students').value, 10) || 0);
-      var plan = est.querySelector('#est-plan').value;
-      var quarterly = est.querySelector('#est-billing').value === 'quarterly';
-      var out = est.querySelector('.est-out');
-      if (students > 5000) {
-        out.innerHTML = '<div class="big">Let’s talk</div><p class="mb-0">Above 5,000 students we tailor a quote. Book a demo and we’ll size it with you.</p>';
-        return;
-      }
-      if (students <= 0) { out.innerHTML = '<p class="mb-0">Enter your number of students to see a figure.</p>'; return; }
-      var rate = RATES[plan];
-      var r = slabCost(rate, students);
-      var before = Math.max(r.total, MIN);
-      var minApplied = r.total < MIN;
-      if (quarterly) before = before * 1.10;
-      var gst = before * 0.18;
-      var total = before + gst;
-      var per = (before / students);
-      var rows = r.lines.map(function (l) {
-        return '<tr><td>' + l.count + ' × ' + inr(l.rate) + (l.pct < 100 ? ' (' + l.pct + '%)' : '') + '</td><td class="center">' + inr(l.count * l.rate) + '</td></tr>';
-      }).join('');
-      out.innerHTML =
-        '<div class="big">' + inr(+total.toFixed(2)) + '</div>' +
-        '<p style="margin:.2rem 0 1rem;color:var(--muted)">a year, GST included · ' +
-        inr(+per.toFixed(2)) + ' per student before GST</p>' +
-        '<table><tbody>' + rows +
-        (minApplied ? '<tr><td>Minimum applied</td><td class="center">' + inr(MIN) + '</td></tr>' : '') +
-        (quarterly ? '<tr><td>Quarterly (+10%)</td><td class="center">applied</td></tr>' : '') +
-        '<tr><td>Before GST</td><td class="center">' + inr(+before.toFixed(2)) + '</td></tr>' +
-        '<tr><td>GST at 18%</td><td class="center">' + inr(+gst.toFixed(2)) + '</td></tr>' +
-        '<tr><td><strong>Total for the year</strong></td><td class="center"><strong>' + inr(+total.toFixed(2)) + '</strong></td></tr>' +
-        '</tbody></table>';
-    }
-    est.querySelectorAll('input,select').forEach(function (el) {
-      el.addEventListener('input', render);
-      el.addEventListener('change', render);
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
     });
-    render();
-  }
 
-  // ---- demo request form (Web3Forms) ----
-  var demo = document.getElementById('demo-form');
-  if (demo) {
-    var status = demo.querySelector('.form-status');
-    var submitBtn = demo.querySelector('button[type="submit"]');
-    demo.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var key = demo.getAttribute('data-access-key');
-      if (!key || key.indexOf('YOUR_') === 0) {
-        status.textContent = 'Form is not connected yet. Please email hello@knowvasystems.com.';
-        return;
+    revealItems.forEach(el => observer.observe(el));
+  } else {
+    revealItems.forEach(el => el.classList.add('revealed', 'is-revealed'));
+  }
+}
+
+/* ==========================================================================
+   2. Animated Number Counters
+   ========================================================================== */
+function initStatCounters() {
+  const countUp = (el, target, isDecimal = false) => {
+    const duration = 1800;
+    const steps = 60;
+    const stepTime = duration / steps;
+    let current = 0;
+    const step = target / steps;
+
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
       }
-      var payload = {};
-      new FormData(demo).forEach(function (v, k) { payload[k] = v; });
-      payload.access_key = key;
-      submitBtn.disabled = true;
-      status.textContent = 'Sending…';
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(payload)
-      })
-        .then(function (r) { return r.json(); })
-        .then(function (j) {
-          if (j.success) {
-            demo.reset();
-            status.textContent = '';
-            var dialog = document.getElementById('demo-confirm');
-            if (dialog && dialog.showModal) dialog.showModal(); else alert('Thanks — we will confirm a slot within one business day.');
-          } else {
-            status.textContent = 'Something went wrong. Please email hello@knowvasystems.com.';
+      if (isDecimal && target === 99.98) {
+        el.textContent = current >= target ? '99.98' : current.toFixed(2);
+      } else {
+        el.textContent = isDecimal ? current.toFixed(1) : Math.floor(current);
+      }
+    }, stepTime);
+  };
+
+  if ('IntersectionObserver' in window) {
+    const statObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const integers = entry.target.querySelectorAll('.counter-val');
+          integers.forEach(num => {
+            const target = parseFloat(num.getAttribute('data-target'));
+            if (!isNaN(target)) countUp(num, target, false);
+          });
+
+          const decimals = entry.target.querySelectorAll('.counter-decimal');
+          decimals.forEach(num => {
+            const target = parseFloat(num.getAttribute('data-target'));
+            if (!isNaN(target)) countUp(num, target, true);
+          });
+
+          // Parent app 100% counter
+          const counter100 = entry.target.querySelector('.counter-number');
+          if (counter100 && !counter100.dataset.animated) {
+            counter100.dataset.animated = 'true';
+            let cur = 0;
+            const t = setInterval(() => {
+              cur += 2;
+              if (cur >= 100) {
+                counter100.textContent = '100%';
+                clearInterval(t);
+              } else {
+                counter100.textContent = cur + '%';
+              }
+            }, 20);
           }
-        })
-        .catch(function () {
-          status.textContent = 'Network error. Please email hello@knowvasystems.com.';
-        })
-        .then(function () { submitBtn.disabled = false; });
+
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.25 });
+
+    const statsSections = document.querySelectorAll('section.bg-slate-100, [data-stats-section], .counter-number');
+    statsSections.forEach(sec => statObserver.observe(sec.closest('section') || sec.closest('div') || sec));
+  }
+}
+
+/* ==========================================================================
+   3. 3D Tilt Micro-Interactions (Hero Dashboard Mockup & Phone Mockups)
+   ========================================================================== */
+function initHeroTilt() {
+  const tiltWrapper = document.getElementById('heroDashboardMockup');
+  if (tiltWrapper && window.matchMedia('(pointer: fine)').matches) {
+    const tiltInner = tiltWrapper.querySelector('.tilt-card-inner') || tiltWrapper;
+    tiltWrapper.addEventListener('mousemove', (e) => {
+      const rect = tiltWrapper.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -5;
+      const rotateY = ((x - centerX) / centerX) * 5;
+
+      tiltInner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    tiltWrapper.addEventListener('mouseleave', () => {
+      tiltInner.style.transform = 'rotateX(0deg) rotateY(0deg)';
     });
   }
+}
 
-  // ---- role tiles flip in place ----
-  var flipCards = Array.prototype.slice.call(document.querySelectorAll('.flip-card'));
-  var setFlip = function (card) {
-    var open = !card.classList.contains('is-flipped');
-    flipCards.forEach(function (c) { c.classList.remove('is-flipped'); });
-    if (open) card.classList.add('is-flipped');
-  };
-  var equalizeFlipCards = function () {
-    flipCards.forEach(function (c) { c.querySelector('.flip-inner').style.minHeight = ''; });
-    var h = Math.max.apply(null, flipCards.map(function (c) { return c.querySelector('.flip-inner').scrollHeight; }));
-    flipCards.forEach(function (c) { c.querySelector('.flip-inner').style.minHeight = h + 'px'; });
-  };
-  flipCards.forEach(function (card) {
-    card.setAttribute('tabindex', '0');
-    card.addEventListener('click', function () { setFlip(card); });
-    card.addEventListener('keydown', function (e) {
-      if (e.target === card && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); setFlip(card); }
+function initTiltCards() {
+  const tiltContainers = document.querySelectorAll('.tilt-card-wrapper');
+  if (window.matchMedia('(pointer: fine)').matches) {
+    tiltContainers.forEach(wrapper => {
+      const card = wrapper.querySelector('.tilt-card');
+      if (!card) return;
+
+      wrapper.addEventListener('mousemove', (e) => {
+        const rect = wrapper.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -8;
+        const rotateY = ((x - centerX) / centerX) * 8;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+      });
+
+      wrapper.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  }
+}
+
+/* ==========================================================================
+   5. Role Switcher Tabs (Solutions page & Home page)
+   ========================================================================== */
+function initRoleTabs() {
+  const tabContainers = document.querySelectorAll('[data-role-tabs]');
+  tabContainers.forEach(container => {
+    const tabs = container.querySelectorAll('[data-role-tab]');
+    const panels = container.querySelectorAll('[data-role-panel]');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetRole = tab.getAttribute('data-role-tab');
+
+        tabs.forEach(t => {
+          t.classList.remove('active', 'border-primary', 'text-primary', 'bg-white', 'shadow-sm');
+          t.classList.add('text-on-surface-variant');
+        });
+        tab.classList.add('active', 'border-primary', 'text-primary', 'bg-white', 'shadow-sm');
+        tab.classList.remove('text-on-surface-variant');
+
+        panels.forEach(panel => {
+          if (panel.getAttribute('data-role-panel') === targetRole) {
+            panel.classList.remove('hidden');
+          } else {
+            panel.classList.add('hidden');
+          }
+        });
+      });
     });
   });
-  if (flipCards.length) {
-    equalizeFlipCards();
-    window.addEventListener('load', equalizeFlipCards);
-    window.addEventListener('resize', equalizeFlipCards);
+}
+
+/* ==========================================================================
+   6. Pricing Calculator (Pricing page)
+   ========================================================================== */
+function initPricingCalculator() {
+  const slider = document.getElementById('student-count-slider');
+  const countDisplay = document.getElementById('student-count-display');
+  const annualTotal = document.getElementById('calculator-total-amount');
+  const perStudentRate = document.getElementById('calculator-per-student-rate');
+  const boardRadios = document.querySelectorAll('input[name="board_tier"]');
+  const addonCheckboxes = document.querySelectorAll('.calculator-addon');
+
+  if (!slider) return;
+
+  function updatePricing() {
+    const students = parseInt(slider.value, 10);
+    if (countDisplay) {
+      countDisplay.textContent = students.toLocaleString('en-IN');
+    }
+
+    let baseRate = 99;
+    if (students > 3000) baseRate = 85;
+    else if (students > 1500) baseRate = 92;
+
+    let boardMultiplier = 1.0;
+    boardRadios.forEach(radio => {
+      if (radio.checked) {
+        if (radio.value === 'icse') boardMultiplier = 1.1;
+        else if (radio.value === 'ib') boardMultiplier = 1.25;
+      }
+    });
+
+    let addonsPerStudent = 0;
+    addonCheckboxes.forEach(cb => {
+      if (cb.checked) {
+        addonsPerStudent += parseFloat(cb.getAttribute('data-price') || 0);
+      }
+    });
+
+    const effectiveRate = Math.round((baseRate * boardMultiplier) + addonsPerStudent);
+    const total = effectiveRate * students;
+
+    if (perStudentRate) {
+      perStudentRate.textContent = `₹${effectiveRate}`;
+    }
+    if (annualTotal) {
+      if (total >= 10000000) {
+        annualTotal.textContent = `₹${(total / 10000000).toFixed(2)} Cr`;
+      } else if (total >= 100000) {
+        annualTotal.textContent = `₹${(total / 100000).toFixed(2)} Lakh`;
+      } else {
+        annualTotal.textContent = `₹${total.toLocaleString('en-IN')}`;
+      }
+    }
   }
 
-  // ---- capability filter ----
-  var cap = document.getElementById('cap-table');
-  if (cap) {
-    var rows = Array.prototype.slice.call(cap.querySelectorAll('tbody tr'));
-    var activeModule = 'all';
-    function apply() {
-      rows.forEach(function (tr) {
-        var ok = activeModule === 'all' || tr.getAttribute('data-module') === activeModule;
-        tr.style.display = ok ? '' : 'none';
-      });
+  slider.addEventListener('input', updatePricing);
+  boardRadios.forEach(r => r.addEventListener('change', updatePricing));
+  addonCheckboxes.forEach(cb => cb.addEventListener('change', updatePricing));
+
+  updatePricing();
+}
+
+/* ==========================================================================
+   7. Capabilities Filter & Search (Capabilities page)
+   ========================================================================== */
+function initCapabilitiesFilter() {
+  const searchInput = document.getElementById('capability-search');
+  const filterButtons = document.querySelectorAll('[data-cap-filter]');
+  const capRows = document.querySelectorAll('[data-capability-row]');
+  const countBadge = document.getElementById('capabilities-count-badge');
+
+  if (!searchInput && filterButtons.length === 0) return;
+
+  let activeCategory = 'all';
+  let searchTerm = '';
+
+  function applyFilter() {
+    let visibleCount = 0;
+
+    capRows.forEach(row => {
+      const category = (row.getAttribute('data-category') || '').toLowerCase();
+      const text = row.textContent.toLowerCase();
+
+      const matchesCategory = (activeCategory === 'all' || category === activeCategory);
+      const matchesSearch = (!searchTerm || text.includes(searchTerm));
+
+      if (matchesCategory && matchesSearch) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    if (countBadge) {
+      countBadge.textContent = `${visibleCount} features`;
     }
-    document.querySelectorAll('[data-filter]').forEach(function (chip) {
-      chip.addEventListener('click', function () {
-        document.querySelectorAll('[data-filter]').forEach(function (c) { c.classList.remove('active'); });
-        chip.classList.add('active');
-        activeModule = chip.getAttribute('data-filter');
-        apply();
-      });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchTerm = e.target.value.trim().toLowerCase();
+      applyFilter();
     });
   }
-})();
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => {
+        b.classList.remove('bg-primary', 'text-white');
+        b.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      });
+      btn.classList.add('bg-primary', 'text-white');
+      btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+
+      activeCategory = btn.getAttribute('data-cap-filter') || 'all';
+      applyFilter();
+    });
+  });
+}
+
+/* ==========================================================================
+   8. Demo & Beta Form Submissions
+   ========================================================================== */
+function initDemoForm() {
+  const demoForm = document.getElementById('book-demo-form');
+  if (!demoForm) return;
+
+  demoForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const submitBtn = demoForm.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin mr-2">progress_activity</span> Confirming...';
+    }
+
+    setTimeout(() => {
+      const isSubpage = window.location.pathname.includes('/pages/');
+      const target = isSubpage ? 'demo-success.html' : 'pages/demo-success.html';
+      window.location.href = target;
+    }, 400);
+  });
+}
+
+function initBetaForm() {
+  const form = document.getElementById('betaForm');
+  const successMsg = document.getElementById('betaSuccess');
+  if (!form || !successMsg) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const submitBtn = document.getElementById('submitBtn');
+    if (submitBtn) {
+      submitBtn.innerHTML = '<span>Processing...</span>';
+      submitBtn.disabled = true;
+    }
+    setTimeout(() => {
+      form.classList.add('hidden');
+      successMsg.classList.remove('hidden');
+      successMsg.classList.add('flex');
+    }, 400);
+  });
+}
+
+/* ==========================================================================
+   9. Accordions / FAQ Toggles
+   ========================================================================== */
+function initAccordions() {
+  const accordionHeaders = document.querySelectorAll('[data-accordion-toggle]');
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const targetId = header.getAttribute('data-accordion-toggle');
+      const content = document.getElementById(targetId);
+      const icon = header.querySelector('.accordion-chevron');
+
+      if (!content) return;
+
+      const isOpen = !content.classList.contains('hidden');
+      if (isOpen) {
+        content.classList.add('hidden');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      } else {
+        content.classList.remove('hidden');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+}

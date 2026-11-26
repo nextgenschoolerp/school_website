@@ -1,255 +1,1291 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Knowva Systems — School ERP for the whole school</title>
-<meta name="description" content="Knowva School ERP brings admissions, students, staff, academics, fees and communications into one role-aware platform for multi-campus schools.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=59">
-<link rel="icon" type="image/png" href="assets/img/logo-light.png">
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+<meta name="description" content="Animated & interactive homepage for Knowva School ERP: admissions, student lifecycle, academics, fee reconciliation, and compliance.">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Knowva Systems — School ERP | Unified Platform for Indian K-12</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js?v=4"></script>
+  
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="assets/css/styles.css?v=13">
+<link rel="stylesheet" href="assets/css/site-header.css?v=5">
+<link rel="stylesheet" href="assets/css/site-footer.css?v=4">
 </head>
-<body>
+<body class="bg-surface font-body text-on-surface antialiased overflow-x-hidden selection:bg-primary-light selection:text-navy">
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="container">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="index.html">
-        <img class="mark" src="assets/img/logo-light.png" alt="" width="34" height="34">
-        <span class="brand-text">Knowva<span>Systems</span></span>
-      </a>
-      <div class="nav-links">
-        <a href="pages/product.html">Modules</a>
+  <!-- ================= TOP HEADER NAVIGATION ================= -->
+  <div id="site-header" data-root=""></div>
+<script src="assets/js/site-header.js?v=5"></script>
+
+  <main class="w-full pt-20">
+
+    <!-- ================= 1. HERO SECTION ================= -->
+    <section class="w-full bg-surface py-16 lg:py-24 relative overflow-hidden">
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 -right-32 w-96 h-96 bg-tertiary/10 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Content -->
+          <div class="lg:col-span-5 flex flex-col items-start reveal-item revealed">
+            <div class="inline-flex items-center kv-eyebrow">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#1E6B55] pulse-indicator"></span>
+              <span class="font-display text-xs tracking-wider uppercase text-on-surface-variant font-bold">
+                Next-Gen K–12 Cloud ERP for India
+              </span>
+            </div>
+            
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-[54px] lg:leading-[62px] text-on-surface font-extrabold tracking-tight mb-6">
+              Run the whole school on one platform.
+            </h1>
+            
+            <p class="text-base sm:text-lg text-gray-600 mb-8">
+              Knowva School ERP brings admissions, students, staff, academics, fees, transport and communications into one role-aware system, built for multi-campus schools and the people who run them every day.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-6">
+              <a href="pages/demo.html" class="btn-shimmer inline-flex items-center justify-center bg-primary text-white font-semibold text-base px-7 py-3.5 rounded-xl hover:bg-primary-dark transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:scale-95 group text-center">
+                Book a demo
+                <span class="material-symbols-outlined text-[18px] ml-1.5 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+              <a href="pages/product.html" class="inline-flex items-center justify-center bg-white border border-gray-300 text-gray-800 font-semibold text-base px-6 py-3.5 rounded-xl hover:bg-gray-50 hover:border-gray-400 hover:-translate-y-0.5 active:scale-95 transition-all text-center">
+                Explore the product
+              </a>
+            </div>
+            
+            <p class="text-xs sm:text-sm text-gray-500 flex items-center gap-2 flex-wrap">
+              <span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+              <span>No credit card required</span>
+              <span>·</span>
+              <span>1-month free trial</span>
+              <span>·</span>
+              <span class="font-semibold text-gray-800">CBSE, ICSE &amp; State Boards ready</span>
+            </p>
+          </div>
+
+          <!-- Right Interactive Dashboard Simulation -->
+          <div class="lg:col-span-7 relative tilt-card-wrapper reveal-item revealed" id="heroDashboardMockup">
+            <div class="tilt-card-inner" style="transform: rotateX(0deg) rotateY(0deg);">
+              <!-- Main App Preview Window -->
+              <div class="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-float">
+                
+                <!-- Window Chrome -->
+                <div class="bg-slate-100 px-4 py-2.5 border-b border-gray-200 flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
+                    <span class="text-xs text-gray-500 font-medium ml-2 hidden sm:inline">knowva-erp.internal/st-jude-north</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs text-gray-600">
+                    <span class="px-2 py-0.5 rounded bg-white text-tertiary font-semibold shadow-2xs border border-gray-200">
+                      CBSE Affiliation #1930281
+                    </span>
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 pulse-indicator"></span>
+                    <span class="font-semibold text-gray-800">Live Sync</span>
+                  </div>
+                </div>
+
+                <!-- Simulation Body -->
+                <div class="flex h-[440px] overflow-hidden text-xs">
+                  <!-- Mini Sidebar -->
+                  <div class="w-16 sm:w-44 bg-navy text-white p-3 flex flex-col justify-between shrink-0">
+                    <div class="space-y-4">
+                      <div class="flex items-center gap-2 px-1">
+                        <div class="w-7 h-7 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-xs shadow-xs">
+                          K
+                        </div>
+                        <div class="hidden sm:block">
+                          <p class="font-display font-bold text-xs leading-tight">Knowva ERP</p>
+                          <p class="text-[10px] text-gray-400">v4.8 Enterprise</p>
+                        </div>
+                      </div>
+                      
+                      <div class="hidden sm:block bg-white/10 rounded-lg p-2 text-[11px] leading-tight text-gray-200">
+                        <p class="text-[9px] uppercase tracking-wider text-amber-300">Campus</p>
+                        <p class="font-semibold truncate">North Campus (CBSE)</p>
+                      </div>
+
+                      <nav class="space-y-1">
+                        <div class="flex items-center gap-2 px-2 py-1.5 rounded-lg bg-primary text-white font-medium cursor-pointer shadow-xs">
+                          <span class="material-symbols-outlined text-[16px]">dashboard</span>
+                          <span class="hidden sm:inline">Overview</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-2 py-1.5 rounded-lg text-gray-300 hover:bg-white/10 hover:text-white transition-colors cursor-pointer">
+                          <span class="material-symbols-outlined text-[16px]">how_to_reg</span>
+                          <span class="hidden sm:inline">Admissions</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-2 py-1.5 rounded-lg text-gray-300 hover:bg-white/10 hover:text-white transition-colors cursor-pointer">
+                          <span class="material-symbols-outlined text-[16px]">school</span>
+                          <span class="hidden sm:inline">Students</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-2 py-1.5 rounded-lg text-gray-300 hover:bg-white/10 hover:text-white transition-colors cursor-pointer">
+                          <span class="material-symbols-outlined text-[16px]">payments</span>
+                          <span class="hidden sm:inline">Fees &amp; Dues</span>
+                        </div>
+                      </nav>
+                    </div>
+
+                    <div class="hidden sm:flex items-center gap-1.5 pt-2 border-t border-white/10 text-[10px] text-gray-400">
+                      <span class="material-symbols-outlined text-[14px]">security</span>
+                      <span>DPDP Certified</span>
+                    </div>
+                  </div>
+
+                  <!-- Mini Dashboard Main View -->
+                  <div class="flex-1 bg-slate-50 p-4 overflow-y-auto">
+                    <!-- Title Bar -->
+                    <div class="flex items-center justify-between pb-3 mb-3 border-b border-gray-200">
+                      <div>
+                        <h4 class="font-display font-bold text-sm text-gray-900">School Overview — St. Jude Global Academy</h4>
+                        <p class="text-[11px] text-gray-500">Academic Year 2025–26 · Term 1 · Active Session</p>
+                      </div>
+                      <span class="px-2 py-1 rounded bg-indigo-100 text-indigo-800 text-[11px] font-semibold flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[13px]">shield_person</span>
+                        Principal
+                      </span>
+                    </div>
+
+                    <!-- 4 Live Stats -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+                      <div class="bg-white p-2.5 rounded-xl border border-gray-200 shadow-2xs hover:border-primary transition-colors">
+                        <span class="text-[10px] text-indigo-600 font-bold uppercase block">Students</span>
+                        <div class="font-bold text-sm text-gray-900 mt-0.5">2,842</div>
+                        <span class="text-[9px] text-emerald-600 font-semibold">+124 this term</span>
+                      </div>
+                      <div class="bg-white p-2.5 rounded-xl border border-gray-200 shadow-2xs hover:border-emerald-500 transition-colors">
+                        <span class="text-[10px] text-emerald-600 font-bold uppercase block">Attendance</span>
+                        <div class="font-bold text-sm text-gray-900 mt-0.5">96.4%</div>
+                        <span class="text-[9px] text-gray-500">2,740 present</span>
+                      </div>
+                      <div class="bg-white p-2.5 rounded-xl border border-gray-200 shadow-2xs hover:border-blue-500 transition-colors">
+                        <span class="text-[10px] text-blue-600 font-bold uppercase block">Staff Live</span>
+                        <div class="font-bold text-sm text-gray-900 mt-0.5">142/148</div>
+                        <span class="text-[9px] text-gray-500">6 on leave</span>
+                      </div>
+                      <div class="bg-white p-2.5 rounded-xl border border-gray-200 shadow-2xs hover:border-primary transition-colors">
+                        <span class="text-[10px] text-primary font-bold uppercase block">Term Fees</span>
+                        <div class="font-bold text-sm text-gray-900 mt-0.5">₹4.18 Cr</div>
+                        <span class="text-[9px] text-emerald-600 font-semibold">95% collected</span>
+                      </div>
+                    </div>
+
+                    <!-- Trend Visual & Inflow -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-3">
+                      <div class="bg-white p-2.5 rounded-xl border border-gray-200">
+                        <div class="flex justify-between items-center mb-1.5">
+                          <span class="font-semibold text-gray-800 text-[11px]">Weekly Attendance</span>
+                          <span class="text-[10px] text-gray-500">Avg 95.7%</span>
+                        </div>
+                        <div class="h-16 flex items-end justify-between gap-2 pt-1 px-1">
+                          <div class="flex-1 flex flex-col items-center gap-1 group">
+                            <div class="w-full bg-emerald-200 group-hover:bg-emerald-300 rounded-t h-10 transition-colors"></div>
+                            <span class="text-[9px] text-gray-500">M</span>
+                          </div>
+                          <div class="flex-1 flex flex-col items-center gap-1 group">
+                            <div class="w-full bg-emerald-300 group-hover:bg-emerald-400 rounded-t h-12 transition-colors"></div>
+                            <span class="text-[9px] text-gray-500">T</span>
+                          </div>
+                          <div class="flex-1 flex flex-col items-center gap-1 group">
+                            <div class="w-full bg-emerald-200 group-hover:bg-emerald-300 rounded-t h-9 transition-colors"></div>
+                            <span class="text-[9px] text-gray-500">W</span>
+                          </div>
+                          <div class="flex-1 flex flex-col items-center gap-1 group">
+                            <div class="w-full bg-emerald-400 group-hover:bg-emerald-500 rounded-t h-14 transition-colors"></div>
+                            <span class="text-[9px] text-gray-500">T</span>
+                          </div>
+                          <div class="flex-1 flex flex-col items-center gap-1 group">
+                            <div class="w-full bg-emerald-600 rounded-t h-13 shadow-xs"></div>
+                            <span class="text-[9px] font-bold text-primary">F</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="bg-white p-2.5 rounded-xl border border-gray-200">
+                        <div class="flex justify-between items-center mb-1.5">
+                          <span class="font-semibold text-gray-800 text-[11px]">Fee Inflows by Mode</span>
+                          <span class="text-[10px] font-bold text-primary">₹4.18 / ₹4.40 Cr</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mb-2 overflow-hidden flex">
+                          <div class="bg-emerald-600 h-full" style="width: 78%" title="UPI 78%"></div>
+                          <div class="bg-amber-500 h-full" style="width: 18%" title="NACH 18%"></div>
+                          <div class="bg-gray-400 h-full" style="width: 4%" title="Counter 4%"></div>
+                        </div>
+                        <div class="flex justify-between text-[10px] text-gray-600 pt-1">
+                          <span>UPI 78%</span>
+                          <span>NACH 18%</span>
+                          <span>Counter 4%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Worklist Items -->
+                    <div class="bg-white p-2.5 rounded-xl border border-gray-200">
+                      <span class="font-semibold text-gray-800 text-[11px] block mb-1.5">Needs Attention (Today)</span>
+                      <div class="space-y-1">
+                        <div class="flex items-center justify-between p-1 rounded bg-slate-50 hover:bg-slate-100 transition-colors">
+                          <span class="truncate text-gray-700 flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary pulse-indicator"></span>
+                            12 TC applications pending sign-off
+                          </span>
+                          <span class="text-[10px] font-bold text-primary">Sign</span>
+                        </div>
+                        <div class="flex items-center justify-between p-1 rounded bg-slate-50 hover:bg-slate-100 transition-colors">
+                          <span class="truncate text-gray-700 flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                            4 Bus Routes reaching capacity (R-07, R-12)
+                          </span>
+                          <span class="text-[10px] font-bold text-gray-800">Route</span>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Overlapping Phone Preview -->
+              <div class="absolute -bottom-6 -right-3 w-56 bg-navy rounded-3xl p-2 shadow-2xl border-4 border-slate-700 hidden sm:block animate-float-delayed hover:scale-105 transition-all">
+                <div class="w-16 h-3 bg-black rounded-full mx-auto mb-2"></div>
+                <div class="bg-white rounded-2xl p-2.5 text-xs text-gray-800">
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="text-[9px] font-bold uppercase tracking-wider text-primary">Knowva Parent App</span>
+                    <span class="text-[9px] text-gray-400">09:41 AM</span>
+                  </div>
+                  <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-1.5 mb-1.5">
+                    <div class="flex justify-between text-[10px]">
+                      <span class="font-bold text-emerald-700">Aarav Sharma (VIII-B)</span>
+                      <span class="text-emerald-700 font-semibold">Present</span>
+                    </div>
+                  </div>
+                  <div class="bg-orange-50 border border-orange-200 rounded-lg p-2">
+                    <div class="flex justify-between text-[10px] font-bold mb-1">
+                      <span>Term 2 Fee Due</span>
+                      <span class="text-primary">₹18,500</span>
+                    </div>
+                    <button class="w-full bg-primary text-white text-[10px] font-semibold py-1 rounded shadow-2xs hover:bg-primary-dark transition-colors">
+                      Pay via UPI (Instant Receipt)
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 2. TRUST STRIP ================= -->
+    <section class="w-full bg-slate-100 border-y border-gray-200 py-6">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+          
+          <div class="flex items-center gap-3 p-2 rounded-xl hover:bg-white transition-all cursor-default group">
+            <div class="w-10 h-10 rounded-xl bg-white shadow-xs border border-gray-200 flex items-center justify-center text-primary shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform">
+              <span class="material-symbols-outlined text-[20px]">corporate_fare</span>
+            </div>
+            <div>
+              <p class="font-display text-xs lg:text-sm font-bold text-gray-900 leading-tight">Multi-campus</p>
+              <p class="text-[12px] text-gray-600">Multi-tenant by design</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 p-2 rounded-xl hover:bg-white transition-all cursor-default group">
+            <div class="w-10 h-10 rounded-xl bg-white shadow-xs border border-gray-200 flex items-center justify-center text-amber-700 shrink-0 group-hover:scale-110 group-hover:-rotate-3 transition-transform">
+              <span class="material-symbols-outlined text-[20px]">school</span>
+            </div>
+            <div>
+              <p class="font-display text-xs lg:text-sm font-bold text-gray-900 leading-tight">CBSE, ICSE &amp; State</p>
+              <p class="text-[12px] text-gray-600">Pre-built grade rubrics</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 p-2 rounded-xl hover:bg-white transition-all cursor-default group">
+            <div class="w-10 h-10 rounded-xl bg-white shadow-xs border border-gray-200 flex items-center justify-center text-indigo-700 shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform">
+              <span class="material-symbols-outlined text-[20px]">vpn_key</span>
+            </div>
+            <div>
+              <p class="font-display text-xs lg:text-sm font-bold text-gray-900 leading-tight">Role-based access</p>
+              <p class="text-[12px] text-gray-600">Governed on every click</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 p-2 rounded-xl hover:bg-white transition-all cursor-default group">
+            <div class="w-10 h-10 rounded-xl bg-white shadow-xs border border-gray-200 flex items-center justify-center text-emerald-700 shrink-0 group-hover:scale-110 group-hover:-rotate-3 transition-transform">
+              <span class="material-symbols-outlined text-[20px]">verified_user</span>
+            </div>
+            <div>
+              <p class="font-display text-xs lg:text-sm font-bold text-gray-900 leading-tight">Full audit trail</p>
+              <p class="text-[12px] text-gray-600">India DPDP Act compliant</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. FOURTEEN CONNECTED MODULES ================= -->
+    <section class="w-full bg-white py-16 lg:py-24" id="modules">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
         
-        <a href="pages/solutions.html">Solutions</a>
-        <a href="pages/security.html">Security</a>
-        <a href="pages/pricing.html">Pricing</a>
-        <a href="pages/resources.html">Resources</a>
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-item revealed">
+          <span class="font-display text-xs uppercase tracking-widest text-primary font-bold block mb-2">
+            Unified Architecture
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl text-gray-900 font-bold tracking-tight mb-4">
+            One platform, fourteen connected modules
+          </h2>
+          <p class="text-base sm:text-lg text-gray-600">
+            Every department shares the exact same single source of truth without double entry, fragile third-party integrations, or midnight CSV reconciliations.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+          
+          <!-- Card 1 -->
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary hover:shadow-xl transition-all duration-300 group cursor-pointer revealed">
+            <div class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[24px]">dashboard</span>
+            </div>
+            <h3 class="font-display text-lg text-gray-900 font-bold mb-2 group-hover:text-primary transition-colors">Overview</h3>
+            <p class="text-sm text-gray-600">
+              Executive real-time school KPIs, board metrics, cash flows, and multi-campus drilldowns for trustees and leadership.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary hover:shadow-xl transition-all duration-300 group cursor-pointer revealed">
+            <div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[24px]">school</span>
+            </div>
+            <h3 class="font-display text-lg text-gray-900 font-bold mb-2 group-hover:text-primary transition-colors">Students</h3>
+            <p class="text-sm text-gray-600">
+              360° student lifecycle from roll allocation to digital health records, disciplinary logs, and co-curricular achievements.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary hover:shadow-xl transition-all duration-300 group cursor-pointer revealed">
+            <div class="w-11 h-11 rounded-xl bg-orange-50 text-primary flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[24px]">contact_mail</span>
+            </div>
+            <h3 class="font-display text-lg text-gray-900 font-bold mb-2 group-hover:text-primary transition-colors">Admissions</h3>
+            <p class="text-sm text-gray-600">
+              Multi-stage enquiry CRM, campus walk-in token system, entrance exam scoring rubrics &amp; spot seat allocation.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary hover:shadow-xl transition-all duration-300 group cursor-pointer revealed">
+            <div class="w-11 h-11 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[24px]">badge</span>
+            </div>
+            <h3 class="font-display text-lg text-gray-900 font-bold mb-2 group-hover:text-primary transition-colors">Staff &amp; Faculty</h3>
+            <p class="text-sm text-gray-600">
+              Complete bio-data, biometric sync, teacher qualification registers, work-hour metrics &amp; automated relief teacher scheduling.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary hover:shadow-xl transition-all duration-300 group cursor-pointer revealed">
+            <div class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+            </div>
+            <h3 class="font-display text-lg text-gray-900 font-bold mb-2 group-hover:text-primary transition-colors">Payroll &amp; Leaves</h3>
+            <p class="text-sm text-gray-600">
+              Indian statutory compliance (EPF, ESI, TDS Form 16), customized salary bands, automated payslip delivery &amp; leave ledgers.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary hover:shadow-xl transition-all duration-300 group cursor-pointer revealed">
+            <div class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[24px]">assignment</span>
+            </div>
+            <h3 class="font-display text-lg text-gray-900 font-bold mb-2 group-hover:text-primary transition-colors">Academics &amp; Exams</h3>
+            <p class="text-sm text-gray-600">
+              CBSE 9-point grading, ICSE rubrics, question banks, hall tickets, weighted internal assessments &amp; automated report cards.
+            </p>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary hover:shadow-xl transition-all duration-300 group cursor-pointer revealed">
+            <div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[24px]">calendar_month</span>
+            </div>
+            <h3 class="font-display text-lg text-gray-900 font-bold mb-2 group-hover:text-primary transition-colors">Teaching &amp; Planning</h3>
+            <p class="text-sm text-gray-600">
+              Period timetables with teacher collision detection, syllabus tracking, digital lesson plans &amp; homework broadcast.
+            </p>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary hover:shadow-xl transition-all duration-300 group cursor-pointer revealed">
+            <div class="w-11 h-11 rounded-xl bg-rose-50 text-rose-700 flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[24px]">fact_check</span>
+            </div>
+            <h3 class="font-display text-lg text-gray-900 font-bold mb-2 group-hover:text-primary transition-colors">Attendance</h3>
+            <p class="text-sm text-gray-600">
+              Biometric facial recognition, RFID turnstile sync, or teacher 2-click roll call with automated instant SMS to parents.
+            </p>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary hover:shadow-xl transition-all duration-300 group cursor-pointer revealed">
+            <div class="w-11 h-11 rounded-xl bg-orange-50 text-primary flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[24px]">credit_card</span>
+            </div>
+            <h3 class="font-display text-lg text-gray-900 font-bold mb-2 group-hover:text-primary transition-colors">Fees &amp; Payments</h3>
+            <p class="text-sm text-gray-600">
+              Custom installment structures, concessions, direct UPI gateway, bank NACH reconciliations &amp; physical counter receipts.
+            </p>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary hover:shadow-xl transition-all duration-300 group cursor-pointer revealed">
+            <div class="w-11 h-11 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[24px]">directions_bus</span>
+            </div>
+            <h3 class="font-display text-lg text-gray-900 font-bold mb-2 group-hover:text-primary transition-colors">Transport &amp; Auxiliary</h3>
+            <p class="text-sm text-gray-600">
+              GPS vehicle telemetry, stop-wise route manifests, driver fitness records, hostel mess allocation &amp; infirmary stock.
+            </p>
+          </div>
+
+          <!-- Card 11 -->
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary hover:shadow-xl transition-all duration-300 group cursor-pointer revealed">
+            <div class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[24px]">forum</span>
+            </div>
+            <h3 class="font-display text-lg text-gray-900 font-bold mb-2 group-hover:text-primary transition-colors">Communications</h3>
+            <p class="text-sm text-gray-600">
+              Official WhatsApp Business API integration, SMS alerts, push alerts &amp; urgent circulars with digital read-receipts.
+            </p>
+          </div>
+
+          <!-- Card 12 -->
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary hover:shadow-xl transition-all duration-300 group cursor-pointer revealed">
+            <div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[24px]">event</span>
+            </div>
+            <h3 class="font-display text-lg text-gray-900 font-bold mb-2 group-hover:text-primary transition-colors">Academic Calendar</h3>
+            <p class="text-sm text-gray-600">
+              Annual operational master schedule, examination datesheets, state gazetted holidays &amp; slot-wise PTM booking.
+            </p>
+          </div>
+
+          <!-- Card 13 -->
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary hover:shadow-xl transition-all duration-300 group cursor-pointer revealed">
+            <div class="w-11 h-11 rounded-xl bg-rose-50 text-rose-700 flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[24px]">bar_chart</span>
+            </div>
+            <h3 class="font-display text-lg text-gray-900 font-bold mb-2 group-hover:text-primary transition-colors">Reports &amp; Analytics</h3>
+            <p class="text-sm text-gray-600">
+              Board inspection readiness registers, fee defaulter aging brackets, cohort trends &amp; teacher productivity analysis.
+            </p>
+          </div>
+
+          <!-- Card 14 -->
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary hover:shadow-xl transition-all duration-300 group cursor-pointer revealed">
+            <div class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[24px]">folder_shared</span>
+            </div>
+            <h3 class="font-display text-lg text-gray-900 font-bold mb-2 group-hover:text-primary transition-colors">Documents &amp; Settings</h3>
+            <p class="text-sm text-gray-600">
+              Automated Transfer Certificates (TC) with verification QR codes, bonafide certificates, CBSE audit exports &amp; RBAC policies.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="text-center reveal-item revealed">
+          <a href="#" class="inline-flex items-center gap-2 font-display text-base font-bold text-primary hover:text-primary-dark group transition-colors">
+            <span>See every module with interactive live previews</span>
+            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1.5 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+
       </div>
-      <div class="nav-cta">
+    </section>
+
+    <!-- ================= 4. ZERO RE-KEYING FLOW ================= -->
+    <section class="w-full bg-slate-100 py-16 lg:py-24 border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
         
-        <a class="btn btn-primary" href="pages/demo.html">Book a demo</a>
-      </div>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
-      </button>
-    </nav>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <p class="eyebrow reveal d1">SchoolERP by Knowva Systems</p>
-      <h1 class="reveal d2">Run your entire school on one <span class="accent">platform.</span></h1>
-      <p class="lead reveal d3">A modular platform that unifies admissions, academics, finance and parent communication — with role-based access and a full audit trail, built around every role on campus.</p>
-      <div class="hero-actions reveal d4">
-        <a class="btn btn-primary btn-lg" href="pages/demo.html">Book an Enterprise Demo</a>
-        <a class="btn btn-outline btn-lg" href="pages/product.html">Explore the 13 modules</a>
-      </div>
-      <div class="hero-compliance reveal d5">
-        <span class="pill-tag">Role-based access control</span>
-        <span class="pill-tag">Full audit trail</span>
-        <span class="pill-tag">Multi-tenant isolation</span>
-        <span class="pill-tag">DPDP-aligned</span>
-      </div>
-    </div>
-
-    <div class="hero-art">
-      <div class="blob" aria-hidden="true"></div>
-      <video class="hero-illus" poster="assets/img/hero-illustration.webp" autoplay loop muted playsinline aria-label="Animated illustration of a school dashboard with attendance charts, class schedule, school-bus map and report cards, with a teacher, a student and a parent">
-        <source src="assets/video/hero-video.webm" type="video/webm">
-        <source src="assets/video/hero-video.mp4" type="video/mp4">
-        <img src="assets/img/hero-illustration.webp" alt="" width="2000" height="1342">
-      </video>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST STRIP -->
-<section class="trust">
-  <div class="container">
-    <div class="inner">
-      <span class="label">Built for</span>
-      <span class="logo">CBSE &amp; ICSE schools</span>
-      <span class="logo">State-board schools</span>
-      <span class="logo">K–12 groups</span>
-      <span class="logo">Multi-campus trusts</span>
-      <span class="logo">International schools</span>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES (hero-matched split layout) -->
-<section class="section feat-section" style="overflow:hidden">
-  <div class="container hero-grid feat-grid">
-    <div>
-      <p class="eyebrow">One platform, connected</p>
-      <h2>Everything a school runs, in one place</h2>
-      <p class="lead">A student enrolled in Admissions appears in Students, bills through Fees, and shows up in Attendance and Academics — entered once, trusted everywhere.</p>
-      <div class="feat-list">
-        <div class="feat-row">
-          <div class="icon-circle ic-purple"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 3l9 5-9 5-9-5 9-5zM5 10v5l7 4 7-4v-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div><h3>Admissions to enrolment</h3><p>Run every enquiry through counselling, entrance exams, offers and deposits to a real student record.</p></div>
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-item revealed">
+          <span class="font-display text-xs uppercase tracking-widest text-primary font-bold block mb-2">
+            Zero Re-Keying
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl text-gray-900 font-bold tracking-tight mb-4">
+            Data entered once, trusted everywhere
+          </h2>
+          <p class="text-base sm:text-lg text-gray-600">
+            Watch how a single admission cascades seamlessly into finance, daily academics, parent communications and board compliance without human re-entry.
+          </p>
         </div>
-        <div class="feat-row">
-          <div class="icon-circle ic-amber"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 19V5m0 14h16M8 19v-6m4 6V9m4 10v-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div><h3>Academics &amp; exams</h3><p>CBSE grading, a live marks grid, controlled unlocking, broadsheets and progress cards.</p></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-12">
+          
+          <div class="reveal-item bg-white rounded-2xl border border-gray-200 p-5 shadow-xs interactive-card cursor-pointer revealed">
+            <div class="w-8 h-8 rounded-full bg-primary text-white font-bold text-xs flex items-center justify-center mb-3 shadow-xs">
+              01
+            </div>
+            <span class="text-[10px] uppercase font-bold text-primary tracking-wider block mb-1">Admissions CRM</span>
+            <h4 class="font-display text-sm font-bold text-gray-900 mb-2">Student Enrolled</h4>
+            <p class="text-xs text-gray-600">
+              Parent submits verification docs. System instantly generates immutable Student ID and roll number.
+            </p>
+          </div>
+
+          <div class="reveal-item bg-white rounded-2xl border border-gray-200 p-5 shadow-xs interactive-card cursor-pointer revealed">
+            <div class="w-8 h-8 rounded-full bg-amber-700 text-white font-bold text-xs flex items-center justify-center mb-3 shadow-xs">
+              02
+            </div>
+            <span class="text-[10px] uppercase font-bold text-amber-700 tracking-wider block mb-1">Fees &amp; Billing</span>
+            <h4 class="font-display text-sm font-bold text-gray-900 mb-2">Structure Assigned</h4>
+            <p class="text-xs text-gray-600">
+              Auto-assigns class fee category, sibling concession logic, and generates Term 1 invoice with UPI payment link.
+            </p>
+          </div>
+
+          <div class="reveal-item bg-white rounded-2xl border border-gray-200 p-5 shadow-xs interactive-card cursor-pointer revealed">
+            <div class="w-8 h-8 rounded-full bg-blue-700 text-white font-bold text-xs flex items-center justify-center mb-3 shadow-xs">
+              03
+            </div>
+            <span class="text-[10px] uppercase font-bold text-blue-700 tracking-wider block mb-1">Academics</span>
+            <h4 class="font-display text-sm font-bold text-gray-900 mb-2">Synced to Class Roll</h4>
+            <p class="text-xs text-gray-600">
+              Biometric credentials pushed to turnstiles; student auto-appears on teacher's daily roll and timetable roster.
+            </p>
+          </div>
+
+          <div class="reveal-item bg-white rounded-2xl border border-gray-200 p-5 shadow-xs interactive-card cursor-pointer revealed">
+            <div class="w-8 h-8 rounded-full bg-emerald-700 text-white font-bold text-xs flex items-center justify-center mb-3 shadow-xs">
+              04
+            </div>
+            <span class="text-[10px] uppercase font-bold text-emerald-700 tracking-wider block mb-1">Parent App</span>
+            <h4 class="font-display text-sm font-bold text-gray-900 mb-2">App Credentials Live</h4>
+            <p class="text-xs text-gray-600">
+              Parents receive WhatsApp onboarding link, instant access to bus tracking, homework broadcast &amp; digital receipts.
+            </p>
+          </div>
+
+          <div class="reveal-item bg-white rounded-2xl border border-gray-200 p-5 shadow-xs interactive-card cursor-pointer revealed">
+            <div class="w-8 h-8 rounded-full bg-indigo-700 text-white font-bold text-xs flex items-center justify-center mb-3 shadow-xs">
+              05
+            </div>
+            <span class="text-[10px] uppercase font-bold text-indigo-700 tracking-wider block mb-1">Board Compliance</span>
+            <h4 class="font-display text-sm font-bold text-gray-900 mb-2">Audit Ready</h4>
+            <p class="text-xs text-gray-600">
+              Instantly reflected in aggregate CBSE OASIS returns, state UDISE+ registers, and Transfer Certificate tracking.
+            </p>
+          </div>
+
         </div>
-        <div class="feat-row">
-          <div class="icon-circle ic-rose"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 10h18M6 3v4m12-4v4M5 7h14a1 1 0 011 1v11a1 1 0 01-1 1H5a1 1 0 01-1-1V8a1 1 0 011-1z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div><h3>Fees &amp; payroll</h3><p>Bill a class, chase defaulters, run gross-to-net payroll with PF, ESI and TDS returns.</p></div>
+
+        <div class="reveal-item bg-white rounded-xl border border-gray-200 p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left shadow-xs hover:shadow-md transition-shadow revealed">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+            <p class="text-sm text-gray-800 font-medium">
+              All orchestrated under one immutable <strong>Role-Based Access Control (RBAC)</strong> security foundation with multi-campus data isolation.
+            </p>
+          </div>
+          <a href="pages/security.html" class="text-xs font-bold text-primary hover:underline shrink-0 flex items-center gap-1 group">
+            <span>Learn about security</span>
+            <span class="material-symbols-outlined text-[15px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
         </div>
-        <div class="feat-row">
-          <div class="icon-circle ic-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H8l-5 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div><h3>Communication</h3><p>Circulars that go WhatsApp-first with SMS and email fallback, plus gate passes and visitors.</p></div>
+
+      </div>
+    </section>
+
+    <!-- ================= 5. TAILORED PERSONAS ================= -->
+    <section class="w-full bg-white py-16 lg:py-24"><div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-item revealed">
+          <span class="font-display text-xs uppercase tracking-widest text-[#BD5117] font-bold block mb-2">
+            Tailored Personas
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl text-[#24283B] font-bold tracking-tight mb-4">
+            Built around the people who run the school
+          </h2>
+          <p class="text-base sm:text-lg text-[#565B6B]">
+            Customized interfaces, tailored permissions and focused workflows for every member of your educational institution.
+          </p>
+        </div>
+
+        <!-- 4 Persona Cards (2x2 Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          
+          <!-- Persona 1: Trustees & Leadership -->
+          <div class="reveal-item interactive-card bg-[#F8F5F2] rounded-2xl border border-gray-200 hover:border-primary/60 hover:shadow-xl p-8 relative flex flex-col justify-between transition-all duration-300 revealed">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-white border border-gray-200 text-xs font-bold uppercase tracking-wider text-[#BD5117]">
+                  Leadership &amp; Trustees
+                </span>
+                <span class="material-symbols-outlined text-[#BD5117] text-[28px] icon-bounce">account_balance</span>
+              </div>
+              <h3 class="font-display text-xl text-[#24283B] font-bold mb-3">
+                Multi-branch oversight without phone calls
+              </h3>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center gap-2 text-sm text-[#565B6B]">
+                  <span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+                  Consolidated Capex/Opex &amp; cash flows across all sister institutions
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#565B6B]">
+                  <span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+                  Real-time fee collection aging and bank reconciliation summaries
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#565B6B]">
+                  <span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+                  Executive statutory compliance status (CBSE affiliation &amp; audit reports)
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white p-4 rounded-xl border-l-4 border-l-[#BD5117] border border-gray-200 shadow-2xs">
+              <p class="italic text-xs text-[#24283B] font-medium">
+                "Instant clarity on cash flow and student retention across all 4 campuses without waiting for weekly spreadsheets."
+              </p>
+            </div>
+          </div>
+
+          <!-- Persona 2: Admissions & Front Office -->
+          <div class="reveal-item interactive-card bg-[#F8F5F2] rounded-2xl border border-gray-200 hover:border-amber-600 hover:shadow-xl p-8 relative flex flex-col justify-between transition-all duration-300 revealed">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-white border border-gray-200 text-xs font-bold uppercase tracking-wider text-amber-700">
+                  Admissions &amp; Front Office
+                </span>
+                <span class="material-symbols-outlined text-amber-700 text-[28px] icon-bounce">support_agent</span>
+              </div>
+              <h3 class="font-display text-xl text-[#24283B] font-bold mb-3">
+                Enquiry to enrollment in under 8 minutes
+              </h3>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center gap-2 text-sm text-[#565B6B]">
+                  <span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+                  Automated enquiry pipeline from website, open-house, and walk-ins
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#565B6B]">
+                  <span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+                  Spot token dispensing system for campus tours and entrance exams
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#565B6B]">
+                  <span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+                  Digital document locker for birth certificates, Aadhaar &amp; transfer records
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white p-4 rounded-xl border-l-4 border-l-amber-700 border border-gray-200 shadow-2xs">
+              <p class="italic text-xs text-[#24283B] font-medium">
+                "No physical paper trails. Parents complete document verification and pay the seat token fee on their phone in minutes."
+              </p>
+            </div>
+          </div>
+
+          <!-- Persona 3: Teachers & Academic Coordinators -->
+          <div class="reveal-item interactive-card bg-[#F8F5F2] rounded-2xl border border-gray-200 hover:border-blue-600 hover:shadow-xl p-8 relative flex flex-col justify-between transition-all duration-300 revealed">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-white border border-gray-200 text-xs font-bold uppercase tracking-wider text-blue-700">
+                  Teachers &amp; Coordinators
+                </span>
+                <span class="material-symbols-outlined text-blue-700 text-[28px] icon-bounce">menu_book</span>
+              </div>
+              <h3 class="font-display text-xl text-[#24283B] font-bold mb-3">
+                Save 45 minutes of clerical work every day
+              </h3>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center gap-2 text-sm text-[#565B6B]">
+                  <span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+                  2-click digital roll call with instant absent notifications sent to parents
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#565B6B]">
+                  <span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+                  Timetable clash resolver and automated relief substitute suggestions
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#565B6B]">
+                  <span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+                  Bulk term marks entry with pre-configured CBSE 9-point grading matrices
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white p-4 rounded-xl border-l-4 border-l-blue-700 border border-gray-200 shadow-2xs">
+              <p class="italic text-xs text-[#24283B] font-medium">
+                "End-of-term report card generation used to take an entire weekend. With Knowva, report cards are ready in 1 click."
+              </p>
+            </div>
+          </div>
+
+          <!-- Persona 4: Finance, HR & Admin -->
+          <div class="reveal-item interactive-card bg-[#F8F5F2] rounded-2xl border border-gray-200 hover:border-indigo-600 hover:shadow-xl p-8 relative flex flex-col justify-between transition-all duration-300 revealed">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-white border border-gray-200 text-xs font-bold uppercase tracking-wider text-indigo-700">
+                  HR, Finance &amp; Accounts
+                </span>
+                <span class="material-symbols-outlined text-indigo-700 text-[28px] icon-bounce">payments</span>
+              </div>
+              <h3 class="font-display text-xl text-[#24283B] font-bold mb-3">
+                Zero pending reconciliations at month-end
+              </h3>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center gap-2 text-sm text-[#565B6B]">
+                  <span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+                  Automated WhatsApp payment links and installment reminders
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#565B6B]">
+                  <span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+                  1-click staff salary generation compliant with Indian EPF, ESI &amp; TDS
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#565B6B]">
+                  <span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+                  Multi-head fee concession approval hierarchy with trustee digital sign-off
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white p-4 rounded-xl border-l-4 border-l-indigo-700 border border-gray-200 shadow-2xs">
+              <p class="italic text-xs text-[#24283B] font-medium">
+                "We slashed our uncollected fee defaulters from 14% to under 2.5% in the very first academic term."
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Action link -->
+        <div class="text-center reveal-item revealed">
+          <a href="#" class="inline-flex items-center gap-2 font-display text-base font-bold text-[#BD5117] hover:text-primary-dark group transition-colors">
+            <span>Find your role and test tailored workflows</span>
+            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+      </div></section>
+
+    <!-- ================= 6. PARENT APP BAND (Dark Navy) ================= -->
+    <section class="w-full bg-navy text-white py-20 relative overflow-hidden">
+      <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 flex flex-col items-start reveal-item revealed">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary text-white text-xs font-bold uppercase tracking-wider mb-6 shadow-xs">
+              <span>New Release</span>
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl text-white font-bold tracking-tight mb-4">
+              Parents stay in the loop, on Android and iPhone.
+            </h2>
+            <p class="text-base sm:text-lg text-gray-300 mb-8">
+              Delight 100% of your parent community with an intuitive, responsive mobile application that eliminates anxiety, reduces front-desk phone calls by 70%, and drives faster fee clearance.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-8 w-full">
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">check_circle</span>
+                <span class="text-sm text-gray-200">Real-time attendance &amp; instant leaves</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">check_circle</span>
+                <span class="text-sm text-gray-200">Daily homework diary &amp; timetables</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">check_circle</span>
+                <span class="text-sm text-gray-200">Exam marks &amp; digital report cards</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">check_circle</span>
+                <span class="text-sm text-gray-200">1-click UPI dues payment with receipts</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3">
+              <div class="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 px-4 py-2.5 rounded-xl cursor-pointer transition-all hover:-translate-y-0.5 active:scale-95">
+                <span class="material-symbols-outlined text-[24px]">android</span>
+                <div class="text-left">
+                  <p class="text-[9px] uppercase tracking-wider text-gray-400">Available on</p>
+                  <p class="text-xs font-bold text-white">Google Play</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 px-4 py-2.5 rounded-xl cursor-pointer transition-all hover:-translate-y-0.5 active:scale-95">
+                <span class="material-symbols-outlined text-[24px]">phone_iphone</span>
+                <div class="text-left">
+                  <p class="text-[9px] uppercase tracking-wider text-gray-400">Download for</p>
+                  <p class="text-xs font-bold text-white">Apple iOS</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 flex justify-center items-center gap-6 pt-8 lg:pt-0 reveal-item revealed">
+            <!-- Phone 1 -->
+            <div class="w-60 bg-slate-900 rounded-3xl p-3 shadow-2xl border-4 border-slate-700 animate-float hover:scale-105 transition-all"><div class="w-16 h-3 bg-black rounded-full mx-auto mb-3"></div><div class="bg-white rounded-2xl p-3 text-gray-900 shadow-sm"><div class="flex items-center justify-between pb-2 mb-2 border-b border-gray-100"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">DP</div><div><p class="text-xs font-bold text-gray-900 leading-tight">Diya Patel</p><p class="text-[10px] text-gray-500">Class V-A · Roll #24</p></div></div><span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">98.2% Attd.</span></div><div class="bg-slate-50 border border-gray-200 rounded-xl p-2.5 mb-2"><div class="flex items-center justify-between mb-1.5"><div class="flex items-center gap-1 text-[11px] font-bold text-gray-900"><span class="material-symbols-outlined text-[14px] text-amber-700">directions_bus</span><span>Bus #04 On Route</span></div><span class="inline-flex items-center gap-1 text-[9px] font-bold text-emerald-600"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 pulse-indicator"></span>Live geofence</span></div><p class="text-[10px] text-gray-600">Next stop: Green Park Extn (ETA 03:42 PM)</p><div class="w-full bg-gray-200 rounded-full h-1.5 mt-1.5 overflow-hidden"><div class="bg-emerald-600 h-full rounded-full" style="width: 68%"></div></div></div><div class="space-y-1.5 mb-2"><div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Today's Schedule</div><div class="flex items-center justify-between p-1.5 bg-indigo-50 border border-indigo-100 rounded-lg"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-indigo-700">auto_stories</span><div><p class="text-[11px] font-bold text-gray-900">English Lit.</p><p class="text-[9px] text-gray-500">Period 4 · Ch 5 Notes</p></div></div><span class="text-[9px] font-semibold text-indigo-700">11:30 AM</span></div><div class="flex items-center justify-between p-1.5 bg-blue-50 border border-blue-100 rounded-lg"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-blue-700">science</span><div><p class="text-[11px] font-bold text-gray-900">General Science</p><p class="text-[9px] text-gray-500">Period 5 · Lab Room 2</p></div></div><span class="text-[9px] font-semibold text-blue-700">01:15 PM</span></div></div><div class="flex items-center justify-between pt-1 border-t border-gray-100 text-[9px] text-gray-400"><span class="flex items-center gap-1 text-primary font-semibold"><span class="material-symbols-outlined text-[12px]">notifications_active</span> Instant push</span><span>Synced 2m ago</span></div></div></div>
+
+            <!-- Phone 2 -->
+            <div class="w-60 bg-slate-900 rounded-3xl p-3 shadow-2xl border-4 border-slate-700 hidden sm:block animate-float-delayed hover:scale-105 transition-all">
+              <div class="w-16 h-3 bg-black rounded-full mx-auto mb-3"></div>
+              <div class="bg-white rounded-2xl p-3 text-gray-900">
+                <span class="text-[10px] uppercase font-bold text-primary block mb-1">Invoice #2025-Q2</span>
+                <p class="text-xl font-extrabold mb-2">₹24,500</p>
+                <button class="btn-shimmer w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1 shadow-sm active:scale-95 transition-all">
+                  <span class="material-symbols-outlined text-[15px]">bolt</span>
+                  Pay via UPI
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-      <a class="btn btn-primary" href="pages/product.html" style="margin-top:2rem">See all 13 modules</a>
-    </div>
+    </section>
 
-    <div class="hero-art">
-      <div class="blob" aria-hidden="true"></div>
-            <div class="fa-row">
-        <div class="mock-float fa-badge fa-1"><span class="gdot" aria-hidden="true"></span> Role-aware dashboards</div>
-        <div class="mock-float fa-badge fa-2"><span class="ring" style="background:var(--purple)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M3 17l5-5 4 4 8-8M21 8v4m0-4h-4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 13 connected modules</div>
-        <div class="mock-float fa-badge fa-3"><span class="ring" style="background:var(--sky)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.3"/></svg></span> Multi-campus ready</div>
+    <!-- ================= 7. CAPABILITY CHECKLIST TEASER ================= -->
+    <section class="w-full bg-white py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-item revealed">
+          <span class="font-display text-xs uppercase tracking-widest text-primary font-bold block mb-2">
+            Transparent Capabilities
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl text-gray-900 font-bold tracking-tight mb-4">
+            Every feature, named – nothing vague
+          </h2>
+          <p class="text-base sm:text-lg text-gray-600">
+            We don't hide capabilities behind enterprise sales speak. Inspect the exact features you get on day one.
+          </p>
+        </div>
+
+        <div class="reveal-item bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 mb-8 revealed">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm border-collapse">
+              <thead>
+                <tr class="bg-slate-100 border-b border-gray-200 text-gray-900">
+                  <th class="py-3.5 px-6 font-bold text-xs uppercase tracking-wider">Capability</th>
+                  <th class="py-3.5 px-6 font-bold text-xs uppercase tracking-wider">Module</th>
+                  <th class="py-3.5 px-6 font-bold text-xs uppercase tracking-wider hidden sm:table-cell">Who</th>
+                  <th class="py-3.5 px-6 font-bold text-xs uppercase tracking-wider text-right">Status</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200 text-gray-600">
+                <tr class="hover:bg-orange-50/50 transition-colors cursor-pointer group">
+                  <td class="py-4 px-6 font-medium text-gray-900 group-hover:text-primary transition-colors">
+                    CBSE Continuous Comprehensive Evaluation (CCE) &amp; 9-point grading
+                  </td>
+                  <td class="py-4 px-6">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-indigo-50 text-indigo-700">Academics</span>
+                  </td>
+                  <td class="py-4 px-6 hidden sm:table-cell text-xs">Principals, Teachers</td>
+                  <td class="py-4 px-6 text-right">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-600 text-white">Live</span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-orange-50/50 transition-colors cursor-pointer group">
+                  <td class="py-4 px-6 font-medium text-gray-900 group-hover:text-primary transition-colors">
+                    Automated biometric facial recognition sync with parent SMS
+                  </td>
+                  <td class="py-4 px-6">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-rose-50 text-rose-700">Attendance</span>
+                  </td>
+                  <td class="py-4 px-6 hidden sm:table-cell text-xs">Front Office, Parents</td>
+                  <td class="py-4 px-6 text-right">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-600 text-white">Live</span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-orange-50/50 transition-colors cursor-pointer group">
+                  <td class="py-4 px-6 font-medium text-gray-900 group-hover:text-primary transition-colors">
+                    Multi-head fee concession approval hierarchy with trustee sign-off
+                  </td>
+                  <td class="py-4 px-6">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-orange-50 text-primary">Fees</span>
+                  </td>
+                  <td class="py-4 px-6 hidden sm:table-cell text-xs">Accounts, Trustees</td>
+                  <td class="py-4 px-6 text-right">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-600 text-white">Live</span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-orange-50/50 transition-colors cursor-pointer group">
+                  <td class="py-4 px-6 font-medium text-gray-900 group-hover:text-primary transition-colors">
+                    GPS live bus tracking with geofenced arrival notifications
+                  </td>
+                  <td class="py-4 px-6">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-amber-50 text-amber-700">Transport</span>
+                  </td>
+                  <td class="py-4 px-6 hidden sm:table-cell text-xs">Parents, Transport Head</td>
+                  <td class="py-4 px-6 text-right">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-600 text-white">Live</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="text-center reveal-item revealed">
+          <button class="inline-flex items-center gap-2 bg-white border border-gray-300 text-gray-800 hover:bg-slate-50 hover:border-primary/50 hover:-translate-y-0.5 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all shadow-xs active:scale-95">
+            <span>Open the full 140+ capability checklist</span>
+            <span class="material-symbols-outlined text-[18px]">checklist</span>
+          </button>
+        </div>
+
       </div>
-      <video class="hero-illus" poster="assets/img/features-illustration.png" autoplay loop muted playsinline aria-label="Animated illustration: an admission flows into a student record that connects fees, payroll, attendance, communication and the school calendar">
-        <source src="assets/video/features-video.webm" type="video/webm">
-        <source src="assets/video/features-video.mp4" type="video/mp4">
-        <img src="assets/img/features-illustration.png" alt="Illustration: an admission flows into a student record that connects fees, payroll, attendance, communication and the school calendar" width="1024" height="768">
-      </video>
-      <div class="mock-float feat-float"><span class="ring" style="background:var(--green)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12l5 5L20 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Entered once, trusted everywhere</div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ROLE WORKFLOWS (interactive tabs) -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">Built around real roles</p>
-      <h2>A different superpower for every login.</h2>
-      <p class="lead" style="max-width:60ch">The app asks what <em>you</em> can do, not what title you hold — so each person gets their own tools, their own data, and nothing that isn't theirs. Pick a role.</p>
-    </div>
-    <div class="wf" id="wf">
-      <div class="wf-tabs" role="tablist" aria-label="Roles">
-        <button class="wf-tab active" data-wf="0" role="tab" aria-selected="true"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span><span class="tx"><span class="t">Principal &amp; director</span><span class="s">Oversight &amp; approvals</span></span></button>
-        <button class="wf-tab" data-wf="1" role="tab" aria-selected="false"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9zM8 12h8M8 16h5"/></svg></span><span class="tx"><span class="t">Registrar &amp; office</span><span class="s">Records &amp; certificates</span></span></button>
-        <button class="wf-tab" data-wf="2" role="tab" aria-selected="false"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="4"/><path d="M3 20a7 7 0 0114 0M19 8v6M16 11h6"/></svg></span><span class="tx"><span class="t">Admission officer</span><span class="s">Enquiry to enrolment</span></span></button>
-        <button class="wf-tab" data-wf="3" role="tab" aria-selected="false"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></span><span class="tx"><span class="t">Teacher</span><span class="s">Classroom &amp; marks</span></span></button>
-        <button class="wf-tab" data-wf="4" role="tab" aria-selected="false"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12h2M3 9h15"/></svg></span><span class="tx"><span class="t">Finance &amp; HR</span><span class="s">Fees &amp; payroll</span></span></button>
-        <button class="wf-tab" data-wf="5" role="tab" aria-selected="false"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></span><span class="tx"><span class="t">IT administrator</span><span class="s">Integrations &amp; sign-in</span></span></button>
+    <!-- ================= 8. SECURITY & COMPLIANCE ================= -->
+    <section class="w-full bg-slate-100 py-16 lg:py-24 border-t border-gray-200" id="security">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-item revealed">
+          <span class="font-display text-xs uppercase tracking-widest text-primary font-bold block mb-2">
+            Enterprise Governance
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl text-gray-900 font-bold tracking-tight mb-4">
+            Security your IT team can sign off
+          </h2>
+          <p class="text-base sm:text-lg text-gray-600">
+            Enterprise-grade safety, privacy by design, and strict adherence to India's DPDP Act and board guidelines.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 hover:border-primary/60 hover:shadow-xl p-6 shadow-xs cursor-pointer group revealed">
+            <div class="w-10 h-10 rounded-xl bg-orange-50 text-primary flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[22px]">manage_accounts</span>
+            </div>
+            <h4 class="font-display text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">Field-Level RBAC</h4>
+            <p class="text-xs text-gray-600">
+              Fine-grained permissions down to individual input fields. Class teachers only access their assigned division.
+            </p>
+          </div>
+
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 hover:border-indigo-600 hover:shadow-xl p-6 shadow-xs cursor-pointer group revealed">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[22px]">history_edu</span>
+            </div>
+            <h4 class="font-display text-base font-bold text-gray-900 mb-2 group-hover:text-indigo-700 transition-colors">Immutable Audit Trail</h4>
+            <p class="text-xs text-gray-600">
+              Every login, marks alteration, fee concession, and record edit is permanently recorded with user identity and timestamp.
+            </p>
+          </div>
+
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 hover:border-emerald-600 hover:shadow-xl p-6 shadow-xs cursor-pointer group revealed">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[22px]">domain_verification</span>
+            </div>
+            <h4 class="font-display text-base font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">Multi-Tenant Isolation</h4>
+            <p class="text-xs text-gray-600">
+              Dedicated logical schemas prevent accidental cross-campus data leakage across large educational trusts.
+            </p>
+          </div>
+
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 hover:border-blue-600 hover:shadow-xl p-6 shadow-xs cursor-pointer group revealed">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center mb-4 icon-bounce transition-transform">
+              <span class="material-symbols-outlined text-[22px]">enhanced_encryption</span>
+            </div>
+            <h4 class="font-display text-base font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">AES-256 Encryption</h4>
+            <p class="text-xs text-gray-600">
+              State-of-the-art encryption at rest and TLS 1.3 in transit. Automated daily geo-redundant snapshots on AWS Mumbai.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="text-center reveal-item revealed">
+          <a href="#" class="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:underline group">
+            <span>Read the complete security &amp; compliance whitepaper</span>
+            <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+
       </div>
-      <div class="wf-panels">
-        <div class="wf-panel active" role="tabpanel"><p class="wf-eyebrow">Leadership</p><h3>Principal &amp; director</h3><div class="role-sub">Oversight across every campus</div><ul class="wf-checks"><li>A School Overview with enrolment, fees and attendance KPIs</li><li>Approve leave, publish progress cards, close applications</li><li>Collect seat deposits and send emergency alerts</li><li>Trustee KPI snapshots for the board</li></ul><div class="wf-mods"><span class="ml">Modules used</span><span class="pill-tag">Overview</span><span class="pill-tag">Reports</span><span class="pill-tag">Admissions</span><span class="pill-tag">Communications</span><a class="wf-link" href="pages/solutions.html">Full workflows →</a></div></div>
-        <div class="wf-panel" role="tabpanel"><p class="wf-eyebrow">Office &amp; records</p><h3>Registrar &amp; office</h3><div class="role-sub">The student record, start to finish</div><ul class="wf-checks"><li>Enrol a student; edit details, class, section and house</li><li>Issue bonafide &amp; transfer certificates (dual sign-off)</li><li>Record conduct, update medical, print ID cards</li><li>Promote a class and bulk-import data</li></ul><div class="wf-mods"><span class="ml">Modules used</span><span class="pill-tag">Students</span><span class="pill-tag">Documents &amp; admin</span><span class="pill-tag">Attendance</span><a class="wf-link" href="pages/solutions.html">Full workflows →</a></div></div>
-        <div class="wf-panel" role="tabpanel"><p class="wf-eyebrow">Admissions &amp; front office</p><h3>Admission officer</h3><div class="role-sub">One pipeline, enquiry to first day</div><ul class="wf-checks"><li>Register walk-ins and log counselling calls</li><li>Schedule entrance exams and record assessments</li><li>Issue offers, collect deposits, enrol the student</li><li>Admissions Outlook: seat demand &amp; what converts</li></ul><div class="wf-mods"><span class="ml">Modules used</span><span class="pill-tag">Admissions</span><span class="pill-tag">Students</span><span class="pill-tag">Communications</span><a class="wf-link" href="pages/solutions.html">Full workflows →</a></div></div>
-        <div class="wf-panel" role="tabpanel"><p class="wf-eyebrow">Teaching</p><h3>Teacher</h3><div class="role-sub">The classroom, in one place</div><ul class="wf-checks"><li>Take the daily register; mark present, late or absent</li><li>Enter marks in a live grid; request an unlock when needed</li><li>Set homework and evaluate submissions</li><li>Author lesson plans and message parents</li></ul><div class="wf-mods"><span class="ml">Modules used</span><span class="pill-tag">Attendance</span><span class="pill-tag">Academics</span><span class="pill-tag">Teaching</span><a class="wf-link" href="pages/solutions.html">Full workflows →</a></div></div>
-        <div class="wf-panel" role="tabpanel"><p class="wf-eyebrow">Finance &amp; HR</p><h3>Finance &amp; HR</h3><div class="role-sub">Money in, people paid</div><ul class="wf-checks"><li>Post fee demands to a class; record payments &amp; receipts</li><li>Track defaulters and run late fees</li><li>Run monthly gross-to-net payroll (PF, ESI, TDS)</li><li>File statutory returns and send encrypted payslips</li></ul><div class="wf-mods"><span class="ml">Modules used</span><span class="pill-tag">Fees &amp; payments</span><span class="pill-tag">Payroll</span><span class="pill-tag">Staff</span><a class="wf-link" href="pages/solutions.html">Full workflows →</a></div></div>
-        <div class="wf-panel" role="tabpanel"><p class="wf-eyebrow">IT &amp; administration</p><h3>IT administrator</h3><div class="role-sub">Integrations, data import and sign-in settings</div><ul class="wf-checks"><li>Set up SMTP, SMS and WhatsApp integrations in Settings</li><li>Bulk-import students and staff, creating their login accounts</li><li>Manage session and sign-in settings for the school</li><li>Review access and role-change history; role changes stay with the super administrator</li></ul><div class="wf-mods"><span class="ml">Modules used</span><span class="pill-tag">Settings</span><span class="pill-tag">Staff</span><span class="pill-tag">Communications</span><a class="wf-link" href="pages/solutions.html">Full workflows →</a></div></div>
+    </section>
+
+    <!-- ================= 9. PRICING TEASER ================= -->
+    <section class="w-full bg-white py-16 lg:py-24">
+      <div class="max-w-5xl mx-auto px-6 lg:px-12">
+        <div class="reveal-item interactive-card bg-slate-50 hover:bg-gradient-to-br from-slate-50 to-orange-50/30 rounded-3xl border border-gray-200 hover:border-primary/50 p-8 lg:p-12 relative overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 revealed">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7">
+              <span class="font-display text-xs uppercase tracking-widest text-primary font-bold block mb-2">
+                Predictable Institutional Pricing
+              </span>
+              <h2 class="font-display text-3xl text-gray-900 font-bold tracking-tight mb-2">
+                Straightforward, honest pricing for schools
+              </h2>
+              <p class="font-display text-3xl sm:text-4xl leading-tight text-primary font-extrabold mb-6">
+                Plans from ₹99 <span class="text-base text-gray-500 font-normal">/ student / year</span>
+              </p>
+              
+              <div class="space-y-3 mb-6">
+                <div class="flex items-center gap-2.5 text-sm text-gray-800">
+                  <span class="material-symbols-outlined text-[18px] text-emerald-600">check</span>
+                  <span>No setup fee or upfront software license costs</span>
+                </div>
+                <div class="flex items-center gap-2.5 text-sm text-gray-800">
+                  <span class="material-symbols-outlined text-[18px] text-emerald-600">check</span>
+                  <span>AWS cloud hosting, daily backups &amp; automatic updates included</span>
+                </div>
+                <div class="flex items-center gap-2.5 text-sm text-gray-800">
+                  <span class="material-symbols-outlined text-[18px] text-emerald-600">check</span>
+                  <span>1-month comprehensive free pilot using your real school data</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 bg-white p-6 rounded-2xl border border-gray-200 text-center flex flex-col items-center shadow-xs hover:shadow-md transition-shadow">
+              <div class="w-12 h-12 rounded-full bg-orange-50 text-primary flex items-center justify-center mb-3">
+                <span class="material-symbols-outlined text-[24px]">calculate</span>
+              </div>
+              <h4 class="font-display text-base font-bold text-gray-900 mb-1">Estimate your cost</h4>
+              <p class="text-xs text-gray-500 mb-5">
+                Select your student count and board requirements to get an immediate custom quotation.
+              </p>
+              <div class="w-full space-y-2.5">
+                <a href="pages/pricing.html" class="btn-shimmer w-full inline-flex items-center justify-center bg-primary text-white hover:bg-primary-dark py-3 rounded-xl font-semibold text-sm transition-all shadow-sm active:scale-95">
+                  See transparent pricing plans
+                </a>
+                <a href="pages/pricing.html#calculator" class="w-full inline-flex items-center justify-center bg-white border border-gray-200 text-gray-800 hover:bg-slate-50 py-3 rounded-xl font-semibold text-sm transition-all active:scale-95">
+                  Calculate school cost
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="center" style="margin-top:2rem"><a class="btn btn-outline" href="pages/solutions.html">See all roles &amp; workflows</a></div>
-  </div>
-</section>
+    </section>
 
-<!-- CAPABILITIES teaser + stats -->
-<section class="section section-tint">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">No vague claims</p>
-      <h2>Every feature, named — compare us line by line</h2>
-      <p class="lead">Hundreds of concrete capabilities across 13 modules, each mapped to the roles that can use it. Take it straight into your RFP.</p>
-    </div>
-    <div class="stats">
-      <div class="stat"><div class="n">13</div><div class="l">functional modules</div></div>
-      <div class="stat"><div class="n">40+</div><div class="l">staff roles supported</div></div>
-      <div class="stat"><div class="n">120+</div><div class="l">named capabilities</div></div>
-      <div class="stat"><div class="n">1</div><div class="l">audited source of truth</div></div>
-    </div>
-    <div class="center" style="margin-top:2.4rem"><a class="btn btn-primary" href="pages/solutions.html#capabilities">Open the capability checklist</a></div>
-  </div>
-</section>
+    <!-- ================= 10. STATS & SOCIAL PROOF ================= -->
+    <section class="w-full bg-slate-100 py-16 lg:py-24 border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <!-- 4 Animated Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 hover:border-primary/50 p-6 text-center shadow-xs hover:shadow-lg transition-all duration-300 revealed">
+            <p class="font-display text-3xl lg:text-4xl text-primary font-extrabold mb-1">
+              <span class="counter-val" data-target="350">0</span>+
+            </p>
+            <p class="font-display text-xs lg:text-sm font-bold text-gray-900">Campuses Live</p>
+            <p class="text-[12px] text-gray-500">Across 14 Indian states</p>
+          </div>
 
-<!-- SECURITY split -->
-<section class="section">
-  <div class="container split">
-    <div>
-      <p class="eyebrow">Enterprise-ready</p>
-      <h2>Security your IT team <span class="sec-accent">can sign off</span></h2>
-      <p>Role-based access on every action, a full audit trail of who did what, multi-tenant isolation between campuses, encrypted integration secrets and OIDC-based delivery — documented control by control, not hand-waved.</p>
-      <a class="wf-link" href="pages/security.html" style="font-size:1rem">Read the security specs →</a>
-      <div class="frame" style="margin-top:2rem">
-        <div class="mock-bar" style="border:0;padding:.3rem .2rem .8rem"><strong style="color:var(--ink);font-family:'Plus Jakarta Sans',sans-serif">Access rules</strong><span class="where" style="margin-left:auto">live from the server</span></div>
-        <table style="min-width:0"><tbody>
-          <tr><td>Collect seat deposit</td><td class="center"><span class="yes">Cashier, Principal</span></td></tr>
-          <tr><td>Enrol student</td><td class="center"><span class="yes">Registrar +2</span></td></tr>
-          <tr><td>Change a user's roles</td><td class="center"><span class="yes">Super admin</span></td></tr>
-          <tr><td>View payslip of others</td><td class="center"><span class="no">— blocked</span></td></tr>
-        </tbody></table>
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 hover:border-primary/50 p-6 text-center shadow-xs hover:shadow-lg transition-all duration-300 revealed">
+            <p class="font-display text-3xl lg:text-4xl text-primary font-extrabold mb-1">
+              <span class="counter-decimal" data-target="4.2">0.0</span> Lakh
+            </p>
+            <p class="font-display text-xs lg:text-sm font-bold text-gray-900">Students Managed</p>
+            <p class="text-[12px] text-gray-500">Active daily profiles</p>
+          </div>
+
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 hover:border-primary/50 p-6 text-center shadow-xs hover:shadow-lg transition-all duration-300 revealed">
+            <p class="font-display text-3xl lg:text-4xl text-primary font-extrabold mb-1">
+              <span class="counter-decimal" data-target="99.98">0.0</span>%
+            </p>
+            <p class="font-display text-xs lg:text-sm font-bold text-gray-900">Uptime SLA</p>
+            <p class="text-[12px] text-gray-500">AWS Mumbai Cloud infra</p>
+          </div>
+
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 hover:border-primary/50 p-6 text-center shadow-xs hover:shadow-lg transition-all duration-300 revealed">
+            <p class="font-display text-3xl lg:text-4xl text-primary font-extrabold mb-1">
+              &lt; <span class="counter-val" data-target="12">0</span>m
+            </p>
+            <p class="font-display text-xs lg:text-sm font-bold text-gray-900">Support Response</p>
+            <p class="text-[12px] text-gray-500">Dedicated success reps</p>
+          </div>
+        </div>
+
+        <!-- 2 Testimonials -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-8 border-l-4 border-l-amber-700 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between revealed">
+            <div class="mb-6">
+              <div class="flex text-amber-500 mb-3">
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+              </div>
+              <p class="text-sm sm:text-base text-gray-800 italic">
+                "Managing 3 campuses under our trust was a chaotic mess of disconnected spreadsheets and delayed fee reconciliations. Knowva brought total financial visibility to our board meetings in the first 60 days."
+              </p>
+            </div>
+            <div>
+              <h5 class="font-display text-sm font-bold text-gray-900">Dr. Ramanathan K.</h5>
+              <p class="text-xs text-gray-500">Trustee &amp; Managing Director · Heritage Vidyapeeth Group</p>
+            </div>
+          </div>
+
+          <div class="reveal-item interactive-card bg-white rounded-2xl border border-gray-200 p-8 border-l-4 border-l-primary shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between revealed">
+            <div class="mb-6">
+              <div class="flex text-amber-500 mb-3">
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+              </div>
+              <p class="text-sm sm:text-base text-gray-800 italic">
+                "Our teachers used to dread the end-of-term report card week. With Knowva's automated CBSE grading and timetable module, our administrative overhead dropped by nearly 60%."
+              </p>
+            </div>
+            <div>
+              <h5 class="font-display text-sm font-bold text-gray-900">Sister Maria D'Souza</h5>
+              <p class="text-xs text-gray-500">Principal · St. Xavier's Senior Secondary School</p>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>
-    <div class="sec-cards">
-      <div class="sec-card"><span class="sec-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></span><div><h3>Server-authoritative access</h3><p>Hidden never means unenforced — the server returns 403 regardless.</p></div></div>
-      <div class="sec-card"><span class="sec-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h11a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2V6a2 2 0 012-2z"/><path d="M9 9h7M9 13h7M9 17h4"/></svg></span><div><h3>Central audit trail</h3><p>Central audit log plus row-level created-by and change history.</p></div></div>
-      <div class="sec-card"><span class="sec-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l2 2M14 9l2 2"/></svg></span><div><h3>Hosted on Kubernetes</h3><p>Runs on Kubernetes (AWS) with TLS and centralised logging.</p></div></div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- PULL QUOTE -->
-<section class="section section-soft">
-  <div class="container">
-    <figure class="quote">
-      <span class="mark" aria-hidden="true">&ldquo;</span>
-      <blockquote>Enter it once, and it&rsquo;s <em>trusted everywhere</em> — the enquiry becomes a student, the student a result, a receipt, a certificate. One record, its whole school life.</blockquote>
-      <figcaption class="attr">The idea behind Knowva</figcaption>
-    </figure>
-  </div>
-</section>
+    <!-- ================= 11. FINAL CTA ================= -->
+    <section class="w-full bg-navy text-white py-20 relative text-center overflow-hidden">
+      <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="max-w-4xl mx-auto px-6 lg:px-12 relative z-10 flex flex-col items-center reveal-item revealed">
+        <span class="font-display text-xs uppercase tracking-widest text-amber-300 font-bold block mb-3">
+          Experience The Difference
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl text-white font-extrabold tracking-tight mb-4 max-w-2xl">
+          See Knowva on your school's data.
+        </h2>
+        <p class="text-base sm:text-lg text-gray-300 mb-8 max-w-2xl">
+          Book a personalized 30-minute walkthrough with our education specialists. We'll map your current fee structures, timetable and board requirements live.
+        </p>
 
-<!-- CTA band -->
-<section class="section">
-  <div class="container">
-    <div class="cta-band">
-      <span class="spark" aria-hidden="true"></span>
-      <span class="spark g" aria-hidden="true"></span>
-      <h2>See Knowva on your school's data</h2>
-      <p>A 30-minute walkthrough tailored to your role and your campuses. Bring your toughest admissions or exam workflow — we'll run it live.</p>
-      <a class="btn btn-primary btn-lg" href="pages/demo.html">Book a demo</a>
-    </div>
-  </div>
-</section>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-6">
+          <a href="pages/demo.html" class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center bg-primary text-white hover:bg-primary-dark text-base font-bold px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-2xl hover:-translate-y-0.5 active:scale-95 group">
+            Book a demo
+            <span class="material-symbols-outlined text-[20px] ml-2 group-hover:scale-110 transition-transform">calendar_month</span>
+          </a>
+          <a href="tel:+91800566982" class="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 hover:bg-white/15 text-white border border-white/20 text-sm sm:text-base font-semibold px-6 py-4 rounded-xl transition-all hover:-translate-y-0.5 active:scale-95">
+            <span class="material-symbols-outlined text-[18px] mr-2">phone_in_talk</span>
+            Talk to a specialist (+91 800-KNOWVA)
+          </a>
+        </div>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="index.html" style="margin-bottom:.8rem">
-          <img class="mark" src="assets/img/logo-light.png" alt="" width="34" height="34">
-          <span class="brand-text">Knowva<span>Systems</span></span>
-        </a>
-        <p>School ERP for multi-campus schools and the people who run them every day.</p>
+        <p class="text-xs text-gray-400 flex items-center gap-2">
+          <span class="material-symbols-outlined text-[16px] text-amber-300 pulse-indicator">school</span>
+          <span>Trusted by top CBSE, ICSE and State Board institutions across India.</span>
+        </p>
       </div>
-      <div><h4>Modules</h4><a href="pages/product.html">All modules</a><a href="pages/pricing.html">Pricing</a><a href="pages/security.html">Security</a></div>
-      <div><h4>Solutions</h4><a href="pages/solutions.html">Leadership</a><a href="pages/solutions.html">Admissions</a><a href="pages/solutions.html">Teaching</a><a href="pages/solutions.html">Finance &amp; HR</a></div>
-      <div><h4>Company</h4><a href="pages/about.html">About</a><a href="pages/resources.html">Resources</a><a href="pages/demo.html">Contact</a><a href="pages/demo.html">Book a demo</a></div>
-      <div><h4>Get started</h4><a href="pages/demo.html">Book a demo</a><a href="pages/demo.html">Free trial</a><a href="pages/pricing.html">See pricing</a></div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Knowva Systems. All rights reserved.</span>
-      <span>Made for schools in India.</span>
-    </div>
-  </div>
-</footer>
+    </section>
 
-<script src="assets/js/app.js?v=58"></script>
-</body>
-</html>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div id="site-footer" data-root=""></div>
+<script src="assets/js/site-footer.js?v=4"></script>
+
+  <!-- ================= MOTION & MICRO-INTERACTIONS JAVASCRIPT ================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Scroll-triggered reveal animations via IntersectionObserver
+      const revealItems = document.querySelectorAll('.reveal-item');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealItems.forEach(el => observer.observe(el));
+      } else {
+        revealItems.forEach(el => el.classList.add('revealed'));
+      }
+
+      // 2. Animated Number Counters
+      const countUp = (el, target, isDecimal = false) => {
+        const duration = 1800;
+        const steps = 60;
+        const stepTime = duration / steps;
+        let current = 0;
+        const step = target / steps;
+
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          el.textContent = isDecimal ? current.toFixed(isDecimal ? 1 : 0) : Math.floor(current);
+          if (isDecimal && target === 99.98) {
+            el.textContent = current >= target ? '99.98' : current.toFixed(2);
+          }
+        }, stepTime);
+      };
+
+      const statObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const integers = entry.target.querySelectorAll('.counter-val');
+            integers.forEach(num => {
+              const target = parseFloat(num.getAttribute('data-target'));
+              countUp(num, target, false);
+            });
+
+            const decimals = entry.target.querySelectorAll('.counter-decimal');
+            decimals.forEach(num => {
+              const target = parseFloat(num.getAttribute('data-target'));
+              countUp(num, target, true);
+            });
+
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.25 });
+
+      const statsSection = document.querySelector('section.bg-slate-100');
+      if (statsSection) statObserver.observe(statsSection);
+
+      // 3. 3D Tilt micro-interaction for Hero Mockup
+      const tiltWrapper = document.getElementById('heroDashboardMockup');
+      if (tiltWrapper && window.matchMedia('(pointer: fine)').matches) {
+        const tiltInner = tiltWrapper.querySelector('.tilt-card-inner');
+        tiltWrapper.addEventListener('mousemove', (e) => {
+          const rect = tiltWrapper.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = ((y - centerY) / centerY) * -5;
+          const rotateY = ((x - centerX) / centerX) * 5;
+
+          if (tiltInner) {
+            tiltInner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+          }
+        });
+
+        tiltWrapper.addEventListener('mouseleave', () => {
+          if (tiltInner) {
+            tiltInner.style.transform = 'rotateX(0deg) rotateY(0deg)';
+          }
+        });
+      }
+    });
+  </script>
+
+
+
+<span id="PING_CONTENT_PUSH_NOTIFICATION" style="display: none;"></span>
+
+<span id="PING_CONTENT_PUSH_NOTIFICATION" style="display: none;"></span>
+
+<span id="PING_CONTENT_PUSH_NOTIFICATION" style="display: none;"></span><script src="assets/js/app.js?v=4"></script>
+</body></html>
