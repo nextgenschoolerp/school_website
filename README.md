@@ -14,6 +14,7 @@ Static marketing site for Knowva Systems and its School ERP product. Plain HTML,
 | `pages/pricing.html` | Pricing and estimator |
 | `pages/resources.html` | Resources and documentation |
 | `pages/about.html` | Company page |
+| `pages/privacy.html` | Data protection and privacy policy |
 | `pages/demo.html` | Demo request |
 
 ## Structure
